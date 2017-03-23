@@ -43,8 +43,8 @@ Dotpulse:
       SupportIE8: FALSE
       cleanHTML: TRUE
       jQuery:
-        old: '1.12.1'
-        new: '2.2.1'
+        old: '1.12.2'
+        new: '2.2.2'
         printInHead: TRUE
       General:
         CSS: #Filenames

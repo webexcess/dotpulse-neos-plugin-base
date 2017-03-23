@@ -1,3 +1,14 @@
 'TYPO3.Neos.NodeTypes:Image':
   superTypes:
     'TYPO3.Neos.NodeTypes:ImageAlignmentMixin': FALSE
+
+'TYPO3.Neos.NodeTypes:AssetList':
+  superTypes:
+    'TYPO3.Neos.NodeTypes:TitleMixin': TRUE
+  properties:
+    title:
+      defaultValue: '<h2>Enter headline here</h2>'
+      ui:
+        aloha:
+          format:
+            h1: FALSE

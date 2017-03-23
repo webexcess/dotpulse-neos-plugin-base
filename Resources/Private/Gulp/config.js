@@ -67,7 +67,7 @@ var notify = require('gulp-notify');
 
 module.exports = {
 	banner : ['/*!',
-		' * <%= info.name %> - powered by <%= info.system %> & dotpulse.ch',
+		' * <%= info.name %> - powered by <%= info.system %> & <%= info.creator %>',
 		' * @build <%= timestamp %>',
 		' * @link <%= info.url %>',
 		' */',

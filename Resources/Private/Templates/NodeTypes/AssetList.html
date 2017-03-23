@@ -11,6 +11,9 @@
 </f:if>
 
 <f:section name="list">
+	<f:if condition="{renderTitle}">
+		<neos:contentElement.editable property="title" tag="div" />
+	</f:if>
 	<f:if condition="{assets}">
 		<f:then>
 			<ul{attributes -> f:format.raw()}>
