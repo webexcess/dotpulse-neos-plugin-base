@@ -7,5 +7,5 @@ getBackendLanguageCode = function(code) {
 };
 
 NeosEvents('ContentModuleLoaded', function() {
-	document.documentElement.setAttribute('data-lang', getBackendLanguageCode('de'));
+	document.documentElement.data('lang', getBackendLanguageCode('de'));
 });

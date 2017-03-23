@@ -30,6 +30,7 @@ TYPO3:
 
 Dotpulse:
   Base:
+    Context: 'Default'
     Source:
       GoogleTagManager:
       GoogleAnalytics:

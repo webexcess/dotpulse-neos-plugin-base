@@ -1,0 +1,7 @@
+Dotpulse:
+  Base:
+    Source:
+      GoogleTagManager: FALSE
+      GoogleAnalytics: FALSE
+      GoogleSiteVerification : FALSE
+      Favicon: FALSE

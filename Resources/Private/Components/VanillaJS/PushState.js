@@ -1,6 +1,8 @@
 setPushState = getPushState = function() {
+	// jscs:disable maximumLineLength
 	console.info('Your browser can\'t handle push state. Time to download a new one: https://www.browser-update.org/update.html');
 	return false;
+	// jscs:enable maximumLineLength
 };
 
 if (typeof history.pushState === 'function') {

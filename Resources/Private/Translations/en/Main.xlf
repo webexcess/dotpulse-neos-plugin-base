@@ -17,14 +17,29 @@
 			<trans-unit id="More" xml:space="preserve">
 				<source>More</source>
 			</trans-unit>
-			<trans-unit id="moreabout" xml:space="preserve">
+			<trans-unit id="more.about" xml:space="preserve">
 				<source>more about</source>
 			</trans-unit>
-			<trans-unit id="Moreabout" xml:space="preserve">
+			<trans-unit id="More.about" xml:space="preserve">
 				<source>More about</source>
+			</trans-unit>
+			<trans-unit id="More.read" xml:space="preserve">
+				<source>Read more</source>
+			</trans-unit>
+			<trans-unit id="More.informations" xml:space="preserve">
+				<source>More informations</source>
 			</trans-unit>
 			<trans-unit id="contact" xml:space="preserve">
 				<source>Contact</source>
+			</trans-unit>
+			<trans-unit id="email" xml:space="preserve">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="phone" xml:space="preserve">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="fax" xml:space="preserve">
+				<source>Fax</source>
 			</trans-unit>
 			<trans-unit id="search" xml:space="preserve">
 				<source>Search</source>

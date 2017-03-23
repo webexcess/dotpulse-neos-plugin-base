@@ -1,3 +1,17 @@
+function NeosEvents(events, callback) {
+	if (typeof events === 'string') {
+		events = events.split(',');
+	}
+	// jshint -W120
+	var length = count = events.length;
+	var name;
+	// jshint +W120
+	while (length--) {
+		name = events[length].replace(/\s/g, '');
+		document.addEventListener('Neos.' + name, callback);
+	}
+	return count + ' Neos Event' + (count === 1 ? '' : 's') + ' added.';
+}
 /*
 Neos.PageLoaded
 Whenever the page reloads by Ajax.

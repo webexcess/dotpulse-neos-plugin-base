@@ -6,6 +6,7 @@
       groups:
         settings:
           label: i18n
+          icon: icon-cog
           position: 50
 
 # bigmargin: Grosser Abstand
