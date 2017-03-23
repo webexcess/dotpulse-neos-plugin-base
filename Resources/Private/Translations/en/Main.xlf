@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file original="" product-name="Dotpulse.Base" source-language="en" datatype="plaintext">
+		<body>
+			<trans-unit id="en" xml:space="preserve">
+				<source>English</source>
+			</trans-unit>
+			<trans-unit id="de" xml:space="preserve">
+				<source>German</source>
+			</trans-unit>
+			<trans-unit id="alllanguages" xml:space="preserve">
+				<source>all languages</source>
+			</trans-unit>
+			<trans-unit id="more" xml:space="preserve">
+				<source>more</source>
+			</trans-unit>
+			<trans-unit id="More" xml:space="preserve">
+				<source>More</source>
+			</trans-unit>
+			<trans-unit id="moreabout" xml:space="preserve">
+				<source>more about</source>
+			</trans-unit>
+			<trans-unit id="Moreabout" xml:space="preserve">
+				<source>More about</source>
+			</trans-unit>
+			<trans-unit id="contact" xml:space="preserve">
+				<source>Contact</source>
+			</trans-unit>
+			<trans-unit id="search" xml:space="preserve">
+				<source>Search</source>
+			</trans-unit>
+			<trans-unit id="assetList.noFiles" xml:space="preserve">
+				<source>Please choose some files in the inspector</source>
+			</trans-unit>
+			<trans-unit id="image.noFile" xml:space="preserve">
+				<source>Please choose a image in the inspector</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

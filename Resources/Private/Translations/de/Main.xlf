@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file original="" product-name="Dotpulse.Base" source-language="de" datatype="plaintext">
+		<body>
+			<trans-unit id="en" xml:space="preserve">
+				<source>English</source>
+			</trans-unit>
+			<trans-unit id="de" xml:space="preserve">
+				<source>Deutsch</source>
+			</trans-unit>
+			<trans-unit id="alllanguages" xml:space="preserve">
+				<source>Alle Sprachen</source>
+			</trans-unit>
+			<trans-unit id="more" xml:space="preserve">
+				<source>mehr</source>
+			</trans-unit>
+			<trans-unit id="More" xml:space="preserve">
+				<source>Mehr</source>
+			</trans-unit>
+			<trans-unit id="more.about" xml:space="preserve">
+				<source>mehr über</source>
+			</trans-unit>
+			<trans-unit id="More.about" xml:space="preserve">
+				<source>Mehr über</source>
+			</trans-unit>
+			<trans-unit id="More.informations" xml:space="preserve">
+				<source>Mehr Informationen</source>
+			</trans-unit>
+			<trans-unit id="contact" xml:space="preserve">
+				<source>Kontakt</source>
+			</trans-unit>
+			<trans-unit id="search" xml:space="preserve">
+				<source>Suchen</source>
+			</trans-unit>
+			<trans-unit id="assetList.noFiles" xml:space="preserve">
+				<source>Bitte Dateien im Inspektor wählen</source>
+			</trans-unit>
+			<trans-unit id="image.noFile" xml:space="preserve">
+				<source>Bitte ein Bild im Inspektor wählen</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

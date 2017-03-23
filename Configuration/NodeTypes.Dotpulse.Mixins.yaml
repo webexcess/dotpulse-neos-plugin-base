@@ -1,0 +1,182 @@
+# TODO: Labels translation
+# Settings im Inspektor
+'Dotpulse.Base:SettingsMixin':
+  abstract: TRUE
+  ui:
+    inspector:
+      groups:
+        settings:
+          label: 'Settings'
+          position: 50
+
+# bigmargin: Grosser Abstand
+'Dotpulse.Base:MarginMixin':
+  abstract: TRUE
+  superTypes:
+    'Dotpulse.Base:SettingsMixin': TRUE
+  properties:
+    bigmargin:
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: 'Extra spacing'
+        reloadPageIfChanged: TRUE
+        inspector:
+          group: settings
+          position: 350
+
+# Text ohne Formatierung
+'Dotpulse.Base:FormatlessTextMixin':
+  abstract: TRUE
+  properties:
+    text:
+      type: string
+      ui:
+        inlineEditable: TRUE
+        aloha:
+          placeholder: 'Enter text here'
+          format: []
+          table: []
+          link: []
+          list: []
+          alignment: []
+          formatlesspaste:
+            button: FALSE
+            formatlessPasteOption: TRUE
+
+# Text inkl. Formatierung (description)
+'Dotpulse.Base:TextMixin':
+  abstract: TRUE
+  properties:
+    description:
+      type: string
+      ui:
+        inlineEditable: TRUE
+        aloha:
+          placeholder: 'Enter text here'
+          alignment: []
+          autoparagraph: TRUE
+          format:
+            strong: TRUE
+            em: TRUE
+            sub: TRUE
+            sup: TRUE
+            p: TRUE
+            h3: TRUE
+            h4: TRUE
+            removeFormat: TRUE
+          table:
+            table: TRUE
+          list:
+            ol: TRUE
+            ul: TRUE
+          link:
+            a: TRUE
+          formatlesspaste:
+            button: TRUE
+            formatlessPasteOption: TRUE
+
+# Grössere Darstellung (Bei Buttons, etc)
+'Dotpulse.Base:LargeMixin':
+  abstract: TRUE
+  superTypes:
+    'Dotpulse.Base:SettingsMixin': TRUE
+  properties:
+    large:
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: 'Large Size'
+        reloadPageIfChanged: TRUE
+        inspector:
+          group: settings
+          position: 310
+
+# Ganze Seitenbreite nutzen (Bei Bildern, Buttons, etc.)
+'Dotpulse.Base:BleedMixin':
+  abstract: TRUE
+  superTypes:
+    'Dotpulse.Base:SettingsMixin': TRUE
+  properties:
+    bleed:
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: 'Use full width'
+        reloadPageIfChanged: TRUE
+        inspector:
+          group: settings
+          position: 340
+
+# shape: Bildkonturen
+'Dotpulse.Base:ImageStyleMixin':
+  abstract: TRUE
+  superTypes:
+    'Dotpulse.Base:SettingsMixin': TRUE
+  properties:
+    shape:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Shape of image'
+        reloadPageIfChanged: TRUE
+        inspector:
+          group: image
+          position: 500
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: Default
+            values:
+              '':
+                label: ''
+              'figure-corner':
+                label: 'No round corners'
+              'figure-rounded':
+                label: 'Round Corners'
+              'figure-circle':
+                label: 'Image in a circle'
+              'figure-thumbnail':
+                label: 'Image with border'
+
+# lightbox: Lightbox Mixin
+'Dotpulse.Base:LightboxMixin':
+  abstract: TRUE
+  superTypes:
+    'Dotpulse.Base:SettingsMixin': TRUE
+  properties:
+    lightbox:
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: 'Enlarge image with click'
+        inspector:
+          group: image
+          position: 1000
+
+# lead: Text als Lead anzeigen
+'Dotpulse.Base:LeadtextMixin':
+  abstract: TRUE
+  superTypes:
+    'Dotpulse.Base:SettingsMixin': TRUE
+  properties:
+    lead:
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: 'Lead copy'
+        reloadPageIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          position: 360
+
+# link: Link zu mehr Inhalt
+'Dotpulse.Base:MoreLinkMixin':
+  abstract: TRUE
+  superTypes:
+    'Dotpulse.Base:SettingsMixin': TRUE
+    'TYPO3.Neos.NodeTypes:LinkMixin': TRUE
+  properties:
+    link:
+      ui:
+        inspector:
+          group: settings

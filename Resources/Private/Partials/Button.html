@@ -1,0 +1,15 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<f:if condition="{neos:rendering.inBackend()}">
+	<f:then>
+		<f:security.ifAccess privilegeTarget="TYPO3.Neos:Backend.GeneralAccess">
+			<div{attributes -> f:format.raw()}>
+				<neos:contentElement.editable property="buttontext" tag="span" />
+			</div>
+		</f:security.ifAccess>
+	</f:then>
+	<f:else>
+		<f:if condition="{link}">
+			<a{attributes -> f:format.raw()}><span>{buttontext -> f:format.raw()}</span></a>
+		</f:if>
+	</f:else>
+</f:if>

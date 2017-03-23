@@ -1,0 +1,7 @@
+@if $grid-row {
+	#{$grid-selector}row {
+		@include clearfix;
+		margin-right: $grid-gutter-compensation;
+		margin-left: $grid-gutter-compensation;
+	}
+}

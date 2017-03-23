@@ -1,0 +1,89 @@
+TYPO3:
+  Flow:
+    i18n:
+      defaultLocale: de
+  Neos:
+    userInterface:
+      navigateComponent:
+        nodeTree:
+          loadingDepth: 1
+    typoScript:
+      autoInclude:
+        'Dotpulse.Base': TRUE
+    nodeTypes:
+      groups:
+        product:
+          position: 50
+          label: 'Products'
+        special:
+          position: 100
+          label: 'Special Content'
+
+Dotpulse:
+  Base:
+    Source:
+      GoogleTagManager:
+      GoogleAnalytics:
+      GoogleSiteVerification:
+      LazyLoading:
+      Favicon:
+      ThemeColor:
+      MSapplicationTileColor:
+      Name:
+      GoogleFonts:
+      VersionOfAssets: #add a value to prevent caching issues
+      General:
+        CSS:
+        HeadJavascript:
+        BodyJavascript:
+        jQuery: #head OR body
+      Backend:
+        CSS:
+        HeadJavascript:
+        BodyJavascript:
+        jQuery: #head OR body
+      Live:
+        CSS:
+        HeadJavascript:
+        BodyJavascript:
+        jQuery: #head OR body
+    Image:
+      marginClass: img-margin
+    Text:
+      leadClass: text-lead
+      marginClass: text-margin
+    Headline:
+      defaultClass: text-center
+      marginClass: headline-margin
+    TextWithImage:
+      defaultAlignment: right
+      marginClass: textimg-margin
+      leadClass: leadtextForChildren
+      containerClass: container
+      rowClass: row
+      firstlevel:
+        left:
+          text: 'text col-sm-8 col-sm-push-4 col-md-7'
+          image: 'image col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-6'
+        right:
+          text: 'text col-sm-8 col-md-7 col-md-offset-1'
+          image: 'image col-sm-4 col-md-3'
+        top:
+          text: text
+          image: image
+        bottom:
+          text: text
+          image: image
+      nested:
+        left:
+          text: 'text col-md-8 col-md-push-4'
+          image: 'image col-md-4 col-md-pull-8'
+        right:
+          text: 'text col-md-8'
+          image: 'image col-md-4'
+        top:
+          text: text
+          image: image
+        bottom:
+          text: text
+          image: image

@@ -1,0 +1,19 @@
+prototype(TypoScript:Template) {
+	// Setzte den Pfad zu den Partials
+	partialRootPath = 'resource://Dotpulse.Base/Private/Partials'
+
+	// Setze Pfad zu den Layouts
+	layoutRootPath = 'resource://Dotpulse.Theme/Private/Layouts'
+
+	// Site-Package-Key
+	sitePackage = ${node.context.currentSite.siteResourcesPackageKey}
+	@override.sitePackage = ${this.sitePackage}
+
+	// Variable mit Settings für Lazy Loading setzen
+	lazyLoading = ${Configuration.setting('Dotpulse.Base.Source.LazyLoading')}
+	@override.lazyLoading = ${this.lazyLoading}
+
+	// Variable Live und Lazy Loading
+	isLiveAndLazyLoading = ${node.context.live && lazyLoading ? true : false}
+	@override.isLiveAndLazyLoading = ${this.isLiveAndLazyLoading}
+}

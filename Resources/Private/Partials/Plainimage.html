@@ -1,0 +1,60 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace media=TYPO3\Media\ViewHelpers}
+{namespace base=Dotpulse\Base\ViewHelpers}
+<f:if condition="{image}">
+	<f:then>
+		<f:if condition="{isLiveAndLazyLoading}">
+			<f:then>
+				<f:if condition="{noRetina}">
+					<f:then>
+						<f:render section="NormalLazy" arguments="{_all}" />
+					</f:then>
+					<f:else>
+						<f:if condition="{maximumWidth} < 2560">
+							<f:then>
+								<f:render section="RetinaLazy" arguments="{_all}" />
+							</f:then>
+							<f:else>
+								<f:render section="RetinaLazy" arguments="{image:image, maximumWidth:1600, maximumHeight:1600, allowCropping:allowCropping, allowUpScaling:allowUpScaling, width:width, height:height, style:style, title:title, alternativeText:alternativeText}" />
+							</f:else>
+						</f:if>
+					</f:else>
+				</f:if>
+			</f:then>
+			<f:else>
+				<f:if condition="{noRetina}">
+					<f:then>
+						<f:render section="Normal" arguments="{_all}" />
+					</f:then>
+					<f:else>
+						<f:if condition="{maximumWidth} < 2560">
+							<f:then>
+								<f:render section="Retina" arguments="{_all}" />
+							</f:then>
+							<f:else>
+								<f:render section="Retina" arguments="{image:image, maximumWidth:1600, maximumHeight:1600, allowCropping:allowCropping, allowUpScaling:allowUpScaling, width:width, height:height, style:style, title:title, alternativeText:alternativeText}" />
+							</f:else>
+						</f:if>
+					</f:else>
+				</f:if>
+			</f:else>
+		</f:if>
+	</f:then>
+	<f:else>
+		<f:render partial="Dummyimage" arguments="{_all}" />
+	</f:else>
+</f:if>
+
+<f:section name="RetinaLazy">
+	<img{f:if(condition:style,then: ' style="{style}"')} src="{f:uri.resource(path: 'blank.gif', package: 'Dotpulse.Base')}" data-src="{media:uri.image(image:image, maximumWidth:maximumWidth, maximumHeight:maximumHeight, allowCropping:allowCropping, allowUpScaling:allowUpScaling, width:width, height:height)}" class="img-plain load" alt="{alternativeText}"{f:if(condition: title, then: '{f:if(condition: link, else: \' title="{title}"\')}')} data-src-retina="{media:uri.image(image:image, maximumWidth:'{base:math.retina(a:maximumWidth)}', maximumHeight:'{base:math.retina(a:maximumHeight)}', width:'{base:math.retina(a:width)}', height:'{base:math.retina(a:height)}', allowCropping:allowCropping, allowUpScaling:allowUpScaling)}" />
+</f:section>
+<f:section name="NormalLazy">
+	<img{f:if(condition:style,then: ' style="{style}"')} src="{f:uri.resource(path: 'blank.gif', package: 'Dotpulse.Base')}" data-src="{media:uri.image(image:image, maximumWidth:maximumWidth, maximumHeight:maximumHeight, allowCropping:allowCropping, allowUpScaling:allowUpScaling, width:width, height:height)}" class="img-plain load" alt="{alternativeText}"{f:if(condition: title, then: '{f:if(condition: link, else: \' title="{title}"\')}')} />
+</f:section>
+
+<f:section name="Retina">
+	<img{f:if(condition:style,then: ' style="{style}"')} src="{media:uri.image(image:image, maximumWidth:maximumWidth, maximumHeight:maximumHeight, allowCropping:allowCropping, allowUpScaling:allowUpScaling, width:width, height:height)}" class="img-plain" alt="{alternativeText}"{f:if(condition: title, then: '{f:if(condition: link, else: \' title="{title}"\')}')} data-src-retina="{media:uri.image(image:image, maximumWidth:'{base:math.retina(a:maximumWidth)}', maximumHeight:'{base:math.retina(a:maximumHeight)}', width:'{base:math.retina(a:width)}', height:'{base:math.retina(a:height)}', allowCropping:allowCropping, allowUpScaling:allowUpScaling)}" />
+</f:section>
+<f:section name="Normal">
+	<img{f:if(condition:style,then: ' style="{style}"')} src="{media:uri.image(image:image, maximumWidth:maximumWidth, maximumHeight:maximumHeight, width:width, height:heigh, allowCropping:allowCropping, allowUpScaling:allowUpScaling)}" class="img-plain" alt="{alternativeText}"{f:if(condition: title, then: '{f:if(condition: link, else: \' title="{title}"\')}')} />
+</f:section>

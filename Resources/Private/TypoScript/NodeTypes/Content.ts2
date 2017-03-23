@@ -1,0 +1,5 @@
+prototype(Neos:Content) {
+	// Container Variable
+	container = ${q(node).parent().parent().is('[instanceof TYPO3.Neos:Document]') ? 'container' : false}
+	@override.container = ${this.container}
+}

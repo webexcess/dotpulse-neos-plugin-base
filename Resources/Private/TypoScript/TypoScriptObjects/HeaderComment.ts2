@@ -1,0 +1,6 @@
+prototype(Neos:Page) {
+	headerDotpulseComment = TypoScript:Template {
+		@position = 'after headerComment'
+		templatePath = 'resource://Dotpulse.Base/Private/Templates/TypoScriptObjects/HeaderComment.html'
+	}
+}

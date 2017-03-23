@@ -1,0 +1,43 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<f:if condition="{container}">
+	<f:then>
+		<div class="container">
+			<f:render section="list" arguments="{_all}" />
+		</div>
+	</f:then>
+	<f:else>
+		<f:render section="list" arguments="{_all}" />
+	</f:else>
+</f:if>
+
+<f:section name="list">
+	<f:if condition="{assets}">
+		<f:then>
+			<ul{attributes -> f:format.raw()}>
+				<f:for each="{assets}" as="asset">
+					<li><a href="{f:uri.resource(resource: asset.resource)}" target="_blank">
+						<f:if condition="{asset.caption}">
+							<strong>
+						</f:if>
+						<f:if condition="{asset.title}">
+							<f:then>{asset.title}</f:then>
+							<f:else>{asset.resource.filename}</f:else>
+						</f:if>
+						<f:if condition="{asset.caption}">
+							</strong> {asset.caption}
+						</f:if>
+					</a></li>
+				</f:for>
+			</ul>
+		</f:then>
+		<f:else>
+			<f:security.ifAccess privilegeTarget="TYPO3.Neos:Backend.GeneralAccess">
+				<f:if condition="{neos:rendering.inBackend()}">
+					<ul{attributes -> f:format.raw()}>
+						<li><f:translate id="assetList.noFiles" package="Dotpulse.Base" /></li>
+					</ul>
+				</f:if>
+			</f:security.ifAccess>
+		</f:else>
+	</f:if>
+</f:section>

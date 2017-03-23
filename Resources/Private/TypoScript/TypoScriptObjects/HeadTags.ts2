@@ -1,0 +1,21 @@
+prototype(Neos:Page) {
+	head {
+		headTags = TypoScript:Template {
+			templatePath = 'resource://Dotpulse.Base/Private/Templates/TypoScriptObjects/HeadTags.html'
+			configuration = ${Configuration.setting('Dotpulse.Base.Source')}
+			VersionOfAssets = ${this.configuration.VersionOfAssets ? '?v=' + this.configuration.VersionOfAssets : ''}
+			General {
+				CSS = ${String.split(String.replace(this.configuration.General.CSS, ' ', ''), ',')}
+				HeadJavascript = ${String.split(String.replace(this.configuration.General.HeadJavascript, ' ', ''), ',')}
+			}
+			Backend {
+				CSS = ${String.split(String.replace(this.configuration.Backend.CSS, ' ', ''), ',')}
+				HeadJavascript = ${String.split(String.replace(this.configuration.Backend.HeadJavascript, ' ', ''), ',')}
+			}
+			Live {
+				CSS = ${String.split(String.replace(this.configuration.Live.CSS, ' ', ''), ',')}
+				HeadJavascript = ${String.split(String.replace(this.configuration.Live.HeadJavascript, ' ', ''), ',')}
+			}
+		}
+	}
+}

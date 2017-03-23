@@ -1,0 +1,105 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<f:if condition="{configuration.GoogleSiteVerification}">
+	<meta name="google-site-verification" content="{configuration.GoogleSiteVerification}" />
+</f:if>
+<f:if condition="{configuration.Favicon}">
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
+	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/manifest.json">
+	<f:if condition="{configuration.ThemeColor}">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="{configuration.ThemeColor}">
+		<meta name="theme-color" content="{configuration.ThemeColor}">
+	</f:if>
+	<link rel="shortcut icon" href="/favicon.ico">
+	<f:if condition="{configuration.Name}">
+		<meta name="apple-mobile-web-app-title" content="{configuration.Name}">
+		<meta name="application-name" content="{configuration.Name}">
+	</f:if>
+	<f:if condition="{configuration.MSapplicationTileColor}">
+		<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+		<meta name="msapplication-TileColor" content="{configuration.MSapplicationTileColor}">
+	</f:if>
+	<meta name="msapplication-config" content="/browserconfig.xml">
+</f:if>
+<script type="text/javascript">document.documentElement.className=document.documentElement.className.replace(/\bno-js\b/g,'js');window.isOldIE=false;</script>
+<f:if condition="{configuration.GoogleFonts}">
+	<link href='//fonts.googleapis.com/css?family={configuration.GoogleFonts}'>
+</f:if>
+<f:if condition="{configuration.General.CSS}">
+	<f:for each="{General.CSS}" as="File">
+		<link rel="stylesheet" href="{f:uri.resource(path: 'Styles/{File}.css', package: sitePackage)}{VersionOfAssets}">
+	</f:for>
+</f:if>
+<f:if condition="{neos:rendering.inBackend()}">
+	<f:then>
+		<f:if condition="{configuration.Backend.CSS}">
+			<f:for each="{Backend.CSS}" as="File">
+				<link rel="stylesheet" href="{f:uri.resource(path: 'Styles/{File}.css', package: sitePackage)}{VersionOfAssets}">
+			</f:for>
+		</f:if>
+	</f:then>
+	<f:else>
+		<f:if condition="{configuration.Live.CSS}">
+			<f:for each="{Live.CSS}" as="File">
+				<link rel="stylesheet" href="{f:uri.resource(path: 'Styles/{File}.css', package: sitePackage)}{VersionOfAssets}">
+			</f:for>
+		</f:if>
+	</f:else>
+</f:if>
+<!--[if lt IE 9]>
+	<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!--[if lte IE 9]>
+	<script>window.isOldIE=true;</script>
+<![endif]-->
+<f:if condition="{configuration.General.jQuery} == 'head'">
+	<f:render partial="jQuery" />
+</f:if>
+<f:if condition="{neos:rendering.inBackend()}">
+	<f:then>
+		<f:if condition="{configuration.Backend.jQuery} == 'head'">
+			<f:render partial="jQuery" />
+		</f:if>
+	</f:then>
+	<f:else>
+		<f:if condition="{configuration.Live.jQuery} == 'head'">
+			<f:render partial="jQuery" />
+		</f:if>
+	</f:else>
+</f:if>
+<f:if condition="{configuration.General.HeadJavascript}">
+	<f:for each="{General.HeadJavascript}" as="File">
+		<script src="{f:uri.resource(path: 'Scripts/{File}.js', package: sitePackage)}{VersionOfAssets}"></script>
+	</f:for>
+</f:if>
+<f:if condition="{neos:rendering.inBackend()}">
+	<f:then>
+		<f:if condition="{configuration.Backend.HeadJavascript}">
+			<f:for each="{Backend.HeadJavascript}" as="File">
+				<script src="{f:uri.resource(path: 'Scripts/{File}.js', package: sitePackage)}{VersionOfAssets}"></script>
+			</f:for>
+		</f:if>
+	</f:then>
+	<f:else>
+		<f:if condition="{configuration.Live.HeadJavascript}">
+			<f:for each="{Live.HeadJavascript}" as="File">
+				<script src="{f:uri.resource(path: 'Scripts/{File}.js', package: sitePackage)}{VersionOfAssets}"></script>
+			</f:for>
+		</f:if>
+	</f:else>
+</f:if>

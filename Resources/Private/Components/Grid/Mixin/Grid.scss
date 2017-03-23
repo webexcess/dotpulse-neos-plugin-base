@@ -1,0 +1,60 @@
+@mixin grid-col {
+	position: relative;
+	padding-right: $grid-half-gutter-width;
+	padding-left: $grid-half-gutter-width;
+	min-height: 1px;
+}
+
+@mixin grid-img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+	@if $grid-enable-flex {
+		flex: 0 0 auto;
+		align-self: center;
+		object-fit: scale-down;
+
+		&[src$=".svg"] {
+			object-fit: fill;
+			width: 100%;
+		}
+	}
+
+	&#{$grid-selector}full {
+		width: 100%;
+		@if $grid-enable-flex {
+			object-fit: contain;
+		}
+	}
+}
+
+
+
+@mixin grid-padding($breakpoints, $padding: $grid-gutter-padding) {
+	@if $breakpoints {
+		@each $breakpoint in $breakpoints {
+			@include media-breakpoint-up($breakpoint) {
+				#{$grid-selector}grid-#{$breakpoint}-padding {
+					padding-left: $padding;
+					padding-right: $padding;
+				}
+			}
+		}
+	}
+}
+
+@mixin grid-margin($breakpoints, $margin: $grid-gutter-margin) {
+	@if $breakpoints {
+		@each $breakpoint in $breakpoints {
+			@include media-breakpoint-up($breakpoint) {
+				#{$grid-selector}grid-#{$breakpoint}-margin {
+					margin-left: $margin;
+					margin-right: $margin;
+				}
+			}
+		}
+	}
+}

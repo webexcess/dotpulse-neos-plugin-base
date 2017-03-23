@@ -1,0 +1,100 @@
+# TODO: Labels translation
+# TODO: All-New Multicolumn Nodetype
+
+'TYPO3.Neos.NodeTypes:TwoColumn':
+  childNodes:
+    column0:
+      constraints: &columnConstraints
+        nodeTypes:
+          'TYPO3.Neos.NodeTypes:TwoColumn': TRUE
+          'TYPO3.Neos.NodeTypes:ThreeColumn': FALSE
+          'TYPO3.Neos.NodeTypes:FourColumn': FALSE
+    column1:
+      constraints: *columnConstraints
+  properties:
+    layout:
+      defaultValue: '6-6'
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '50-50': ~
+              '75-25': ~
+              '25-75': ~
+              '66-33': ~
+              '33-66': ~
+              '6-6':
+                label: '50% / 50%'
+              '8-4':
+                label: '66% / 33%'
+              '4-8':
+                label: '33% / 66%'
+              '3-9':
+                label: '25% / 75%'
+              '9-3':
+                label: '75% / 25%'
+              '2-10':
+                label: '16% / 84%'
+              '10-2':
+                label: '84% / 16%'
+
+'TYPO3.Neos.NodeTypes:ThreeColumn':
+  childNodes:
+    column0:
+      constraints: &columnConstraints
+        nodeTypes:
+          'TYPO3.Neos.NodeTypes:TwoColumn': FALSE
+          'TYPO3.Neos.NodeTypes:ThreeColumn': FALSE
+          'TYPO3.Neos.NodeTypes:FourColumn': FALSE
+    column1:
+      constraints: *columnConstraints
+    column2:
+      constraints: *columnConstraints
+  properties:
+    layout:
+      defaultValue: '4-4-4'
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '33-33-33': ~
+              '50-25-25': ~
+              '25-50-25': ~
+              '25-25-50': ~
+              '4-4-4':
+                label: '33% / 33% / 33%'
+              '6-3-3':
+                label: '50% / 25% / 33%'
+              '3-6-3':
+                label: '25% / 50% / 25%'
+              '3-3-6':
+                label: '25% / 25% / 50%'
+
+'TYPO3.Neos.NodeTypes:FourColumn':
+  childNodes:
+    column0:
+      constraints: &columnConstraints
+        nodeTypes:
+          'TYPO3.Neos.NodeTypes:TwoColumn': FALSE
+          'TYPO3.Neos.NodeTypes:ThreeColumn': FALSE
+          'TYPO3.Neos.NodeTypes:FourColumn': FALSE
+    column1:
+      constraints: *columnConstraints
+    column2:
+      constraints: *columnConstraints
+    column3:
+      constraints: *columnConstraints
+  properties:
+    layout:
+      defaultValue: '3-3-3-3'
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '25-25-25-25': ~
+              '3-3-3-3':
+                label: '25% / 25% / 25% / 25%'
+
+'TYPO3.Neos.NodeTypes:Image':
+  properties:
+    alignment: []

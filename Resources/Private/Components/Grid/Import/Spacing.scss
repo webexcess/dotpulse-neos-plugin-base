@@ -1,0 +1,47 @@
+@if $grid-spacing-margin-0 {
+	@include spacing-margin-0($grid-spacing-margin-0);
+}
+
+@if $grid-spacing-margin {
+	@include spacing-margin($grid-spacing-margin);
+}
+
+@if $grid-spacing-margin-sm {
+	@include spacing-margin-sm($grid-spacing-margin-sm);
+}
+
+@if $grid-spacing-margin-md {
+	@include spacing-margin-md($grid-spacing-margin-md);
+}
+
+@if $grid-spacing-margin-lg {
+	@include spacing-margin-lg($grid-spacing-margin-lg);
+}
+
+@if $grid-spacing-margin-xl {
+	@include spacing-margin-xl($grid-spacing-margin-xl);
+}
+
+@if $grid-spacing-padding-0 {
+	@include spacing-padding-0($grid-spacing-padding-0);
+}
+
+@if $grid-spacing-padding {
+	@include spacing-padding($grid-spacing-padding);
+}
+
+@if $grid-spacing-padding-sm {
+	@include spacing-padding-sm($grid-spacing-padding-sm);
+}
+
+@if $grid-spacing-padding-md {
+	@include spacing-padding-md($grid-spacing-padding-md);
+}
+
+@if $grid-spacing-padding-lg {
+	@include spacing-padding-lg($grid-spacing-padding-lg);
+}
+
+@if $grid-spacing-padding-xl {
+	@include spacing-padding-xl($grid-spacing-padding-xl);
+}

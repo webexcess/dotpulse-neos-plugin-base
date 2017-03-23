@@ -1,0 +1,3 @@
+prototype(NodeTypes:AssetList) {
+	templatePath = 'resource://Dotpulse.Base/Private/Templates/NodeTypes/AssetList.html'
+}

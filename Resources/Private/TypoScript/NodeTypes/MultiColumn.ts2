@@ -1,0 +1,26 @@
+prototype(NodeTypes:MultiColumn) {
+	templatePath = 'resource://Dotpulse.Base/Private/Templates/NodeTypes/MultiColumn.html'
+	attributes.class = TypoScript:RawArray {
+		row = ${q(node).parent().parent().is('[instanceof TYPO3.Neos:Document]') ? 'container' : 'row'}
+	}
+	columns.iterationName = 'multiColumnIteration'
+	container = ${q(node).parent().parent().is('[instanceof TYPO3.Neos:Document]')}
+}
+
+prototype(NodeTypes:MultiColumnItem) {
+	attributes.class = TypoScript:RawArray {
+		num = ${'col-num-' + (multiColumnIteration.index + 1)}
+		sm = ${'col-sm-' + String.split(q(node).parent().property('layout'), '-')[multiColumnIteration.index]}
+	}
+}
+
+prototype(Dotpulse.Base:FourColumnItem) < prototype(NodeTypes:MultiColumnItem) {
+	attributes.class {
+		sm = ${'col-sm-' + String.split(q(node).parent().property('layout'), '-')[multiColumnIteration.index] * 2}
+		md = ${'col-md-' + String.split(q(node).parent().property('layout'), '-')[multiColumnIteration.index]}
+	}
+}
+
+prototype(NodeTypes:FourColumn) {
+	columns.itemRenderer = Dotpulse.Base:FourColumnItem
+}

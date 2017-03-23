@@ -1,0 +1,32 @@
+// scss-lint:disable DeclarationOrder
+
+@if #{$classes-col} != '' {
+	#{$classes-col} {
+		@include grid-col;
+	}
+}
+
+@include col('xs', $grid-xs);
+@include col-offset('xs', $grid-xs-offset);
+@include col-push('xs', $grid-xs-push);
+@include col-pull('xs', $grid-xs-pull);
+
+@include col('sm', $grid-sm);
+@include col-offset('sm', $grid-sm-offset);
+@include col-push('sm', $grid-sm-push);
+@include col-pull('sm', $grid-sm-pull);
+
+@include col('md', $grid-md);
+@include col-offset('md', $grid-md-offset);
+@include col-push('md', $grid-md-push);
+@include col-pull('md', $grid-md-pull);
+
+@include col('lg', $grid-lg);
+@include col-offset('lg', $grid-lg-offset);
+@include col-push('lg', $grid-lg-push);
+@include col-pull('lg', $grid-lg-pull);
+
+@include col('xl', $grid-xl);
+@include col-offset('xl', $grid-xl-offset);
+@include col-push('xl', $grid-xl-push);
+@include col-pull('xl', $grid-xl-pull);

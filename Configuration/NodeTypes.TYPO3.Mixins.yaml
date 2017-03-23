@@ -1,0 +1,58 @@
+# TODO: Labels translation
+# Blindtext beim Text
+'TYPO3.Neos.NodeTypes:TextMixin':
+  properties:
+    text:
+      defaultValue: ''
+      ui:
+        aloha:
+          placeholder: '<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>'
+          format:
+            sub: TRUE
+            sup: TRUE
+            h1: FALSE
+            h4: TRUE
+          alignment: []
+          list:
+            ol: TRUE
+            ul: TRUE
+
+# Image alignment mixin
+'TYPO3.Neos.NodeTypes:ImageAlignmentMixin':
+  properties:
+    alignment:
+      ui:
+        label: 'Position'
+        inspector:
+          position: 90
+          editorOptions:
+            placeholder: 'Default'
+            values:
+              '':
+                label: ''
+              top:
+                label: 'Top'
+              left:
+                label: 'Left'
+              right:
+                label: 'Right'
+              bottom:
+                label: 'Bottom'
+              center: ~
+
+'TYPO3.Neos.NodeTypes:ImageCaptionMixin':
+  properties:
+    caption:
+      defaultValue: ''
+      ui:
+        aloha:
+          placeholder: '<p>Please enter caption</p>'
+
+# Title mixin
+'TYPO3.Neos.NodeTypes:TitleMixin':
+  properties:
+    title:
+      defaultValue: '<h1>Enter headline here</h1>'
+      ui:
+        aloha:
+          placeholder: '<h1>Enter headline here</h1>'
