@@ -17,16 +17,16 @@
 	// jscs: enable
 	// jshint ignore:end
 
-	// Setzen der Variable "$.cookiesAllowed".
-	// Bei jeder Funktion muss dies geprüft werden,
-	// da gerade Safari im privaten Modus Cookies unterbindet.
-
-	var noError = true;
+	// Falls Cookies nicht erlaubt sind, wird dir Funktion geleert und gibt nur noch ein false zurück
+	// Zusätzlich wird noch die Variable cookiesAllowed gesetzt.
+	window.cookiesAllowed = true;
 	try {
 		$.cookie('cookiesAllowed');
 	} catch (e) {
-		noError = false;
-	} finally {
-		$.cookiesAllowed = noError;
+		cookiesAllowed = false;
+		$.cookie = function() {
+			return false;
+		};
 	}
+
 })(jQuery);

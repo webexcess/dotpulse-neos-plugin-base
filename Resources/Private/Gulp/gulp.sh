@@ -95,6 +95,7 @@ if [[ "$1" == "npm" || "$1" == "-n" ]]; then
   rm -f npm-shrinkwrap.json
   npm install
   npm shrinkwrap
+  echo v4.1.0 > .nvmrc
   echo 'Module wurden installiert'
   echo '\n'
   exit
