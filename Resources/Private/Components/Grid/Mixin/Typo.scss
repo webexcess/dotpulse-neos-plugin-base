@@ -21,6 +21,7 @@
 }
 
 @mixin grabCursor {
+	// scss-lint:disable DuplicateProperty
 	cursor: move;
 	cursor: grab;
 
@@ -30,6 +31,7 @@
 }
 
 @mixin pointAndGrabCursor {
+	// scss-lint:disable DuplicateProperty
 	cursor: pointer;
 
 	&:active {

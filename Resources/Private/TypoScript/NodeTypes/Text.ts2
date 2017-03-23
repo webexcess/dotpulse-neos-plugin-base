@@ -1,8 +1,5 @@
 prototype(NodeTypes:Text) {
-	@context.configuration = ${Configuration.setting('Dotpulse.Base.Text')}
 	attributes.class = TypoScript:RawArray {
-		container = ${container ? 'container' : false}
-		lead = ${q(node).property('lead') ? configuration.leadClass : false}
-		margin = ${q(node).property('bigmargin') ? configuration.marginClass : false}
+		container = ${container ? baseConfiguration.Container.Text : false}
 	}
 }

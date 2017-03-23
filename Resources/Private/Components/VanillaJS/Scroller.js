@@ -1,14 +1,15 @@
 // Require Extend
-
+//= require ../Polyfill/RequestAnimationFrame.js
+//= require Extend.js
 (function() {
-	var doScroll = function(doc, position, options) {
+	var doScroll = function(position, options) {
 		var start = Date.now();
-		var scrollTop = doc.scrollTop;
+		var scrollTop = window.pageYOffset;
 		var scroll = function(timestamp) {
 			var currentTime = Date.now();
 			var time = Math.min(1, ((currentTime - start) / options.duration));
 			var easedT = options.easing(time);
-			doc.scrollTop = (easedT * (position - scrollTop)) + scrollTop;
+			window.scrollTo(0, (easedT * (position - scrollTop)) + scrollTop);
 			if (time < 1) {
 				requestAnimationFrame(scroll);
 			} else if (typeof options.callback === 'function') {
@@ -27,8 +28,7 @@
 	};
 
 	window.scroller = function(id, opt) {
-		var doc = scrollDocument ? scrollDocument : document.documentElement.scrollTop ? document.documentElement : document.body;
-		var scrollTop = doc.scrollTop;
+		var scrollTop = window.pageYOffset;
 		var options = scroller.defaults;
 		var position = 0;
 		var height = 0;
@@ -46,7 +46,7 @@
 
 		if (typeof id === 'object') {
 			try {
-				position = id.getBoundingClientRect().top + scrollTop;
+				position = Math.round(id.getBoundingClientRect().top + scrollTop);
 			} catch (error) {
 				position = 0;
 			}
@@ -55,7 +55,7 @@
 		position += options.offset;
 
 		if (!options.animate) {
-			doc.scrollTop = position;
+			window.scrollTo(0, position);
 			return;
 		}
 		height = position < scrollTop ? scrollTop - position : position - scrollTop;
@@ -64,7 +64,7 @@
 		time = Math.max(time, options.minRange);
 		options.duration = time;
 
-		doScroll(doc, position, options);
+		doScroll(position, options);
 	};
 
 	scroller.defaults = {

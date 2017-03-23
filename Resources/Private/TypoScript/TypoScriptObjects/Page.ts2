@@ -16,16 +16,14 @@ prototype(Neos:Page) {
 		data-neos-node = ${node.contextPath}
 		id = ${q(site).get(0) == q(node).get(0) ? 'level-index' : 'level-' + q(node).parents().count() + '-' + q(node).property('uriPathSegment')}
 		class = TypoScript:RawArray {
-			subpages = ${q(node).parents().is() && q(node).children('[instanceof TYPO3.Neos:Document]').filter('[_hiddenInIndex=false]').is() ? 'has-subpages' : ''}
+			subpages = ${q(node).parents().is() && q(node).children('[instanceof TYPO3.Neos:Document]').filter('[_hiddenInIndex=false]').is() ? 'has-subpages' : false}
 			level = ${'level-' + q(node).parents().count()}
-			meta = ${q(node).parent().get(0) == q(site).children('meta').get(0) ? 'metaActive' : ''}
-			rawMode = ${rawContent ? 'neos-raw-content-mode' : false}
 		}
 	}
 
 	body {
-		configuration = ${Configuration.setting('Dotpulse.Base.Source')}
-		@context.configuration = ${this.configuration}
+		baseConfiguration = ${Configuration.setting('Dotpulse.Base')}
+		@context.baseConfiguration = ${this.baseConfiguration}
 		partialRootPath = 'resource://Dotpulse.Base/Private/Partials'
 
 		mainAttributes = TypoScript:Attributes {
@@ -37,39 +35,39 @@ prototype(Neos:Page) {
 
 		GoogleTagManager = TypoScript:Template {
 			templatePath = 'resource://Dotpulse.Base/Private/Partials/GoogleTagManager.html'
-			GoogleTagManager = ${configuration.GoogleTagManager}
+			GoogleTagManager = ${baseConfiguration.Source.GoogleTagManager}
 			@if.isLive = ${node.context.live}
-			@if.isNotBlank = ${configuration.GoogleTagManager ? true : false}
+			@if.isNotBlank = ${!String.isBlank(this.GoogleTagManager)}
 		}
 		@process.PrependGoogleTagManager = ${this.GoogleTagManager + value}
 
 		GoogleAnalytics  = TypoScript:Template {
 			templatePath = 'resource://Dotpulse.Base/Private/Partials/GoogleAnalytics.html'
-			GoogleAnalytics = ${configuration.GoogleAnalytics}
-			SendPageview = ${configuration.GoogleAnalyticsSendPageview}
+			GoogleAnalytics = ${baseConfiguration.Source.GoogleAnalytics}
+			SendPageview = ${baseConfiguration.Source.GoogleAnalyticsSendPageview}
 			@if.isLive = ${node.context.live}
 			@if.isNotBlank = ${!String.isBlank(this.GoogleAnalytics)}
 		}
 		@process.PrependGoogleAnalytics = ${this.GoogleAnalytics + value}
-		@context.VersionOfAssets = ${this.configuration.VersionOfAssets ? '?v=' + this.configuration.VersionOfAssets : ''}
+		@context.VersionOfAssets = ${baseConfiguration.Source.VersionOfAssets ? '?v=' + baseConfiguration.Source.VersionOfAssets : ''}
 		javascripts {
 			jQuery = Base:jQuery
 			General = Base:JSCollection {
-				collection = ${String.split(configuration.General.BodyJavascript, ',')}
+				collection = ${String.split(baseConfiguration.Source.General.BodyJavascript, ',')}
 				@if.isNotRaw = ${rawContent ? false : true}
 			}
 			Backend = Base:JSCollection {
-				collection = ${String.split(configuration.Backend.BodyJavascript, ',')}
+				collection = ${String.split(baseConfiguration.Source.Backend.BodyJavascript, ',')}
 				@if.isBackend = ${node.context.inBackend}
 				@if.isNotRaw = ${rawContent ? false : true}
 			}
 			Live = Base:JSCollection {
-				collection = ${String.split(configuration.Live.BodyJavascript, ',')}
+				collection = ${String.split(baseConfiguration.Source.Live.BodyJavascript, ',')}
 				@if.isLive = ${!node.context.inBackend}
 				@if.isNotRaw = ${rawContent ? false : true}
 			}
 			RawContent = Base:JSCollection {
-				collection = ${String.split(configuration.RawContent.BodyJavascript, ',')}
+				collection = ${String.split(baseConfiguration.Source.RawContent.BodyJavascript, ',')}
 				@if.isRaw = ${rawContent}
 			}
 		}

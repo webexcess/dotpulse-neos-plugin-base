@@ -1,5 +1,5 @@
 prototype(Neos:Content) {
 	// Container Variable
-	container = ${q(node).parent().parent().is('[instanceof TYPO3.Neos:Document]') ? 'container' : false}
-	@context.container = ${this.container}
+	@context.container = ${q(node).parent().parent().is(baseConfiguration.Container.Filter) ? baseConfiguration.Container.General : false}
+	container = ${container}
 }

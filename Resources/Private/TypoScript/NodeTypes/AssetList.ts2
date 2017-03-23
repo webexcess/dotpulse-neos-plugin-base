@@ -1,7 +1,9 @@
 prototype(NodeTypes:AssetList) {
 	templatePath = 'resource://Dotpulse.Base/Private/Templates/NodeTypes/AssetList.html'
 	title = ${q(node).property('title')}
+	titleTag = ${baseConfiguration.AssetList.titleTag}
 	renderTitle = ${node.context.inBackend || this.title}
+	container = ${container ? baseConfiguration.Container.AssetList : false}
 
 	// Entfernt Dateiendung
 	filename = ${String.replace(filename, '.' + extension, '')}

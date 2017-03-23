@@ -2,7 +2,7 @@ window.getCookie = window.setCookie = function() {
 	return false;
 };
 
-window.deleteCookie = function() {
+window.deleteCookie = function(name) {
 	return setCookie(name, '', -1);
 };
 

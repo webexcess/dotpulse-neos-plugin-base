@@ -1,8 +1,5 @@
 prototype(NodeTypes:Headline) {
-	@context.configuration = ${Configuration.setting('Dotpulse.Base.Headline')}
 	attributes.class = TypoScript:RawArray {
-		container = ${container ? 'container' : false}
-		defaultClass = ${configuration.defaultClass}
-		margin = ${q(node).property('bigmargin') ? configuration.marginClass : false}
+		container = ${container ? baseConfiguration.Container.Headline : false}
 	}
 }

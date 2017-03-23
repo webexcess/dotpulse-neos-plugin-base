@@ -8,19 +8,20 @@ var cssnano   = require('cssnano'); // https://github.com/ben-eb/cssnano
 // Post SCSS
 var pc = config.styles.postcss;
 var postScss = [
-	require('lost'),																	// https://github.com/peterramsing/lost
-	require('postcss-short'),													// https://github.com/jonathantneal/postcss-short
-	require('postcss-center'),												// https://github.com/jedmao/postcss-center
-	require('rucksack-css')(pc.rucksack),							// http://simplaio.github.io/rucksack/
-	require('postcss-flexbox'),												// https://github.com/archana-s/postcss-flexbox
-	require('postcss-assets')(pc.assets),							// https://github.com/borodean/postcss-assets
-	require('postcss-svg-fallback')(pc.svgFallback),	// https://github.com/justim/postcss-svg-fallback
-	require('postcss-flexibility'),										// https://github.com/10up/flexibility
-	require('pleeease-filters'),											// https://github.com/iamvdo/pleeease-filters
-	require('postcss-selector-matches'),							// https://github.com/postcss/postcss-selector-matches
-	require('postcss-selector-not'),									// https://github.com/postcss/postcss-selector-not
-	require('postcss-pseudoelements'),								// https://github.com/axa-ch/postcss-pseudoelements
-	require('css-mqpacker')(pc.mqpacker)							// https://github.com/hail2u/node-css-mqpacker
+	require('lost'),                                   // https://github.com/peterramsing/lost
+	require('postcss-short'),                          // https://github.com/jonathantneal/postcss-short
+	require('postcss-center'),                         // https://github.com/jedmao/postcss-center
+	require('rucksack-css')(pc.rucksack),              // http://simplaio.github.io/rucksack/
+	require('postcss-flexbox'),                        // https://github.com/archana-s/postcss-flexbox
+	require('postcss-assets')(pc.assets),              // https://github.com/borodean/postcss-assets
+	require('postcss-svg-fallback')(pc.svgFallback),   // https://github.com/justim/postcss-svg-fallback
+	require('postcss-flexibility'),                    // https://github.com/10up/flexibility
+	require('pleeease-filters'),                       // https://github.com/iamvdo/pleeease-filters
+	require('postcss-selector-matches'),               // https://github.com/postcss/postcss-selector-matches
+	require('postcss-selector-not'),                   // https://github.com/postcss/postcss-selector-not
+	require('postcss-pseudoelements'),                 // https://github.com/axa-ch/postcss-pseudoelements
+	require('css-mqpacker')(pc.mqpacker),              // https://github.com/hail2u/node-css-mqpacker
+	require('postcss-fixes')(pc.fixes)                 // https://github.com/MattDiMu/postcss-fixes
 ];
 
 function cssRender() {

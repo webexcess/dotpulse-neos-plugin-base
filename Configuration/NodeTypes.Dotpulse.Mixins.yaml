@@ -9,22 +9,6 @@
           icon: icon-cog
           position: 50
 
-# bigmargin: Grosser Abstand
-'Dotpulse.Base:MarginMixin':
-  abstract: TRUE
-  superTypes:
-    'Dotpulse.Base:SettingsMixin': TRUE
-  properties:
-    bigmargin:
-      type: boolean
-      defaultValue: FALSE
-      ui:
-        label: i18n
-        reloadIfChanged: TRUE
-        inspector:
-          group: settings
-          position: 350
-
 # Text ohne Formatierung
 'Dotpulse.Base:FormatlessTextMixin':
   abstract: TRUE
@@ -76,22 +60,6 @@
             button: TRUE
             formatlessPasteOption: TRUE
 
-# Grössere Darstellung (Bei Buttons, etc)
-'Dotpulse.Base:LargeMixin':
-  abstract: TRUE
-  superTypes:
-    'Dotpulse.Base:SettingsMixin': TRUE
-  properties:
-    large:
-      type: boolean
-      defaultValue: FALSE
-      ui:
-        label: i18n
-        reloadIfChanged: TRUE
-        inspector:
-          group: settings
-          position: 310
-
 # Ganze Seitenbreite nutzen (Bei Bildern, Buttons, etc.)
 'Dotpulse.Base:BleedMixin':
   abstract: TRUE
@@ -107,6 +75,23 @@
         inspector:
           group: settings
           position: 340
+
+'Dotpulse.Base:MaximumWidthMixin':
+  abstract: TRUE
+  properties:
+    maximumWidth:
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: image
+          position: 330
+          editorOptions:
+            placeholder: Pixel
+      validation:
+        'TYPO3.Neos/Validation/IntegerValidator': []
+
 
 # shape: Bildkonturen
 'Dotpulse.Base:ImageStyleMixin':
@@ -140,8 +125,6 @@
 # lightbox: Lightbox Mixin
 'Dotpulse.Base:LightboxMixin':
   abstract: TRUE
-  superTypes:
-    'Dotpulse.Base:SettingsMixin': TRUE
   properties:
     lightbox:
       type: boolean
@@ -151,31 +134,3 @@
         inspector:
           group: image
           position: 1000
-
-# lead: Text als Lead anzeigen
-'Dotpulse.Base:LeadtextMixin':
-  abstract: TRUE
-  superTypes:
-    'Dotpulse.Base:SettingsMixin': TRUE
-  properties:
-    lead:
-      type: boolean
-      defaultValue: FALSE
-      ui:
-        label: i18n
-        reloadIfChanged: TRUE
-        inspector:
-          group: settings
-          position: 360
-
-# link: Link zu mehr Inhalt
-'Dotpulse.Base:MoreLinkMixin':
-  abstract: TRUE
-  superTypes:
-    'Dotpulse.Base:SettingsMixin': TRUE
-    'TYPO3.Neos.NodeTypes:LinkMixin': TRUE
-  properties:
-    link:
-      ui:
-        inspector:
-          group: settings

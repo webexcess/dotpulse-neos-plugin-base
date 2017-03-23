@@ -4,13 +4,13 @@ ButtonContextBar = {
 			var addButton = function() {
 				var button = document.createElement('button');
 				button.className = 'neos-button ' + options.className;
-				button.attr('type', 'button');
-				button.attr('title', options.title);
+				button.setAttribute('type', 'button');
+				button.setAttribute('title', options.title);
 				button.innerHTML = '<i class="' + options.icon + '"></i>';
-				$.first('#neos-context-bar > .neos-right').insertBefore(button, element.firstChild);
+				document.querySelector('#neos-context-bar > .neos-right').insertBefore(button, element.firstChild);
 			};
 
-			if ($has.id('neos-context-bar')) {
+			if (document.getElementById('neos-context-bar')) {
 				addButton();
 			} else {
 				NeosEvents('ContentModuleLoaded', addButton);
@@ -19,8 +19,8 @@ ButtonContextBar = {
 	},
 	remove: function(className) {
 		if (typeof className === 'string') {
-			var parent = $.first('#neos-context-bar>.neos-right');
-			var button = $.first('#neos-context-bar>.neos-right>.' + className);
+			var parent = document.querySelector('#neos-context-bar>.neos-right');
+			var button = document.querySelector('#neos-context-bar>.neos-right>.' + className);
 			if (button) {
 				parent.removeChild(button);
 			}

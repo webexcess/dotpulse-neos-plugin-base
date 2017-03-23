@@ -155,6 +155,9 @@ module.exports = {
 				discardComments: {
 					removeAll: true
 				}
+			},
+			fixes: {
+				mode: 'safe'
 			}
 		},
 		cssbeautifyOptions: {

@@ -1,26 +1,25 @@
 prototype(NodeTypes:TextWithImage) {
 	templatePath = 'resource://Dotpulse.Base/Private/Templates/NodeTypes/TextWithImage.html'
-	configuration = ${Configuration.setting('Dotpulse.Base')}
-	@context.configuration = ${this.configuration}
-	alignment = ${q(node).property('alignment') ? q(node).property('alignment') : this.configuration.TextWithImage.defaultAlignment}
+
+	alignmentProperty = ${q(node).property('alignment') ? q(node).property('alignment') : baseConfiguration.TextWithImage.defaultAlignment}
+	alignment = ${(baseConfiguration.TextWithImage.style == 'Float' && (this.alignmentProperty == 'left' || this.alignmentProperty == 'right')) ?  'float-' + this.alignmentProperty : this.alignmentProperty}
 	@context.alignment = ${this.alignment}
 
-	needRow = ${alignment == 'left' || alignment == 'right' ? true : false}
-	colClasses = ${q(node).parent().parent().is('[instanceof TYPO3.Neos:Document]') ? configuration.TextWithImage.firstlevel[alignment] : configuration.TextWithImage.nested[alignment]}
+	imageFirst = ${(this.alignment == 'top' || this.alignment == 'float-left' || this.alignment == 'float-right') ? true : false}
+	maximumWidth = ${baseConfiguration.TextWithImage.maximumWidth}
 
-	alternativeText = ${q(node).property('alternativeText') ? q(node).property('alternativeText') : q(node).property('image').caption}
+	needRow = ${(this.alignment == 'left' || this.alignment == 'right') && this.container ? true : false}
+	colClasses = ${q(node).parent().parent().is(baseConfiguration.Container.Filter) ? baseConfiguration.TextWithImage.firstlevel[this.alignment] : baseConfiguration.TextWithImage.nested[this.alignment]}
 
 	attributes.class = TypoScript:RawArray {
-		container = ${container ? configuration.TextWithImage.containerClass : alignment == 'left' || alignment == 'right' ? configuration.TextWithImage.rowClass : false}
-		lead = ${q(node).property('lead') ? configuration.TextWithImage.leadClass : false}
-		margin = ${q(node).property('bigmargin') ? configuration.TextWithImage.marginClass : false}
+		container = ${container ? baseConfiguration.Container.TextWithImage : false}
+		row = ${container ? false : alignment == 'left' || alignment == 'right' ? baseConfiguration.TextWithImage.rowClass : false}
 		alignment = ${'pos-' + alignment}
 	}
 
 	attributesRow = TypoScript:Attributes {
 		class = TypoScript:RawArray {
-			row = ${configuration.TextWithImage.rowClass}
+			row = ${baseConfiguration.TextWithImage.rowClass}
 		}
 	}
-
 }

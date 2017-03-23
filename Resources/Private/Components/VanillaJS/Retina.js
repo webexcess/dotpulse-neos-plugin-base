@@ -1,9 +1,13 @@
-// Needs Selectors, Each, Attr, domReady
+//= require Selectors.js
+//= require ClassManipulation.js
+//= require EachElement.js
+//= require Attr.js
+//= require DomReady.js
 (function() {
 	if (feature.retina) {
 		onReady.Retina = function() {
-			$('img').each(function() {
-				if (!this.hasClass('load')) {
+			$('img').eachElement(function() {
+				if (!this.classHas('load')) {
 					var src = this.attr('data-src-retina');
 					if (src) {
 						this.attr('src', src).removeAttr('data-src-retina');

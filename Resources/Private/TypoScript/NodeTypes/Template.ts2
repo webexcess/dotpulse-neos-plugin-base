@@ -1,4 +1,6 @@
 prototype(TypoScript:Template) {
+	@context.baseConfiguration = ${Configuration.setting('Dotpulse.Base')}
+
 	// Setzte den Pfad zu den Partials
 	partialRootPath = 'resource://Dotpulse.Base/Private/Partials'
 
@@ -10,7 +12,7 @@ prototype(TypoScript:Template) {
 	@context.sitePackage = ${this.sitePackage}
 
 	// Variable mit Settings für Lazy Loading setzen
-	lazyLoading = ${Configuration.setting('Dotpulse.Base.Source.LazyLoading')}
+	lazyLoading = ${baseConfiguration.Source.LazyLoading}
 	@context.lazyLoading = ${this.lazyLoading}
 
 	// Variable Live und Lazy Loading
@@ -20,7 +22,7 @@ prototype(TypoScript:Template) {
 	@process.cleanHTML {
 		expression = ${String.pregReplace(value, '%(?>[^\S ]\s*| \s{2,})(?=[^<]*+(?:<(?!/?(?:textarea|pre|script)\b)[^<]*+)*+(?:<(?>textarea|pre|script)\b| \z))%Six', ' ')}
 		@position = 'end'
-		@if.isEnabled = ${Configuration.setting('Dotpulse.Base.Source.cleanHTML') && !node.context.inBackend}
+		@if.isEnabled = ${baseConfiguration.Source.cleanHTML && !node.context.inBackend}
 	}
 }
 

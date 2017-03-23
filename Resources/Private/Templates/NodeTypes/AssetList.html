@@ -2,7 +2,7 @@
 {namespace ts=TYPO3\TypoScript\ViewHelpers}
 <f:if condition="{container}">
 	<f:then>
-		<div class="container">
+		<div class="{container}">
 			<f:render section="list" arguments="{_all}" />
 		</div>
 	</f:then>
@@ -13,7 +13,7 @@
 
 <f:section name="list">
 	<f:if condition="{renderTitle}">
-		<neos:contentElement.editable property="title" tag="div" />
+		<neos:contentElement.editable property="title" tag="{titleTag}" />
 	</f:if>
 	<f:if condition="{assets}">
 		<f:then>

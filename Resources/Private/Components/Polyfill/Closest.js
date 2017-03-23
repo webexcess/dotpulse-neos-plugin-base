@@ -1,6 +1,7 @@
 // jshint ignore:start
 // jscs: disable
 // closest polyfill
+//= require Matches.js
 this.Element && function(ElementPrototype) {
 	ElementPrototype.closest = ElementPrototype.closest ||
 	function(selector) {

@@ -48,8 +48,8 @@ Dotpulse:
       cleanHTML: TRUE
       loadCSSAsynchron: FALSE
       jQuery:
-        old: '1.12.3'
-        new: '2.2.3'
+        old: '1.12.4'
+        new: '2.2.4'
         printInHead: TRUE
       General:
         CSS: #Filenames
@@ -71,37 +71,47 @@ Dotpulse:
         HeadJavascript: #Filenames
         BodyJavascript: #Filenames
         jQuery: #head OR body
+    Container:
+      Filter: '[instanceof TYPO3.Neos:Document]'
+      General: container
+      AssetList: container
+      Text: container
+      TextWithImage: container
+      Image: container
+      Headline: container
+    AssetList:
+      titleTag: h3
     Image:
-      marginClass: img-margin
-    Text:
-      leadClass: text-lead
-      marginClass: text-margin
-    Headline:
-      defaultClass: text-xs-center
-      marginClass: headline-margin
+      maximumWidth: 2560
+      openOriginalImageInLightbox: FALSE
     TextWithImage:
+      maximumWidth: 2560
       defaultAlignment: right
-      marginClass: textimg-margin
-      leadClass: text-lead
-      containerClass: container
+      style: Row # Row or Float
       rowClass: row
       firstlevel:
         left:
-          text: 'text col-sm-8 col-sm-push-4 col-md-7'
-          image: 'image col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-6'
+          text: 'text col-sm-8 col-sm-last'
+          image: 'image col-sm-4 col-sm-first'
         right:
-          text: 'text col-sm-8 col-md-7 col-md-offset-1'
-          image: 'image col-sm-4 col-md-3'
+          text: 'text col-sm-8'
+          image: 'image col-sm-4'
         top:
           text: text
           image: image
         bottom:
           text: text
           image: image
+        float-left:
+          text: text
+          image: 'float-image-left image'
+        float-right:
+          text: text
+          image: 'float-image-right image'
       nested:
         left:
-          text: 'text col-md-8 col-md-push-4'
-          image: 'image col-md-4 col-md-pull-8'
+          text: 'text col-md-8 col-md-last'
+          image: 'image col-md-4 col-md-first'
         right:
           text: 'text col-md-8'
           image: 'image col-md-4'
@@ -111,3 +121,9 @@ Dotpulse:
         bottom:
           text: text
           image: image
+        float-left:
+          text: text
+          image: 'float-image-left image'
+        float-right:
+          text: text
+          image: 'float-image-right image'

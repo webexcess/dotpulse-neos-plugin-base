@@ -13,14 +13,19 @@ feature.retina = (function() {
 
 // Add Oldie
 feature.oldie = (function() {
-	var test = isIE && isIE < 10 ? 'oldie' : false;
-	return !!test;
+	return isIE && isIE < 10;
 })();
 
 // Add Mobile
 feature.mobile = (function() {
 	var test = (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
 	return !!test;
+})();
+
+feature.hasHistory = (function() {
+	var referrer = document.referrer;
+	var host = referrer ? referrer.split('/')[2] : '';
+	return (host == location.host && history.length > 1);
 })();
 
 feature.testAll();

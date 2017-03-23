@@ -1,15 +1,26 @@
 prototype(NodeTypes:Image) {
-	@context.configuration = ${Configuration.setting('Dotpulse.Base')}
-	attributes.class = TypoScript:RawArray {
-		container = ${container && q(node).property('bleed') != true ? 'container' : false}
-		margin = ${q(node).property('bigmargin') ? configuration.Image.marginClass : false}
+	attributes {
+		class = TypoScript:RawArray {
+			bleed = ${q(node).property('bleed') ? 'typo3-neos-nodetypes-image-bleed' : false}
+			container = ${container && q(node).property('bleed') != true ? baseConfiguration.Container.Image : false}
+		}
+		style = ${q(node).property('maximumWidth') ? 'max-width:' + q(node).property('maximumWidth') + 'px;' : false}
 	}
+
+	maximumWidth = ${q(node).property('maximumWidth') ? q(node).property('maximumWidth') : baseConfiguration.Image.maximumWidth}
+
 	alternativeText = ${q(node).property('alternativeText') ? q(node).property('alternativeText') : q(node).property('image').caption}
 	imageClassName = TypoScript:Array {
-		shape = ${q(node).property('shape')}
-		lazyLoad = ${configuration.Source.LazyLoading ? 'load' : false}
+		shape = ${q(node).property('shape') ? q(node).property('shape') : false}
+		lazyLoad = ${baseConfiguration.Source.LazyLoading ? 'load' : false}
 	}
+
 	link.@process.convertUris = Neos:ConvertUris {
 		forceConversion = true
 	}
+
+	image = ${q(node).property('image')}
+	lightbox = ${q(node).property('lightbox') && this.image}
+	@if.hasImage = ${this.image || node.context.inBackend}
+	lighboxImage = ${(baseConfiguration.Image.openOriginalImageInLightbox && this.image.originalAsset) ? this.image.originalAsset : this.image}
 }

@@ -27,20 +27,20 @@ $has.id = function(selector, context) {
 };
 
 $has.class = function(selector, context) {
-	return $.class(selector, context) ? true : false;
+	return $.class(selector, context).length ? true : false;
 };
 
-Element.prototype.find = function(selector) {
+Element.prototype.findElement = function(selector) {
 	return $(selector, this);
 };
 
-Object.defineProperty(Object.prototype, 'first', {
+Object.defineProperty(Object.prototype, 'firstElement', {
 	value: function() {
 		return this[0];
 	}
 });
 
-Object.defineProperty(Object.prototype, 'last', {
+Object.defineProperty(Object.prototype, 'lastElement', {
 	value: function() {
 		return this[this.length - 1];
 	}

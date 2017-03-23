@@ -37,6 +37,7 @@
               bottom:
                 label: 'Dotpulse.Base:NodeTypes.ImageAlignmentMixin:properties.alignment.selectBoxEditor.values.bottom'
               center: ~
+              '': ~
 
 'TYPO3.Neos.NodeTypes:ImageCaptionMixin':
   properties:

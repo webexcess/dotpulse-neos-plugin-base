@@ -1,15 +1,8 @@
 {namespace neos=TYPO3\Neos\ViewHelpers}
 <div{attributes -> f:format.raw()}>
-	<f:if condition="{container}">
-		<f:then>
-			<f:if condition="{needRow}"><div{attributesRow -> f:format.raw()}></f:if>
-				<f:render section="Item" arguments="{_all}" />
-			<f:if condition="{needRow}"></div></f:if>
-		</f:then>
-		<f:else>
-			<f:render section="Item" arguments="{_all}" />
-		</f:else>
-	</f:if>
+	<f:if condition="{needRow}"><div{attributesRow -> f:format.raw()}></f:if>
+		<f:render section="Item" arguments="{_all}" />
+	<f:if condition="{needRow}"></div></f:if>
 </div>
 
 <f:section name="Image">
@@ -23,7 +16,7 @@
 </f:section>
 
 <f:section name="Item">
-	<f:if condition="{alignment} == 'top'">
+	<f:if condition="{imageFirst}">
 		<f:then>
 			<f:render section="Image" arguments="{_all}" />
 			<f:render section="Text" arguments="{_all}" />

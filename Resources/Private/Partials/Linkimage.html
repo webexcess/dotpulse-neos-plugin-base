@@ -17,7 +17,7 @@
 			<f:else>
 				<f:if condition="{lightbox}">
 					<f:then>
-						<a href="{media:uri.image(image:'{f:if(condition:image.originalAsset,then:image.originalAsset,else:image)}')}"{f:if(condition:title,then: ' title="{title}"')} class="img-link lightbox" data-size="{f:if(condition:image.originalAsset,then:image.originalAsset.width,else:image.width)}x{f:if(condition:image.originalAsset,then:image.originalAsset.height,else:image.height)}">
+						<a href="{media:uri.image(image:lighboxImage)}"{f:if(condition:title,then: ' title="{title}"')} class="img-link lightbox" data-size="{lighboxImage.width}x{lighboxImage.height}">
 							<f:render partial="Plainimage" arguments="{_all}" />
 						</a>
 					</f:then>

@@ -1,28 +1,27 @@
-// Require Polyfill Matches
-
+//= require ../Polyfill/Matches.js
 if ('classList' in document.documentElement) {
-	Element.prototype.hasClass = function(className) {
+	Element.prototype.classHas = function(className) {
 		return this.classList.contains(className);
 	};
-	Element.prototype.addClass = function(className) {
+	Element.prototype.classAdd = function(className) {
 		this.classList.add(className);
 		return this;
 	};
-	Element.prototype.removeClass = function(className) {
+	Element.prototype.classRemove = function(className) {
 		this.classList.remove(className);
 		return this;
 	};
 } else {
-	Element.prototype.hasClass = function(className) {
+	Element.prototype.classHas = function(className) {
 		return new RegExp('\\b' +  className + '\\b').test(this.className);
 	};
-	Element.prototype.addClass = function(className) {
-		if (!this.hasClass(className)) {
+	Element.prototype.classAdd = function(className) {
+		if (!this.classHas(className)) {
 			this.className += ' ' + className;
 		}
 		return this;
 	};
-	Element.prototype.removeClass = function(className) {
+	Element.prototype.classRemove = function(className) {
 		var regex = new RegExp('\\b' + className + '\\b', 'g');
 		var classes = this.className;
 		this.className = classes.replace(regex, '').replace(/\s\s*/g, ' ').replace(/^\s\s*/, '').replace(/\s\s*$/, '');
@@ -30,14 +29,14 @@ if ('classList' in document.documentElement) {
 	};
 }
 
-Element.prototype.toggleClass = function(className, boolean) {
+Element.prototype.classToggle = function(className, boolean) {
 	if (typeof boolean == 'undefined') {
-		boolean = !this.hasClass(className);
+		boolean = !this.classHas(className);
 	}
 	if (boolean) {
-		this.addClass(className);
+		this.classAdd(className);
 	} else {
-		this.removeClass(className);
+		this.classRemove(className);
 	}
 	return this;
 };
@@ -46,31 +45,31 @@ Element.prototype.is = function(selector) {
 	return this.matches(selector);
 };
 
-Object.defineProperty(Object.prototype, 'addClass', {
+Object.defineProperty(Object.prototype, 'classAdd', {
 	value: function(className) {
 		var length = this.length;
 		while (length--) {
-			this[length].addClass(className);
+			this[length].classAdd(className);
 		}
 		return this;
 	}
 });
 
-Object.defineProperty(Object.prototype, 'removeClass', {
+Object.defineProperty(Object.prototype, 'classRemove', {
 	value: function(className) {
 		var length = this.length;
 		while (length--) {
-			this[length].removeClass(className);
+			this[length].classRemove(className);
 		}
 		return this;
 	}
 });
 
-Object.defineProperty(Object.prototype, 'toggleClass', {
+Object.defineProperty(Object.prototype, 'classToggle', {
 	value: function(className, boolean) {
 		var length = this.length;
 		while (length--) {
-			this[length].toggleClass(className, boolean);
+			this[length].classToggle(className, boolean);
 		}
 		return this;
 	}

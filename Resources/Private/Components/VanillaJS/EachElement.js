@@ -1,4 +1,4 @@
-Object.defineProperty(Object.prototype, 'each', {
+Object.defineProperty(Object.prototype, 'eachElement', {
 	value: function(callback) {
 		var length = this.length;
 		var index = 0;

@@ -1,5 +1,5 @@
 if (!Array.isArray) {
-	Array.isArray = function(vArg) {
-		return Object.prototype.toString.call(vArg) === '[object Array]';
+	Array.isArray = function(elements) {
+		return Object.prototype.toString.call(elements) === '[object Array]';
 	};
 }
