@@ -1,4 +1,6 @@
 prototype(Neos:Page) {
+	@override.rawContent = ${node.context.currentRenderingMode.name == 'rawContent' ? true : false}
+
 	htmlTag.attributes {
 		@override.config = ${Configuration.setting('Dotpulse.Base.Source')}
 		data-version = ${config.VersionOfAssets}
@@ -17,6 +19,7 @@ prototype(Neos:Page) {
 			subpages = ${q(node).parents().is() && q(node).children('[instanceof TYPO3.Neos:Document]').filter('[_hiddenInIndex=false]').is() ? 'has-subpages' : ''}
 			level = ${'level-' + q(node).parents().count()}
 			meta = ${q(node).parent().get(0) == q(site).children('meta').get(0) ? 'metaActive' : ''}
+			rawMode = ${rawContent ? 'neos-raw-content-mode' : false}
 		}
 	}
 
@@ -24,6 +27,13 @@ prototype(Neos:Page) {
 		configuration = ${Configuration.setting('Dotpulse.Base.Source')}
 		@override.configuration = ${this.configuration}
 		partialRootPath = 'resource://Dotpulse.Base/Private/Partials'
+
+		mainAttributes = TypoScript:Attributes {
+			id = ${rawContent ? 'neos-raw-content-container' : 'top'}
+			class = TypoScript:RawArray {
+				level = ${'level-' + q(node).parents().count()}
+			}
+		}
 
 		GoogleTagManager = TypoScript:Template {
 			templatePath = 'resource://Dotpulse.Base/Private/Partials/GoogleTagManager.html'
@@ -36,6 +46,7 @@ prototype(Neos:Page) {
 		GoogleAnalytics  = TypoScript:Template {
 			templatePath = 'resource://Dotpulse.Base/Private/Partials/GoogleAnalytics.html'
 			GoogleAnalytics = ${configuration.GoogleAnalytics}
+			SendPageview = ${configuration.GoogleAnalyticsSendPageview}
 			@if.isLive = ${node.context.live}
 			@if.isNotBlank = ${!String.isBlank(this.GoogleAnalytics)}
 		}
@@ -45,14 +56,21 @@ prototype(Neos:Page) {
 			jQuery = Base:jQuery
 			General = Base:JSCollection {
 				collection = ${String.split(configuration.General.BodyJavascript, ',')}
+				@if.isNotRaw = ${rawContent ? false : true}
 			}
 			Backend = Base:JSCollection {
 				collection = ${String.split(configuration.Backend.BodyJavascript, ',')}
 				@if.isBackend = ${node.context.inBackend}
+				@if.isNotRaw = ${rawContent ? false : true}
 			}
 			Live = Base:JSCollection {
 				collection = ${String.split(configuration.Live.BodyJavascript, ',')}
 				@if.isLive = ${!node.context.inBackend}
+				@if.isNotRaw = ${rawContent ? false : true}
+			}
+			RawContent = Base:JSCollection {
+				collection = ${String.split(configuration.RawContent.BodyJavascript, ',')}
+				@if.isRaw = ${rawContent}
 			}
 		}
 	}

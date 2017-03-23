@@ -1,42 +1,76 @@
 prototype(Neos:Page) {
 	head {
-		headTags = TypoScript:Template {
-			templatePath = 'resource://Dotpulse.Base/Private/Templates/TypoScriptObjects/HeadTags.html'
-			configuration = ${Configuration.setting('Dotpulse.Base.Source')}
-			supportIE8 = ${this.configuration.SupportIE8}
-			VersionOfAssets = ${this.configuration.VersionOfAssets ? '?v=' + this.configuration.VersionOfAssets : ''}
-			@override.configuration = ${this.configuration}
-			@override.VersionOfAssets = ${this.VersionOfAssets}
+		headTags = TypoScript:Array {
+			base = TypoScript:Template {
+				templatePath = 'resource://Dotpulse.Base/Private/Templates/TypoScriptObjects/HeadTags.html'
+				configuration = ${Configuration.setting('Dotpulse.Base.Source')}
+				supportIE8 = ${this.configuration.SupportIE8}
+				VersionOfAssets = ${this.configuration.VersionOfAssets ? '?v=' + this.configuration.VersionOfAssets : ''}
+				@override.configuration = ${this.configuration}
+				@override.VersionOfAssets = ${this.VersionOfAssets}
 
-			HeadCSS =  TypoScript:Array {
-				General = Base:CSSCollection {
-					collection = ${String.split(configuration.General.CSS, ',')}
+				HeadCSS =  TypoScript:Array {
+					General = Base:CSSCollection {
+						collection = ${String.split(configuration.General.CSS, ',')}
+					}
+					Backend = Base:CSSCollection {
+						collection = ${String.split(configuration.Backend.CSS, ',')}
+						@if.isBackend = ${node.context.inBackend}
+					}
+					Live = Base:CSSCollection {
+						collection = ${String.split(configuration.Live.CSS, ',')}
+						@if.isLive = ${!node.context.inBackend}
+					}
 				}
-				Backend = Base:CSSCollection {
-					collection = ${String.split(configuration.Backend.CSS, ',')}
-					@if.isBackend = ${node.context.inBackend}
+				HeadJavascript =  TypoScript:Array {
+					jQuery = Base:jQuery {
+						place = 'head'
+					}
+					General = Base:JSCollection {
+						collection = ${String.split(configuration.General.HeadJavascript, ',')}
+					}
+					Backend = Base:JSCollection {
+						collection = ${String.split(configuration.Backend.HeadJavascript, ',')}
+						@if.isBackend = ${node.context.inBackend}
+					}
+					Live = Base:JSCollection {
+						collection = ${String.split(configuration.Live.HeadJavascript, ',')}
+						@if.isLive = ${!node.context.inBackend}
+					}
 				}
-				Live = Base:CSSCollection {
-					collection = ${String.split(configuration.Live.CSS, ',')}
-					@if.isLive = ${!node.context.inBackend}
-				}
+				@position = 'start'
+				@if.isNotRaw = ${rawContent ? false : true}
 			}
-			HeadJavascript =  TypoScript:Array {
-				jQuery = Base:jQuery {
-					place = 'head'
+			rawContent = TypoScript:Array {
+				files = TypoScript:Template {
+					templatePath = 'resource://Dotpulse.Base/Private/Templates/TypoScriptObjects/HeadTags.html'
+					configuration = ${Configuration.setting('Dotpulse.Base.Source')}
+					supportIE8 = ${this.configuration.SupportIE8}
+					VersionOfAssets = ${this.configuration.VersionOfAssets ? '?v=' + this.configuration.VersionOfAssets : ''}
+					@override.configuration = ${this.configuration}
+					@override.VersionOfAssets = ${this.VersionOfAssets}
+
+					HeadCSS = Base:CSSCollection {
+						collection = ${String.split(configuration.RawContent.CSS, ',')}
+					}
+					HeadJavascript =  TypoScript:Array {
+						jQuery = Base:jQuery {
+							place = 'head'
+						}
+						JS = Base:JSCollection {
+							collection = ${String.split(configuration.RawContent.HeadJavascript, ',')}
+						}
+					}
+					@position = 'start'
 				}
-				General = Base:JSCollection {
-					collection = ${String.split(configuration.General.HeadJavascript, ',')}
+				container = TypoScript:Tag {
+					tagName = 'style'
+					content = '#neos-raw-content-container{margin-bottom:2rem;}'
 				}
-				Backend = Base:JSCollection {
-					collection = ${String.split(configuration.Backend.HeadJavascript, ',')}
-					@if.isBackend = ${node.context.inBackend}
-				}
-				Live = Base:JSCollection {
-					collection = ${String.split(configuration.Live.HeadJavascript, ',')}
-					@if.isLive = ${!node.context.inBackend}
-				}
+				@if.isRaw = ${rawContent}
 			}
+
 		}
+
 	}
 }

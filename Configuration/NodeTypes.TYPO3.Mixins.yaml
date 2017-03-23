@@ -26,9 +26,8 @@
           position: 90
           editorOptions:
             placeholder: 'Dotpulse.Base:NodeTypes.ImageAlignmentMixin:properties.alignment.selectBoxEditor.placeholder'
+            allowEmpty: TRUE
             values:
-              '':
-                label: ''
               top:
                 label: 'Dotpulse.Base:NodeTypes.ImageAlignmentMixin:properties.alignment.selectBoxEditor.values.top'
               left:

@@ -32,6 +32,7 @@ Dotpulse:
     Source:
       GoogleTagManager:
       GoogleAnalytics:
+      GoogleAnalyticsSendPageview: TRUE
       GoogleSiteVerification:
       LazyLoading:
       Favicon:
@@ -57,6 +58,11 @@ Dotpulse:
         BodyJavascript: #Filenames
         jQuery: #head OR body
       Live:
+        CSS: #Filenames
+        HeadJavascript: #Filenames
+        BodyJavascript: #Filenames
+        jQuery: #head OR body
+      RawContent:
         CSS: #Filenames
         HeadJavascript: #Filenames
         BodyJavascript: #Filenames

@@ -5,5 +5,5 @@ prototype(Base:jQuery) < prototype(TypoScript:Template) {
 	supportIE8 = ${this.configuration.SupportIE8}
 	old = ${this.configuration.jQuery.old}
 	new = ${this.configuration.jQuery.new}
-	@if.isActive = ${configuration.General.jQuery == this.place || (configuration.Live.jQuery == this.place && !node.context.inBackend) || (configuration.Backend.jQuery == this.place && node.context.inBackend)}
+	@if.isActive = ${configuration.General.jQuery == this.place || (configuration.Live.jQuery == this.place && !node.context.inBackend) || (configuration.Backend.jQuery == this.place && node.context.inBackend) || (configuration.RawContent.jQuery == this.place && node.context.currentRenderingMode.name == 'rawContent')}
 }

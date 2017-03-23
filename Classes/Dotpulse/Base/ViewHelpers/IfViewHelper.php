@@ -1,22 +1,22 @@
 <?php
-namespace Dotpulse\Base\ViewHelpers\ExtendedIf;
+namespace Dotpulse\Base\ViewHelpers;
 
 use TYPO3\Fluid\Core\ViewHelper\AbstractConditionViewHelper;
 
-class AndViewHelper extends AbstractConditionViewHelper
+class IfViewHelper extends AbstractConditionViewHelper
 {
 
     /**
      * Renders <f:then> child if $condition is true, otherwise renders <f:else> child.
      *
-     * @param boolean $condition View helper condition
-     * @param boolean $and View helper condition
+     * @param mixed $condition View helper condition
      * @return string the rendered string
      * @api
      */
-    public function render($condition, $and)
+    public function render($condition)
     {
-        if ($condition && $and) {
+        eval('$result = '.$condition.';');
+        if ($result) {
             return $this->renderThenChild();
         } else {
             return $this->renderElseChild();

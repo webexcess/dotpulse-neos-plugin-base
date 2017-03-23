@@ -125,9 +125,8 @@
           editor: TYPO3.Neos/Inspector/Editors/SelectBoxEditor
           editorOptions:
             placeholder: i18n
+            allowEmpty: TRUE
             values:
-              '':
-                label: ''
               figure-corner:
                 label: i18n
               figure-rounded:

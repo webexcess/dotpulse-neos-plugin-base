@@ -1,0 +1,3 @@
+prototype(TypoScript:GlobalCacheIdentifiers) {
+	currentRenderingModeName = ${node.context.currentRenderingMode.name}
+}
