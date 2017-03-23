@@ -212,6 +212,6 @@ if (settings.system === 'Flow' || settings.multisite) {
 	module.exports.styles.sassOptions.includePaths = [path.plugins.base];
 	module.exports.watch = {
 		styles:  [path.plugins.private + '/**/*.scss','!' + path.plugins.private + '/**/_all.scss'],
-		scripts: [path.plugins.private + '/**/*.js']
+		scripts: [path.plugins.private + '/**/*.js', '!' + path.plugins.base + '/Dotpulse.Base/Resources/Private/**/*.js']
 	};
 }

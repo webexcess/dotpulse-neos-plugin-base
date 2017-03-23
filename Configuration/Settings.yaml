@@ -27,7 +27,6 @@ TYPO3:
 #  * extern: e.g. //ajax.googleapis.com/...
 #  * If you want to add attributes, add it with square brackets e.g. Filename[data-prop data-attr="true"]
 
-
 Dotpulse:
   Base:
     Source:

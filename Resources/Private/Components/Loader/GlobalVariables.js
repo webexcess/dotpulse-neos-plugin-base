@@ -1,7 +1,6 @@
 // jscs:disable maximumLineLength
 // Some Elements
 html = document.documentElement;
-body = document.body;
 
 html.className = html.className.replace(/\bno-js\b/g,'');
 
@@ -97,6 +96,7 @@ path.Assets = path.base + 'Assets/';
 NeosEvents = function() {
 	return 'No Neos Events added';
 };
+
 if (typeof document.addEventListener === 'function' && !isLive) {
 	NeosEvents = function(events, callback) {
 		if (typeof events === 'string') {

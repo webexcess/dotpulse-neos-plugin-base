@@ -1,4 +1,4 @@
-window.getBackendLanguageCode = function(code) {
+getBackendLanguageCode = function(code) {
 	try {
 		code = Em.I18n.translations.Dotpulse_Base.NodeTypes_Language.code;
 	} catch (error) {} finally {
