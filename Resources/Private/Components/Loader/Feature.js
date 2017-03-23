@@ -17,4 +17,10 @@ feature.oldie = (function() {
 	return !!test;
 })();
 
+// Add Mobile
+feature.mobile = (function() {
+	var test = (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
+	return !!test;
+})();
+
 feature.testAll();

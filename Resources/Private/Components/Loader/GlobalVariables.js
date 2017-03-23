@@ -1,5 +1,12 @@
 // jscs:disable maximumLineLength
 // Some Elements
+
+if (!String.prototype.trim) {
+	String.prototype.trim = function() {
+		return this.replace(/^\s+|\s+$/g,'');
+	};
+}
+
 html = document.documentElement;
 
 getProtokoll = 'https:' == document.location.protocol ? 'https' : 'http';

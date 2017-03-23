@@ -20,9 +20,8 @@
 	<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
 	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 	<link rel="manifest" href="/manifest.json">
-	<f:if condition="{configuration.ThemeColor}">
-		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="{configuration.ThemeColor}">
-		<meta name="theme-color" content="{configuration.ThemeColor}">
+	<f:if condition="{configuration.SafariPinColor}">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="{configuration.SafariPinColor}">
 	</f:if>
 	<link rel="shortcut icon" href="/favicon.ico">
 	<f:if condition="{configuration.Name}">
@@ -33,12 +32,15 @@
 		<meta name="msapplication-TileImage" content="/mstile-144x144.png">
 		<meta name="msapplication-TileColor" content="{configuration.MSapplicationTileColor}">
 	</f:if>
+	<f:if condition="{configuration.ThemeColor}">
+		<meta name="theme-color" content="{configuration.ThemeColor}">
+	</f:if>
 	<meta name="msapplication-config" content="/browserconfig.xml">
 </f:if>
 <f:if condition="{configuration.GoogleFonts}">
 	<f:if condition="{configuration.loadCSSAsynchron}">
 		<f:then>
-			<link rel="preload" href="//fonts.googleapis.com/css?family={configuration.GoogleFonts}" as="style" onload="this.rel=\'stylesheet\'">
+			<link rel="preload" href="//fonts.googleapis.com/css?family={configuration.GoogleFonts}" as="style" onload="this.rel='stylesheet'">
 			<noscript><link rel="stylesheet" href="//fonts.googleapis.com/css?family={configuration.GoogleFonts}"></noscript>
 		</f:then>
 		<f:else>

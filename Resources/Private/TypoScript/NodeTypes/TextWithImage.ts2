@@ -11,7 +11,7 @@ prototype(NodeTypes:TextWithImage) {
 	alternativeText = ${q(node).property('alternativeText') ? q(node).property('alternativeText') : q(node).property('image').caption}
 
 	attributes.class = TypoScript:RawArray {
-		container = ${q(node).parent().parent().is('[instanceof TYPO3.Neos:Document]') ? configuration.TextWithImage.containerClass : alignment == 'left' || alignment == 'right' ? configuration.TextWithImage.rowClass : false}
+		container = ${container ? configuration.TextWithImage.containerClass : alignment == 'left' || alignment == 'right' ? configuration.TextWithImage.rowClass : false}
 		lead = ${q(node).property('lead') ? configuration.TextWithImage.leadClass : false}
 		margin = ${q(node).property('bigmargin') ? configuration.TextWithImage.marginClass : false}
 		alignment = ${'pos-' + alignment}

@@ -1,8 +1,8 @@
 prototype(NodeTypes:Image) {
 	@context.configuration = ${Configuration.setting('Dotpulse.Base')}
 	attributes.class = TypoScript:RawArray {
-		container = ${q(node).parent().parent().is('[instanceof TYPO3.Neos:Document]') && q(node).property('bleed') != true ? 'container' : ''}
-		margin = ${q(node).property('bigmargin') ? configuration.Image.marginClass : ''}
+		container = ${container && q(node).property('bleed') != true ? 'container' : false}
+		margin = ${q(node).property('bigmargin') ? configuration.Image.marginClass : false}
 	}
 	alternativeText = ${q(node).property('alternativeText') ? q(node).property('alternativeText') : q(node).property('image').caption}
 	imageClassName = TypoScript:Array {

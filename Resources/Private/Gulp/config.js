@@ -150,6 +150,7 @@ module.exports = {
 					add: true,
 					browsers: ['last 2 version', '> 1%', 'safari 7', 'ie 9', 'bb 10', 'android 4']
 				},
+				reduceIdents: false,
 				zindex: false,
 				discardComments: {
 					removeAll: true
