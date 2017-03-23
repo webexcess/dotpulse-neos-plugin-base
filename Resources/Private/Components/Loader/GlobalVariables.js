@@ -2,8 +2,6 @@
 // Some Elements
 html = document.documentElement;
 
-html.className = html.className.replace(/\bno-js\b/g,'');
-
 getProtokoll = 'https:' == document.location.protocol ? 'https' : 'http';
 
 getID = function(id) {
@@ -60,8 +58,69 @@ hasClass = function(value) {
 	return getClass(value).length ? true : false;
 };
 
+elementHasClass = function(node, value) {
+	return node.className.indexOf(value) > -1;
+};
+
+elementRemoveClass = function(node, value) {
+	var regex = new RegExp(value, 'g');
+	node.className = node.className.replace(regex, '').replace(/\s\s*/g, ' ').replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+};
+
+elementAddClass = function(node, value) {
+	if (!elementHasClass(node, value)) {
+		node.className += ' ' + value;
+	}
+};
+
+elementToggleClass = function(node, value, boolean) {
+	if (typeof boolean == 'undefined') {
+		boolean = !elementHasClass(node, value);
+	}
+	if (boolean) {
+		elementAddClass(node, value);
+	} else {
+		elementRemoveClass(node, value);
+	}
+	return boolean;
+};
+
+elementsRemoveClass = function(nodes, value) {
+	var count = nodes.length;
+	while (count--) {
+		elementRemoveClass(nodes[count], value);
+	}
+};
+
+elementsAddClass = function(nodes, value) {
+	var count = nodes.length;
+	while (count--) {
+		elementAddClass(nodes[count], value);
+	}
+};
+
+getIndex = function(node) {
+	var returnedIndex = 0;
+	var siblings = node.parentNode.childNodes;
+	var count = siblings.length;
+	var index = 0;
+	while (index < count) {
+		if (siblings[index].nodeType === 1) {
+			// Node is an element
+			if (node == siblings[index]) {
+				break;
+			}
+			returnedIndex++;
+		}
+		index++;
+	}
+	return returnedIndex;
+};
+
+elementRemoveClass(html, 'no-js');
+
 // Version of assets (string)
-dataVersion = html.getAttribute('data-version') || 1;
+dataVersion = html.getAttribute('data-version') || 0;
 
 isIE = (function() {
 	var agent = navigator.userAgent.toLowerCase();
@@ -85,10 +144,12 @@ jQuerySRC = (function() {
 language = html.lang || 'de';
 
 // Live workspace (boolean)
-isLive = html.className.indexOf('live') > -1;
+isLive = elementHasClass(html, 'live');
+
+theme = typeof theme == 'string' ? theme : 'Dotpulse.Theme';
 
 path = {
-	base: '/_Resources/Static/Packages/Dotpulse.Theme/'
+	base: '/_Resources/Static/Packages/' + theme + '/'
 };
 path.Scripts = path.base + 'Scripts/';
 path.Assets = path.base + 'Assets/';
@@ -156,6 +217,20 @@ domReady = function(callback) {
 		doc[add](pre + 'DOMContentLoaded', init, false);
 		doc[add](pre + 'readystatechange', init, false);
 		win[add](pre + 'load', init, false);
+	}
+};
+
+onReady = {};
+onReadyRun = function() {
+	for (var key in onReady) {
+		if (!onReady.hasOwnProperty(key)) {
+			continue;
+		}
+
+		var func = onReady[key];
+		if (typeof func === 'function') {
+			func(); // Run function
+		}
 	}
 };
 

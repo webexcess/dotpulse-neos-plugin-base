@@ -36,7 +36,15 @@
 	<meta name="msapplication-config" content="/browserconfig.xml">
 </f:if>
 <f:if condition="{configuration.GoogleFonts}">
-	<link href='//fonts.googleapis.com/css?family={configuration.GoogleFonts}'>
+	<f:if condition="{configuration.loadCSSAsynchron}">
+		<f:then>
+			<link rel="preload" href="//fonts.googleapis.com/css?family={configuration.GoogleFonts}" as="style" onload="this.rel=\'stylesheet\'">
+			<noscript><link rel="stylesheet" href="//fonts.googleapis.com/css?family={configuration.GoogleFonts}"></noscript>
+		</f:then>
+		<f:else>
+			<link rel="stylesheet" href="//fonts.googleapis.com/css?family={configuration.GoogleFonts}">
+		</f:else>
+	</f:if>
 </f:if>
 {HeadCSS -> f:format.raw()}
 <f:if condition="{supportIE8}">

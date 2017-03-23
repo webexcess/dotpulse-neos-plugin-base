@@ -1,0 +1,9 @@
+prototype(Base:InlineStyle) < prototype(TypoScript:Tag) {
+	filename = ${false}
+	@context.filename = ${this.filename}
+	tagName = 'style'
+	content = TypoScript:Template {
+		templatePath = ${'resource://' + sitePackage + '/Private/Templates/InlineAssets/' + filename + '.css'}
+	}
+	@if.hasFilename = ${this.filename}
+}

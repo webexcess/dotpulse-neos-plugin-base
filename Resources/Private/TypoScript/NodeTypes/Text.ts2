@@ -1,5 +1,5 @@
 prototype(NodeTypes:Text) {
-	@override.configuration = ${Configuration.setting('Dotpulse.Base.Text')}
+	@context.configuration = ${Configuration.setting('Dotpulse.Base.Text')}
 	attributes.class = TypoScript:RawArray {
 		container = ${q(node).parent().parent().is('[instanceof TYPO3.Neos:Document]') ? 'container' : ''}
 		lead = ${q(node).property('lead') ? configuration.leadClass : ''}

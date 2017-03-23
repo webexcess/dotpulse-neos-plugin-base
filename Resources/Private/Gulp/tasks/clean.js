@@ -5,7 +5,8 @@ function clean(callback) {
 			config.assets.destination,
 			config.maps.destination,
 			config.scripts.destination,
-			config.styles.destination
+			config.styles.destination,
+			config.inlineAssets
 		],
 		{
 			force: true

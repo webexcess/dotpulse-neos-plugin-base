@@ -1,8 +1,8 @@
 prototype(Neos:Page) {
-	@override.rawContent = ${node.context.currentRenderingMode.name == 'rawContent' ? true : false}
+	@context.rawContent = ${node.context.currentRenderingMode.name == 'rawContent' ? true : false}
 
 	htmlTag.attributes {
-		@override.config = ${Configuration.setting('Dotpulse.Base.Source')}
+		@context.config = ${Configuration.setting('Dotpulse.Base.Source')}
 		data-version = ${config.VersionOfAssets}
 		data-jq = ${config.jQuery.printInHead ? config.jQuery.new : false}
 		data-jq-old = ${config.SupportIE8 && config.jQuery.printInHead ? config.jQuery.old : false}
@@ -25,7 +25,7 @@ prototype(Neos:Page) {
 
 	body {
 		configuration = ${Configuration.setting('Dotpulse.Base.Source')}
-		@override.configuration = ${this.configuration}
+		@context.configuration = ${this.configuration}
 		partialRootPath = 'resource://Dotpulse.Base/Private/Partials'
 
 		mainAttributes = TypoScript:Attributes {
@@ -51,7 +51,7 @@ prototype(Neos:Page) {
 			@if.isNotBlank = ${!String.isBlank(this.GoogleAnalytics)}
 		}
 		@process.PrependGoogleAnalytics = ${this.GoogleAnalytics + value}
-		@override.VersionOfAssets = ${this.configuration.VersionOfAssets ? '?v=' + this.configuration.VersionOfAssets : ''}
+		@context.VersionOfAssets = ${this.configuration.VersionOfAssets ? '?v=' + this.configuration.VersionOfAssets : ''}
 		javascripts {
 			jQuery = Base:jQuery
 			General = Base:JSCollection {

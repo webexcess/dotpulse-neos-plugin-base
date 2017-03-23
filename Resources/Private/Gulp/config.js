@@ -39,6 +39,7 @@ path.site = {
 path.site.resources = path.site.base + '/' + settings.theme + '/Resources';
 path.site.private   = path.site.resources + '/Private';
 path.site.public    = path.site.resources + '/Public';
+path.site.inline    = path.site.private + '/Templates/InlineAssets';
 
 // Render Ordner
 path.render = {
@@ -106,6 +107,7 @@ module.exports = {
 		}
 	},
 	publicPath : path.site.public,
+	inlineAssets: path.site.inline,
 	styles     : {
 		source      : path.render.styles,
 		includePath : [path.site.private + path.includeFile, path.plugins.private + path.includeFile],
@@ -187,8 +189,8 @@ module.exports = {
 		destination: path.assets.public
 	},
 	watch: {
-		styles:   [path.plugins.private + '/**/*.scss', path.site.private + '/**/*.scss', '!' + path.plugins.private + '/**/_all.scss', '!' + path.site.private + '/**/_all.scss'],
-		scripts:  [path.plugins.private + '/**/*.js',   path.site.private + '/**/*.js'  , '!' + path.site.private + '/WebRoot/**/*.js', '!' + path.site.private + '/Gulp/**/*.js']
+		styles:   [path.plugins.private + '/**/*.scss', path.site.private + '/**/*.scss', '!' + path.plugins.private + '/**/_all.scss', '!' + path.site.private + '/**/_all.scss', '!' + path.site.inline + '**/*.scss'],
+		scripts:  [path.plugins.private + '/**/*.js',   path.site.private + '/**/*.js'  , '!' + path.site.private + '/WebRoot/**/*.js', '!' + path.site.private + '/Gulp/**/*.js', '!' + path.site.inline + '**/*.js']
 	},
 	handleErrors: function() {
 		var args         = Array.prototype.slice.call(arguments);
@@ -211,7 +213,7 @@ module.exports = {
 if (settings.system === 'Flow' || settings.multisite) {
 	module.exports.styles.sassOptions.includePaths = [path.plugins.base];
 	module.exports.watch = {
-		styles:  [path.plugins.private + '/**/*.scss','!' + path.plugins.private + '/**/_all.scss'],
-		scripts: [path.plugins.private + '/**/*.js', '!' + path.plugins.private + '/WebRoot/**/*.js', '!' + path.plugins.private + '/Gulp/**/*.js', '!' + path.plugins.base + '/Dotpulse.Base/Resources/Private/**/*.js']
+		styles:  [path.plugins.private + '/**/*.scss','!' + path.plugins.private + '/**/_all.scss','!' + path.site.inline + '**/*.scss'],
+		scripts: [path.plugins.private + '/**/*.js', '!' + path.plugins.private + '/WebRoot/**/*.js', '!' + path.plugins.private + '/Gulp/**/*.js', '!' + path.plugins.base + '/Dotpulse.Base/Resources/Private/**/*.js', '!' + path.site.inline + '**/*.js']
 	};
 }

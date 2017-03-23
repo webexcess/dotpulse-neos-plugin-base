@@ -1,4 +1,6 @@
 prototype(Base:CSSCollection) < prototype(TypoScript:Collection) {
+	@context.loadCSSAsynchron = ${Configuration.setting('Dotpulse.Base.Source.loadCSSAsynchron')}
+
 	itemName = 'item'
 	itemRenderer = TypoScript:Collection {
 		collection = ${item ? String.split(String.replace(String.trim(item), ']', ''), '[') : []}
@@ -26,6 +28,6 @@ prototype(Base:CSSCollection) < prototype(TypoScript:Collection) {
 				renderer = ${' ' + String.trim(entry)}
 			}
 		}
-		@process.wrap = ${value ? '<link rel="stylesheet"' + value + ' />' : ''}
+		@process.wrap = ${value ? loadCSSAsynchron ? '<link rel="preload"' + value + ' as="style" onload="this.rel=\'stylesheet\'" /><noscript><link rel="stylesheet"' + value + ' /></noscript>' : '<link rel="stylesheet"' + value + ' />' : ''}
 	}
 }

@@ -1,5 +1,5 @@
 prototype(NodeTypes:Headline) {
-	@override.configuration = ${Configuration.setting('Dotpulse.Base.Headline')}
+	@context.configuration = ${Configuration.setting('Dotpulse.Base.Headline')}
 	attributes.class = TypoScript:RawArray {
 		container = ${q(node).parent().parent().is('[instanceof TYPO3.Neos:Document]') ? 'container' : ''}
 		defaultClass = ${configuration.defaultClass}

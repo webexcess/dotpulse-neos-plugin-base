@@ -4,6 +4,7 @@ TYPO3:
       defaultLocale: de
   Neos:
     userInterface:
+      defaultLanguage: de
       navigateComponent:
         nodeTree:
           loadingDepth: 1
@@ -16,11 +17,11 @@ TYPO3:
     nodeTypes:
       groups:
         product:
-          position: 50
-          label: Products
+          position: 300
+          label: 'Dotpulse.Base:NodeTypes.Groups:product'
         special:
-          position: 100
-          label: 'Special Content'
+          position: 400
+          label: 'Dotpulse.Base:NodeTypes.Groups:special'
 
 # Filenames are comma separated
 #  * intern: Just the name e.g. "Main"
@@ -43,9 +44,10 @@ Dotpulse:
       VersionOfAssets: #add a value to prevent caching issues
       SupportIE8: FALSE
       cleanHTML: TRUE
+      loadCSSAsynchron: FALSE
       jQuery:
-        old: '1.12.2'
-        new: '2.2.2'
+        old: '1.12.3'
+        new: '2.2.3'
         printInHead: TRUE
       General:
         CSS: #Filenames

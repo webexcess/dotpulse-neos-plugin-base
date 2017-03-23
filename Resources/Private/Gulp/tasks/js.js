@@ -30,6 +30,7 @@ function jsRender() {
 		}))
 		.pipe(gflatten())
 		.pipe(mode.minimize ? guglify(config.scripts.uglifyOptions) : gutil.noop())
+		.pipe(gulp.dest(config.inlineAssets))
 		.pipe(gheader(config.banner, {
 			info: settings,
 			timestamp: config.timestamp()

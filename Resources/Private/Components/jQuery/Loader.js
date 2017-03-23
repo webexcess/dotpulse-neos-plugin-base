@@ -1,18 +1,14 @@
 // Init Funktionen
 (function($) {
 	// Funktionen, welche beim DOM Rendering ausgeführt werden
-	$.onReady      = {};
-	$.windowLoaded = false;
-	$.onReadyRun   = function() {
+	$.onReady = {};
+	$.onReadyRun = function() {
 		return $.each($.onReady, function() {
 			if (typeof this === 'function') {
 				this(); // Funktion ausführen
 			}
 		});
 	};
-	$(window).load(function() {
-		$.windowLoaded = true;
-	});
 
 	$.stripTags = function(html) {
 		return $('<div>' + html + '</div >').text();

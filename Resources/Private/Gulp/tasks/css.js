@@ -34,6 +34,7 @@ function cssRender() {
 		.pipe(postcss(postScss))
 		.pipe(mode.minimize ? postcss([cssnano(pc.cssnano)]) : gutil.noop())
 		.pipe(mode.beautify ? gbeautify(config.styles.cssbeautifyOptions) : gutil.noop())
+		.pipe(gulp.dest(config.inlineAssets))
 		.pipe(gheader(config.banner, {
 			info: settings,
 			timestamp: config.timestamp()

@@ -6,8 +6,8 @@ prototype(Neos:Page) {
 				configuration = ${Configuration.setting('Dotpulse.Base.Source')}
 				supportIE8 = ${this.configuration.SupportIE8}
 				VersionOfAssets = ${this.configuration.VersionOfAssets ? '?v=' + this.configuration.VersionOfAssets : ''}
-				@override.configuration = ${this.configuration}
-				@override.VersionOfAssets = ${this.VersionOfAssets}
+				@context.configuration = ${this.configuration}
+				@context.VersionOfAssets = ${this.VersionOfAssets}
 
 				HeadCSS =  TypoScript:Array {
 					General = Base:CSSCollection {
@@ -47,8 +47,8 @@ prototype(Neos:Page) {
 					configuration = ${Configuration.setting('Dotpulse.Base.Source')}
 					supportIE8 = ${this.configuration.SupportIE8}
 					VersionOfAssets = ${this.configuration.VersionOfAssets ? '?v=' + this.configuration.VersionOfAssets : ''}
-					@override.configuration = ${this.configuration}
-					@override.VersionOfAssets = ${this.VersionOfAssets}
+					@context.configuration = ${this.configuration}
+					@context.VersionOfAssets = ${this.VersionOfAssets}
 
 					HeadCSS = Base:CSSCollection {
 						collection = ${String.split(configuration.RawContent.CSS, ',')}
