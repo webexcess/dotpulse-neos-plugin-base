@@ -187,8 +187,8 @@ module.exports = {
 		destination: path.assets.public
 	},
 	watch: {
-		styles:   [path.plugins.private + '/**/*.scss', path.site.private + '/**/*.scss','!' + path.plugins.private + '/**/_all.scss', '!' + path.site.private + '/**/_all.scss'],
-		scripts:  [path.plugins.private + '/**/*.js',   path.site.private + '/**/*.js']
+		styles:   [path.plugins.private + '/**/*.scss', path.site.private + '/**/*.scss', '!' + path.plugins.private + '/**/_all.scss', '!' + path.site.private + '/**/_all.scss'],
+		scripts:  [path.plugins.private + '/**/*.js',   path.site.private + '/**/*.js'  , '!' + path.site.private + '/WebRoot/**/*.js', '!' + path.site.private + '/Gulp/**/*.js']
 	},
 	handleErrors: function() {
 		var args         = Array.prototype.slice.call(arguments);
@@ -212,6 +212,6 @@ if (settings.system === 'Flow' || settings.multisite) {
 	module.exports.styles.sassOptions.includePaths = [path.plugins.base];
 	module.exports.watch = {
 		styles:  [path.plugins.private + '/**/*.scss','!' + path.plugins.private + '/**/_all.scss'],
-		scripts: [path.plugins.private + '/**/*.js', '!' + path.plugins.base + '/Dotpulse.Base/Resources/Private/**/*.js']
+		scripts: [path.plugins.private + '/**/*.js', '!' + path.plugins.private + '/WebRoot/**/*.js', '!' + path.plugins.private + '/Gulp/**/*.js', '!' + path.plugins.base + '/Dotpulse.Base/Resources/Private/**/*.js']
 	};
 }
