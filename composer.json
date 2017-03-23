@@ -2,7 +2,7 @@
     "name": "dotpulse/base",
     "type": "typo3-flow-plugin",
     "description": "The Base package from dotpulse for Neos 2",
-    "version": "2.1.19",
+    "version": "2.1.20",
     "require": {
         "typo3/neos-nodetypes": "2.1.*"
     },

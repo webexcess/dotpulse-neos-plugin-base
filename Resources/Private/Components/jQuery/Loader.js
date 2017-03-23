@@ -13,6 +13,11 @@
 	$(window).load(function() {
 		$.windowLoaded = true;
 	});
+
+	$.stripTags = function(html) {
+		return $('<div>' + html + '</div >').text();
+	};
+
 	$(document).on('click', '.disabled', function() {
 		return false;
 	});
