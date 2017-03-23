@@ -1,22 +1,22 @@
-prototype(Base:CSSCollection) < prototype(TypoScript:Collection) {
+prototype(Dotpulse.Base:CSSCollection) < prototype(TYPO3.TypoScript:Collection) {
 	@context.loadCSSAsynchron = ${Configuration.setting('Dotpulse.Base.Source.loadCSSAsynchron')}
 
 	itemName = 'item'
-	itemRenderer = TypoScript:Collection {
+	itemRenderer = TYPO3.TypoScript:Collection {
 		collection = ${item ? String.split(String.replace(String.trim(item), ']', ''), '[') : []}
 		iterationName = 'iterator'
 		itemName = 'entry'
-		itemRenderer = TypoScript:Case {
+		itemRenderer = TYPO3.TypoScript:Case {
 			isFilename {
 				condition = ${iterator.isFirst}
-				renderer = TypoScript:Case {
+				renderer = TYPO3.TypoScript:Case {
 					isExternal {
 						condition = ${String.indexOf(entry, '//') != -1}
 						renderer = ${entry}
 					}
 					isInternal {
 						condition = ${entry}
-						renderer = TypoScript:ResourceUri {
+						renderer = TYPO3.TypoScript:ResourceUri {
 							path = ${'resource://' + sitePackage + '/Public/Styles/' + entry +'.css'}
 						}
 					}

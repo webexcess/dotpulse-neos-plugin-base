@@ -1,7 +1,7 @@
-prototype(Neos:Page) {
+prototype(TYPO3.Neos:Page) {
 	headerComment.@process.removeEndComment = ${String.replace(value, '-->', '')}
 	headerComment.@process.cleanHTML >
-	headerDotpulseComment = TypoScript:Template {
+	headerDotpulseComment = TYPO3.TypoScript:Template {
 		@position = 'after headerComment'
 		templatePath = 'resource://Dotpulse.Base/Private/Templates/TypoScriptObjects/HeaderComment.html'
 		@process.removeEndComment = ${String.replace(value, '<!--', '')}

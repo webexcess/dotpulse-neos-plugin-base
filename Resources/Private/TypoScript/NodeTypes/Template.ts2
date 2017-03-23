@@ -1,5 +1,6 @@
-prototype(TypoScript:Template) {
-	@context.baseConfiguration = ${Configuration.setting('Dotpulse.Base')}
+prototype(TYPO3.TypoScript:Template) {
+	baseConfiguration = ${Configuration.setting('Dotpulse.Base')}
+	@context.baseConfiguration = ${this.baseConfiguration}
 
 	// Setzte den Pfad zu den Partials
 	partialRootPath = 'resource://Dotpulse.Base/Private/Partials'

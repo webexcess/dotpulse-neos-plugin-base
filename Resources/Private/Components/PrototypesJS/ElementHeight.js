@@ -2,7 +2,7 @@
 // true: Höhe lesen und setzen
 // false: Höhe lesen und auf 0
 // Kein Wert: Höhe lesen
-//= require TransitionEvent.js
+//= require ../VanillaJS/TransitionEvent.js
 Element.prototype.elementHeight = function(value) {
 	var _this = this;
 	if (typeof value === 'string' || value === 0) {

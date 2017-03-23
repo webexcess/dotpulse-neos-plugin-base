@@ -2,7 +2,6 @@
 //= require ClassManipulation.js
 //= require EachElement.js
 //= require Attr.js
-//= require DomReady.js
 (function() {
 	if (feature.retina) {
 		onReady.Retina = function() {

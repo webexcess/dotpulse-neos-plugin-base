@@ -1,4 +1,4 @@
-prototype(NodeTypes:AssetList) {
+prototype(TYPO3.Neos.NodeTypes:AssetList) {
 	templatePath = 'resource://Dotpulse.Base/Private/Templates/NodeTypes/AssetList.html'
 	title = ${q(node).property('title')}
 	titleTag = ${baseConfiguration.AssetList.titleTag}

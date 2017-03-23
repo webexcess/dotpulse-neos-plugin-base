@@ -66,11 +66,6 @@ Dotpulse:
         HeadJavascript: #Filenames
         BodyJavascript: #Filenames
         jQuery: #head OR body
-      RawContent:
-        CSS: #Filenames
-        HeadJavascript: #Filenames
-        BodyJavascript: #Filenames
-        jQuery: #head OR body
     Container:
       Filter: '[instanceof TYPO3.Neos:Document]'
       General: container

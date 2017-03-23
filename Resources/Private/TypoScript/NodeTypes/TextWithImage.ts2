@@ -1,25 +1,26 @@
-prototype(NodeTypes:TextWithImage) {
+prototype(TYPO3.Neos.NodeTypes:TextWithImage) {
 	templatePath = 'resource://Dotpulse.Base/Private/Templates/NodeTypes/TextWithImage.html'
 
-	alignmentProperty = ${q(node).property('alignment') ? q(node).property('alignment') : baseConfiguration.TextWithImage.defaultAlignment}
-	alignment = ${(baseConfiguration.TextWithImage.style == 'Float' && (this.alignmentProperty == 'left' || this.alignmentProperty == 'right')) ?  'float-' + this.alignmentProperty : this.alignmentProperty}
+	alignmentProperty = ${q(node).property('alignment') ? q(node).property('alignment') : this.baseConfiguration.TextWithImage.defaultAlignment}
+	alignment = ${(this.baseConfiguration.TextWithImage.style == 'Float' && (this.alignmentProperty == 'left' || this.alignmentProperty == 'right')) ?  'float-' + this.alignmentProperty : this.alignmentProperty}
 	@context.alignment = ${this.alignment}
 
 	imageFirst = ${(this.alignment == 'top' || this.alignment == 'float-left' || this.alignment == 'float-right') ? true : false}
-	maximumWidth = ${baseConfiguration.TextWithImage.maximumWidth}
+	maximumWidth = ${this.baseConfiguration.TextWithImage.maximumWidth}
 
 	needRow = ${(this.alignment == 'left' || this.alignment == 'right') && this.container ? true : false}
-	colClasses = ${q(node).parent().parent().is(baseConfiguration.Container.Filter) ? baseConfiguration.TextWithImage.firstlevel[this.alignment] : baseConfiguration.TextWithImage.nested[this.alignment]}
+	colClasses = ${q(node).parent().parent().is(this.baseConfiguration.Container.Filter) ? this.baseConfiguration.TextWithImage.firstlevel[this.alignment] : this.baseConfiguration.TextWithImage.nested[this.alignment]}
 
-	attributes.class = TypoScript:RawArray {
+	attributes.class = TYPO3.TypoScript:RawArray {
 		container = ${container ? baseConfiguration.Container.TextWithImage : false}
 		row = ${container ? false : alignment == 'left' || alignment == 'right' ? baseConfiguration.TextWithImage.rowClass : false}
 		alignment = ${'pos-' + alignment}
 	}
 
-	attributesRow = TypoScript:Attributes {
-		class = TypoScript:RawArray {
+	attributesRow = TYPO3.TypoScript:Attributes {
+		class = TYPO3.TypoScript:RawArray {
 			row = ${baseConfiguration.TextWithImage.rowClass}
 		}
 	}
+	@if.hasImage = true
 }

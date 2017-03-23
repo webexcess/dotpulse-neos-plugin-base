@@ -47,20 +47,4 @@ function domReady(callback) {
 	}
 }
 
-window.onReady = {};
-function onReadyRun() {
-	for (var key in onReady) {
-		if (!onReady.hasOwnProperty(key)) {
-			continue;
-		}
-
-		var func = onReady[key];
-		if (typeof func === 'function') {
-			func(); // Run function
-		}
-	}
-}
-
-domReady(function() {
-	window.body = document.body;
-});
+domReady(onReadyRun);

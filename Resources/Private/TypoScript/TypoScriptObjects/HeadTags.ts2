@@ -1,7 +1,7 @@
-prototype(Neos:Page) {
+prototype(TYPO3.Neos:Page) {
 	head {
-		headTags = TypoScript:Array {
-			base = TypoScript:Template {
+		headTags = TYPO3.TypoScript:Array {
+			base = TYPO3.TypoScript:Template {
 				templatePath = 'resource://Dotpulse.Base/Private/Templates/TypoScriptObjects/HeadTags.html'
 				configuration = ${Configuration.setting('Dotpulse.Base.Source')}
 				supportIE8 = ${this.configuration.SupportIE8}
@@ -9,67 +9,37 @@ prototype(Neos:Page) {
 				@context.configuration = ${this.configuration}
 				@context.VersionOfAssets = ${this.VersionOfAssets}
 
-				HeadCSS =  TypoScript:Array {
-					General = Base:CSSCollection {
+				HeadCSS =  TYPO3.TypoScript:Array {
+					General = Dotpulse.Base:CSSCollection {
 						collection = ${String.split(configuration.General.CSS, ',')}
 					}
-					Backend = Base:CSSCollection {
+					Backend = Dotpulse.Base:CSSCollection {
 						collection = ${String.split(configuration.Backend.CSS, ',')}
 						@if.isBackend = ${node.context.inBackend}
 					}
-					Live = Base:CSSCollection {
+					Live = Dotpulse.Base:CSSCollection {
 						collection = ${String.split(configuration.Live.CSS, ',')}
 						@if.isLive = ${!node.context.inBackend}
 					}
 				}
-				HeadJavascript =  TypoScript:Array {
-					jQuery = Base:jQuery {
+				HeadJavascript =  TYPO3.TypoScript:Array {
+					jQuery = Dotpulse.Base:jQuery {
 						place = 'head'
 					}
-					General = Base:JSCollection {
+					General = Dotpulse.Base:JSCollection {
 						collection = ${String.split(configuration.General.HeadJavascript, ',')}
 					}
-					Backend = Base:JSCollection {
+					Backend = Dotpulse.Base:JSCollection {
 						collection = ${String.split(configuration.Backend.HeadJavascript, ',')}
 						@if.isBackend = ${node.context.inBackend}
 					}
-					Live = Base:JSCollection {
+					Live = Dotpulse.Base:JSCollection {
 						collection = ${String.split(configuration.Live.HeadJavascript, ',')}
 						@if.isLive = ${!node.context.inBackend}
 					}
 				}
 				@position = 'start'
-				@if.isNotRaw = ${rawContent ? false : true}
 			}
-			rawContent = TypoScript:Array {
-				files = TypoScript:Template {
-					templatePath = 'resource://Dotpulse.Base/Private/Templates/TypoScriptObjects/HeadTags.html'
-					configuration = ${Configuration.setting('Dotpulse.Base.Source')}
-					supportIE8 = ${this.configuration.SupportIE8}
-					VersionOfAssets = ${this.configuration.VersionOfAssets ? '?v=' + this.configuration.VersionOfAssets : ''}
-					@context.configuration = ${this.configuration}
-					@context.VersionOfAssets = ${this.VersionOfAssets}
-
-					HeadCSS = Base:CSSCollection {
-						collection = ${String.split(configuration.RawContent.CSS, ',')}
-					}
-					HeadJavascript =  TypoScript:Array {
-						jQuery = Base:jQuery {
-							place = 'head'
-						}
-						JS = Base:JSCollection {
-							collection = ${String.split(configuration.RawContent.HeadJavascript, ',')}
-						}
-					}
-					@position = 'start'
-				}
-				container = TypoScript:Tag {
-					tagName = 'style'
-					content = '#neos-raw-content-container{margin-bottom:2rem;}'
-				}
-				@if.isRaw = ${rawContent}
-			}
-
 		}
 
 	}

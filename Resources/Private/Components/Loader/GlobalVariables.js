@@ -33,3 +33,22 @@ path = {
 };
 path.Scripts = path.base + 'Scripts/';
 path.Assets = path.base + 'Assets/';
+
+window.onReady = {
+	body: function() {
+		window.body = document.body;
+	}
+};
+
+function onReadyRun() {
+	for (var key in onReady) {
+		if (!onReady.hasOwnProperty(key)) {
+			continue;
+		}
+
+		var func = onReady[key];
+		if (typeof func === 'function') {
+			func(); // Run function
+		}
+	}
+}

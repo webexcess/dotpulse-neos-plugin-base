@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Readme</title>
+	<style>
+	@font-face {
+	font-family: octicons-link;
+	src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+	}
+
+	.markdown-body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	color: #333;
+	font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 16px;
+	line-height: 1.6;
+	word-wrap: break-word;
+	}
+
+	.markdown-body a {
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects;
+	}
+
+	.markdown-body a:active,
+	.markdown-body a:hover {
+	outline-width: 0;
+	}
+
+	.markdown-body strong {
+	font-weight: inherit;
+	}
+
+	.markdown-body strong {
+	font-weight: bolder;
+	}
+
+	.markdown-body h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+	}
+
+	.markdown-body img {
+	border-style: none;
+	}
+
+	.markdown-body svg:not(:root) {
+	overflow: hidden;
+	}
+
+	.markdown-body code,
+	.markdown-body kbd,
+	.markdown-body pre {
+	font-family: monospace, monospace;
+	font-size: 1em;
+	}
+
+	.markdown-body hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+	}
+
+	.markdown-body input {
+	font: inherit;
+	margin: 0;
+	}
+
+	.markdown-body input {
+	overflow: visible;
+	}
+
+	.markdown-body button:-moz-focusring,
+	.markdown-body [type="button"]:-moz-focusring,
+	.markdown-body [type="reset"]:-moz-focusring,
+	.markdown-body [type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+	}
+
+	.markdown-body [type="checkbox"] {
+	box-sizing: border-box;
+	padding: 0;
+	}
+
+	.markdown-body table {
+	border-spacing: 0;
+	border-collapse: collapse;
+	}
+
+	.markdown-body td,
+	.markdown-body th {
+	padding: 0;
+	}
+
+	.markdown-body * {
+	box-sizing: border-box;
+	}
+
+	.markdown-body input {
+	font: 13px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	}
+
+	.markdown-body a {
+	color: #4078c0;
+	text-decoration: none;
+	}
+
+	.markdown-body a:hover,
+	.markdown-body a:active {
+	text-decoration: underline;
+	}
+
+	.markdown-body hr {
+	height: 0;
+	margin: 15px 0;
+	overflow: hidden;
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid #ddd;
+	}
+
+	.markdown-body hr::before {
+	display: table;
+	content: "";
+	}
+
+	.markdown-body hr::after {
+	display: table;
+	clear: both;
+	content: "";
+	}
+
+	.markdown-body h1,
+	.markdown-body h2,
+	.markdown-body h3,
+	.markdown-body h4,
+	.markdown-body h5,
+	.markdown-body h6 {
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 1.5;
+	}
+
+	.markdown-body h1 {
+	font-size: 30px;
+	}
+
+	.markdown-body h2 {
+	font-size: 21px;
+	}
+
+	.markdown-body h3 {
+	font-size: 16px;
+	}
+
+	.markdown-body h4 {
+	font-size: 14px;
+	}
+
+	.markdown-body h5 {
+	font-size: 12px;
+	}
+
+	.markdown-body h6 {
+	font-size: 11px;
+	}
+
+	.markdown-body p {
+	margin-top: 0;
+	margin-bottom: 10px;
+	}
+
+	.markdown-body blockquote {
+	margin: 0;
+	}
+
+	.markdown-body ul,
+	.markdown-body ol {
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	}
+
+	.markdown-body ol ol,
+	.markdown-body ul ol {
+	list-style-type: lower-roman;
+	}
+
+	.markdown-body ul ul ol,
+	.markdown-body ul ol ol,
+	.markdown-body ol ul ol,
+	.markdown-body ol ol ol {
+	list-style-type: lower-alpha;
+	}
+
+	.markdown-body dd {
+	margin-left: 0;
+	}
+
+	.markdown-body code {
+	font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-size: 12px;
+	}
+
+	.markdown-body pre {
+	margin-top: 0;
+	margin-bottom: 0;
+	font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	}
+
+	.markdown-body .pl-0 {
+	padding-left: 0 !important;
+	}
+
+	.markdown-body .pl-1 {
+	padding-left: 3px !important;
+	}
+
+	.markdown-body .pl-2 {
+	padding-left: 6px !important;
+	}
+
+	.markdown-body .pl-3 {
+	padding-left: 12px !important;
+	}
+
+	.markdown-body .pl-4 {
+	padding-left: 24px !important;
+	}
+
+	.markdown-body .pl-5 {
+	padding-left: 36px !important;
+	}
+
+	.markdown-body .pl-6 {
+	padding-left: 48px !important;
+	}
+
+	.markdown-body .form-select::-ms-expand {
+	opacity: 0;
+	}
+
+	.markdown-body:before {
+	display: table;
+	content: "";
+	}
+
+	.markdown-body:after {
+	display: table;
+	clear: both;
+	content: "";
+	}
+
+	.markdown-body>*:first-child {
+	margin-top: 0 !important;
+	}
+
+	.markdown-body>*:last-child {
+	margin-bottom: 0 !important;
+	}
+
+	.markdown-body a:not([href]) {
+	color: inherit;
+	text-decoration: none;
+	}
+
+	.markdown-body .anchor {
+	display: inline-block;
+	padding-right: 2px;
+	margin-left: -18px;
+	}
+
+	.markdown-body .anchor:focus {
+	outline: none;
+	}
+
+	.markdown-body h1,
+	.markdown-body h2,
+	.markdown-body h3,
+	.markdown-body h4,
+	.markdown-body h5,
+	.markdown-body h6 {
+	margin-top: 1em;
+	margin-bottom: 16px;
+	font-weight: bold;
+	line-height: 1.4;
+	}
+
+	.markdown-body h1 .octicon-link,
+	.markdown-body h2 .octicon-link,
+	.markdown-body h3 .octicon-link,
+	.markdown-body h4 .octicon-link,
+	.markdown-body h5 .octicon-link,
+	.markdown-body h6 .octicon-link {
+	color: #000;
+	vertical-align: middle;
+	visibility: hidden;
+	}
+
+	.markdown-body h1:hover .anchor,
+	.markdown-body h2:hover .anchor,
+	.markdown-body h3:hover .anchor,
+	.markdown-body h4:hover .anchor,
+	.markdown-body h5:hover .anchor,
+	.markdown-body h6:hover .anchor {
+	text-decoration: none;
+	}
+
+	.markdown-body h1:hover .anchor .octicon-link,
+	.markdown-body h2:hover .anchor .octicon-link,
+	.markdown-body h3:hover .anchor .octicon-link,
+	.markdown-body h4:hover .anchor .octicon-link,
+	.markdown-body h5:hover .anchor .octicon-link,
+	.markdown-body h6:hover .anchor .octicon-link {
+	visibility: visible;
+	}
+
+	.markdown-body h1 {
+	padding-bottom: 0.3em;
+	font-size: 2.25em;
+	line-height: 1.2;
+	border-bottom: 1px solid #eee;
+	}
+
+	.markdown-body h1 .anchor {
+	line-height: 1;
+	}
+
+	.markdown-body h2 {
+	padding-bottom: 0.3em;
+	font-size: 1.75em;
+	line-height: 1.225;
+	border-bottom: 1px solid #eee;
+	}
+
+	.markdown-body h2 .anchor {
+	line-height: 1;
+	}
+
+	.markdown-body h3 {
+	font-size: 1.5em;
+	line-height: 1.43;
+	}
+
+	.markdown-body h3 .anchor {
+	line-height: 1.2;
+	}
+
+	.markdown-body h4 {
+	font-size: 1.25em;
+	}
+
+	.markdown-body h4 .anchor {
+	line-height: 1.2;
+	}
+
+	.markdown-body h5 {
+	font-size: 1em;
+	}
+
+	.markdown-body h5 .anchor {
+	line-height: 1.1;
+	}
+
+	.markdown-body h6 {
+	font-size: 1em;
+	color: #777;
+	}
+
+	.markdown-body h6 .anchor {
+	line-height: 1.1;
+	}
+
+	.markdown-body p,
+	.markdown-body blockquote,
+	.markdown-body ul,
+	.markdown-body ol,
+	.markdown-body dl,
+	.markdown-body table,
+	.markdown-body pre {
+	margin-top: 0;
+	margin-bottom: 16px;
+	}
+
+	.markdown-body hr {
+	height: 4px;
+	padding: 0;
+	margin: 16px 0;
+	background-color: #e7e7e7;
+	border: 0 none;
+	}
+
+	.markdown-body ul,
+	.markdown-body ol {
+	padding-left: 2em;
+	}
+
+	.markdown-body ul ul,
+	.markdown-body ul ol,
+	.markdown-body ol ol,
+	.markdown-body ol ul {
+	margin-top: 0;
+	margin-bottom: 0;
+	}
+
+	.markdown-body li>p {
+	margin-top: 16px;
+	}
+
+	.markdown-body dl {
+	padding: 0;
+	}
+
+	.markdown-body dl dt {
+	padding: 0;
+	margin-top: 16px;
+	font-size: 1em;
+	font-style: italic;
+	font-weight: bold;
+	}
+
+	.markdown-body dl dd {
+	padding: 0 16px;
+	margin-bottom: 16px;
+	}
+
+	.markdown-body blockquote {
+	padding: 0 15px;
+	color: #777;
+	border-left: 4px solid #ddd;
+	}
+
+	.markdown-body blockquote>:first-child {
+	margin-top: 0;
+	}
+
+	.markdown-body blockquote>:last-child {
+	margin-bottom: 0;
+	}
+
+	.markdown-body table {
+	display: block;
+	width: 100%;
+	overflow: auto;
+	word-break: normal;
+	word-break: keep-all;
+	}
+
+	.markdown-body table th {
+	font-weight: bold;
+	}
+
+	.markdown-body table th,
+	.markdown-body table td {
+	padding: 6px 13px;
+	border: 1px solid #ddd;
+	}
+
+	.markdown-body table tr {
+	background-color: #fff;
+	border-top: 1px solid #ccc;
+	}
+
+	.markdown-body table tr:nth-child(2n) {
+	background-color: #f8f8f8;
+	}
+
+	.markdown-body img {
+	max-width: 100%;
+	box-sizing: content-box;
+	background-color: #fff;
+	}
+
+	.markdown-body code {
+	padding: 0;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	margin: 0;
+	font-size: 85%;
+	background-color: rgba(0,0,0,0.04);
+	border-radius: 3px;
+	}
+
+	.markdown-body code:before,
+	.markdown-body code:after {
+	letter-spacing: -0.2em;
+	content: "\00a0";
+	}
+
+	.markdown-body pre>code {
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	word-break: normal;
+	white-space: pre;
+	background: transparent;
+	border: 0;
+	}
+
+	.markdown-body .highlight {
+	margin-bottom: 16px;
+	}
+
+	.markdown-body .highlight pre,
+	.markdown-body pre {
+	padding: 16px;
+	overflow: auto;
+	font-size: 85%;
+	line-height: 1.45;
+	background-color: #f7f7f7;
+	border-radius: 3px;
+	}
+
+	.markdown-body .highlight pre {
+	margin-bottom: 0;
+	word-break: normal;
+	}
+
+	.markdown-body pre {
+	word-wrap: normal;
+	}
+
+	.markdown-body pre code {
+	display: inline;
+	max-width: initial;
+	padding: 0;
+	margin: 0;
+	overflow: initial;
+	line-height: inherit;
+	word-wrap: normal;
+	background-color: transparent;
+	border: 0;
+	}
+
+	.markdown-body pre code:before,
+	.markdown-body pre code:after {
+	content: normal;
+	}
+
+	.markdown-body kbd {
+	display: inline-block;
+	padding: 3px 5px;
+	font-size: 11px;
+	line-height: 10px;
+	color: #555;
+	vertical-align: middle;
+	background-color: #fcfcfc;
+	border: solid 1px #ccc;
+	border-bottom-color: #bbb;
+	border-radius: 3px;
+	box-shadow: inset 0 -1px 0 #bbb;
+	}
+
+	.markdown-body .pl-c {
+	color: #969896;
+	}
+
+	.markdown-body .pl-c1,
+	.markdown-body .pl-s .pl-v {
+	color: #0086b3;
+	}
+
+	.markdown-body .pl-e,
+	.markdown-body .pl-en {
+	color: #795da3;
+	}
+
+	.markdown-body .pl-s .pl-s1,
+	.markdown-body .pl-smi {
+	color: #333;
+	}
+
+	.markdown-body .pl-ent {
+	color: #63a35c;
+	}
+
+	.markdown-body .pl-k {
+	color: #a71d5d;
+	}
+
+	.markdown-body .pl-pds,
+	.markdown-body .pl-s,
+	.markdown-body .pl-s .pl-pse .pl-s1,
+	.markdown-body .pl-sr,
+	.markdown-body .pl-sr .pl-cce,
+	.markdown-body .pl-sr .pl-sra,
+	.markdown-body .pl-sr .pl-sre {
+	color: #183691;
+	}
+
+	.markdown-body .pl-v {
+	color: #ed6a43;
+	}
+
+	.markdown-body .pl-id {
+	color: #b52a1d;
+	}
+
+	.markdown-body .pl-ii {
+	background-color: #b52a1d;
+	color: #f8f8f8;
+	}
+
+	.markdown-body .pl-sr .pl-cce {
+	color: #63a35c;
+	font-weight: bold;
+	}
+
+	.markdown-body .pl-ml {
+	color: #693a17;
+	}
+
+	.markdown-body .pl-mh,
+	.markdown-body .pl-mh .pl-en,
+	.markdown-body .pl-ms {
+	color: #1d3e81;
+	font-weight: bold;
+	}
+
+	.markdown-body .pl-mq {
+	color: #008080;
+	}
+
+	.markdown-body .pl-mi {
+	color: #333;
+	font-style: italic;
+	}
+
+	.markdown-body .pl-mb {
+	color: #333;
+	font-weight: bold;
+	}
+
+	.markdown-body .pl-md {
+	background-color: #ffecec;
+	color: #bd2c00;
+	}
+
+	.markdown-body .pl-mi1 {
+	background-color: #eaffea;
+	color: #55a532;
+	}
+
+	.markdown-body .pl-mdr {
+	color: #795da3;
+	font-weight: bold;
+	}
+
+	.markdown-body .pl-mo {
+	color: #1d3e81;
+	}
+
+	.markdown-body kbd {
+	display: inline-block;
+	padding: 3px 5px;
+	font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	line-height: 10px;
+	color: #555;
+	vertical-align: middle;
+	background-color: #fcfcfc;
+	border: solid 1px #ccc;
+	border-bottom-color: #bbb;
+	border-radius: 3px;
+	box-shadow: inset 0 -1px 0 #bbb;
+	}
+
+	.markdown-body .full-commit .btn-outline:not(:disabled):hover {
+	color: #4078c0;
+	border: 1px solid #4078c0;
+	}
+
+	.markdown-body :checked+.radio-label {
+	position: relative;
+	z-index: 1;
+	border-color: #4078c0;
+	}
+
+	.markdown-body .octicon {
+	display: inline-block;
+	vertical-align: text-top;
+	fill: currentColor;
+	}
+
+	.markdown-body .task-list-item {
+	list-style-type: none;
+	}
+
+	.markdown-body .task-list-item+.task-list-item {
+	margin-top: 3px;
+	}
+
+	.markdown-body .task-list-item input {
+	margin: 0 0.2em 0.25em -1.6em;
+	vertical-align: middle;
+	}
+
+	.markdown-body hr {
+	border-bottom-color: #eee;
+	}
+	.markdown-body {
+	box-sizing: border-box;
+	min-width: 200px;
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 45px;
+	}
+	</style>
+</head>
+<body>
+	<article class="markdown-body entry-content container">
+		<h1><a aria-hidden="true" class="anchor" href="#cash" id="cash"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Cash</h1>
+		<p><em>An absurdly small jQuery alternative for modern browsers (IE9+)</em></p>
+		<p>Cash is a small library for modern browsers (Chrome, Firefox, Safari and Internet Explorer 9+) that provides jQuery style syntax for manipulating the DOM. Utilizing modern browser features to minimize the codebase, developers can use the familiar chainable methods at a fraction of the file size. 100% feature parity with jQuery isn't a goal, but cash comes helpfully close, covering most day to day use cases.</p>
+		<h4><a aria-hidden="true" class="anchor" href="#size-comparison" id="size-comparison"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Size Comparison</h4>
+		<table>
+			<thead>
+				<tr>
+					<th>Library</th>
+					<th align="right">jQuery 1.12.2</th>
+					<th align="right">jQuery 2.2.2</th>
+					<th align="right">Cash</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Uncompressed</td>
+					<td align="right">287K</td>
+					<td align="right">253K</td>
+					<td align="right">20.6K</td>
+				</tr>
+				<tr>
+					<td>Minified</td>
+					<td align="right">95K</td>
+					<td align="right">76K</td>
+					<td align="right">9.7K</td>
+				</tr>
+				<tr>
+					<td><strong>Minified &amp; Gzipped</strong></td>
+					<td align="right"><strong>34K</strong></td>
+					<td align="right"><strong>30K</strong></td>
+					<td align="right"><strong>3.5K</strong></td>
+				</tr>
+			</tbody>
+		</table>
+		<hr>
+		<h2><a aria-hidden="true" class="anchor" href="#usage" id="usage"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Usage</h2>
+		<p>Add cash to your project on your server or using the <a href="https://cdn.jsdelivr.net/cash/1.3.0/cash.min.js">jsDelivr</a> or <a href="https://cdnjs.cloudflare.com/ajax/libs/cash/1.3.0/cash.min.js">CloudFlare</a> CDNs, and use cash to manipulate the DOM!</p>
+		<div class="highlight highlight-text-html-basic">
+			<pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://cdn.jsdelivr.net/cash/1.3.0/cash.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+<span class="pl-s1">&lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1"><span class="pl-en">$</span>(<span class="pl-k">function</span>(){</span>
+<span class="pl-s1"></span>
+<span class="pl-s1">  <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>html<span class="pl-pds">'</span></span>).<span class="pl-en">addClass</span>(<span class="pl-s"><span class="pl-pds">'</span>dom-loaded<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1"></span>
+<span class="pl-s1">  <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>&lt;footer&gt;Appended with cash&lt;/footer&gt;<span class="pl-pds">'</span></span>).<span class="pl-en">appendTo</span>(<span class="pl-c1">document</span>.<span class="pl-c1">body</span>);</span>
+<span class="pl-s1"></span>
+<span class="pl-s1">});</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre>
+		</div>
+		<p>Cash is also available through <a href="http://npmjs.com">NPM</a> as the <a href="https://www.npmjs.com/package/cash-dom"><code>cash-dom</code></a> package:</p>
+		<pre><code>npm install cash-dom --save-dev
+</code></pre>
+		<p>And through <a href="http://bower.io/">Bower</a> as <code>cash</code>:</p>
+		<pre><code>bower install cash
+</code></pre>
+		<hr>
+		<h2><a aria-hidden="true" class="anchor" href="#documentation" id="documentation"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Documentation</h2>
+		<h3><a aria-hidden="true" class="anchor" href="#" id=""><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$()</h3>
+		<p>This is the main selector method for cash. It returns an actionable collection of nodes. If a function is provided, the function will be run once the DOM is ready.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(selector,[context]) <span class="pl-c">// =&gt; collection</span>
+<span class="pl-en">$</span>(node) <span class="pl-c">// =&gt; collection</span>
+<span class="pl-en">$</span>(nodeList) <span class="pl-c">// =&gt; collection</span>
+<span class="pl-en">$</span>(htmlString) <span class="pl-c">// =&gt; collection</span>
+<span class="pl-en">$</span>(collection) <span class="pl-c">// =&gt; self</span>
+<span class="pl-en">$</span>(<span class="pl-k">function</span>) <span class="pl-c">// =&gt; document ready callback</span></pre>
+		</div>
+		<h3><a aria-hidden="true" class="anchor" href="#collection-methods" id="collection-methods"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Collection Methods</h3>
+		<p>These methods from the collection prototype ( <a href="#fn">$.fn</a> ) are available once you create a collection with <code>$()</code> and are called like so:</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">addClass</span>(className) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<table>
+			<thead>
+				<tr>
+					<th>Attributes</th>
+					<th>Collection</th>
+					<th>CSS</th>
+					<th>Data</th>
+					<th>Dimensions</th>
+					<th>Events</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<a href="#fnaddclass">$.fn.addClass()</a>
+					</td>
+					<td>
+						<a href="#fn">$.fn</a>
+					</td>
+					<td>
+						<a href="#fncss">$.fn.css()</a>
+					</td>
+					<td>
+						<a href="#fndata">$.fn.data()</a>
+					</td>
+					<td>
+						<a href="#fnheight">$.fn.height()</a>
+					</td>
+					<td>
+						<a href="#fnoff">$.fn.off()</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#fnattr">$.fn.attr()</a>
+					</td>
+					<td>
+						<a href="#fnadd">$.fn.add()</a>
+					</td>
+					<td></td>
+					<td>
+						<a href="#fnremovedata">$.fn.removeData()</a>
+					</td>
+					<td>
+						<a href="#fninnerheight">$.fn.innerHeight()</a>
+					</td>
+					<td>
+						<a href="#fnon">$.fn.on()</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#fnhasclass">$.fn.hasClass()</a>
+					</td>
+					<td>
+						<a href="#fneach">$.fn.each()</a>
+					</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a href="#fninnerwidth">$.fn.innerWidth()</a>
+					</td>
+					<td>
+						<a href="#fnone">$.fn.one()</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#fnprop">$.fn.prop()</a>
+					</td>
+					<td>
+						<a href="#fneq">$.fn.eq()</a>
+					</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a href="#fnouterheight">$.fn.outerHeight()</a>
+					</td>
+					<td>
+						<a href="#fnready">$.fn.ready()</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#fnremoveattr">$.fn.removeAttr()</a>
+					</td>
+					<td>
+						<a href="#fnfilter">$.fn.filter()</a>
+					</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a href="#fnouterwidth">$.fn.outerWidth()</a>
+					</td>
+					<td>
+						<a href="#fntrigger">$.fn.trigger()</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#fnremoveclass">$.fn.removeClass()</a>
+					</td>
+					<td>
+						<a href="#fnfirst">$.fn.first()</a>
+					</td>
+					<td></td>
+					<td></td>
+					<td>
+						<a href="#fnwidth">$.fn.width()</a>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#fnremoveprop">$.fn.removeProp()</a>
+					</td>
+					<td>
+						<a href="#fnget">$.fn.get()</a>
+					</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#fntoggleclass">$.fn.toggleClass()</a>
+					</td>
+					<td>
+						<a href="#fnindex">$.fn.index()</a>
+					</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<a href="#fnlast">$.fn.last()</a>
+					</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<thead>
+				<tr>
+					<th>Forms</th>
+					<th>Manipulation</th>
+					<th>Offset</th>
+					<th>Traversal</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<a href="#fnserialize">$.fn.serialize()</a>
+					</td>
+					<td>
+						<a href="#fnafter">$.fn.after()</a>
+					</td>
+					<td>
+						<a href="#fnoffset">$.fn.offset()</a>
+					</td>
+					<td>
+						<a href="#fnchildren">$.fn.children()</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#fnval">$.fn.val()</a>
+					</td>
+					<td>
+						<a href="#fnappend">$.fn.append()</a>
+					</td>
+					<td>
+						<a href="#fnoffsetparent">$.fn.offsetParent()</a>
+					</td>
+					<td>
+						<a href="#fnclosest">$.fn.closest()</a>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<a href="#fnappendto">$.fn.appendTo()</a>
+					</td>
+					<td>
+						<a href="#fnposition">$.fn.position()</a>
+					</td>
+					<td>
+						<a href="#fnfind">$.fn.find()</a>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<a href="#fnbefore">$.fn.before()</a>
+					</td>
+					<td></td>
+					<td>
+						<a href="#fnhas">$.fn.has()</a>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<a href="#fnclone">$.fn.clone()</a>
+					</td>
+					<td></td>
+					<td>
+						<a href="#fnis">$.fn.is()</a>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<a href="#fnempty">$.fn.empty()</a>
+					</td>
+					<td></td>
+					<td>
+						<a href="#fnnext">$.fn.next()</a>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<a href="#fnhtml">$.fn.html()</a>
+					</td>
+					<td></td>
+					<td>
+						<a href="#fnnot">$.fn.not()</a>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<a href="#fninsertafter">$.fn.insertAfter()</a>
+					</td>
+					<td></td>
+					<td>
+						<a href="#fnparent">$.fn.parent()</a>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<a href="#fninsertbefore">$.fn.insertBefore()</a>
+					</td>
+					<td></td>
+					<td>
+						<a href="#fnparents">$.fn.parents()</a>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<a href="#fnprepend">$.fn.prepend()</a>
+					</td>
+					<td></td>
+					<td>
+						<a href="#fnprev">$.fn.prev()</a>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<a href="#fnprependto">$.fn.prependTo()</a>
+					</td>
+					<td></td>
+					<td>
+						<a href="#fnsiblings">$.fn.siblings()</a>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<a href="#fnremove">$.fn.remove()</a>
+					</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<a href="#fntext">$.fn.text()</a>
+					</td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+		<h3><a aria-hidden="true" class="anchor" href="#utilities" id="utilities"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Utilities</h3>
+		<table>
+			<thead>
+				<tr>
+					<th>Type Checking</th>
+					<th>Utilities</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<a href="#isarray">$.isArray()</a>
+					</td>
+					<td>
+						<a href="#each">$.each()</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#isfunction">$.isFunction()</a>
+					</td>
+					<td>
+						<a href="#extend">$.extend()</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#isnumeric">$.isNumeric()</a>
+					</td>
+					<td>
+						<a href="#matches">$.matches()</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#isstring">$.isString()</a>
+					</td>
+					<td>
+						<a href="#parsehtml">$.parseHTML()</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr>
+		<h4><a aria-hidden="true" class="anchor" href="#fn" id="fn"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn</h4>
+		<p>The main prototype for collections, allowing you to extend cash with plugins by adding methods to all collections.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-smi">$</span>.<span class="pl-smi">fn</span> <span class="pl-c">// =&gt; cash.prototype</span>
+<span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-en">myMethod</span> <span class="pl-k">=</span> <span class="pl-k">function</span>(){ }; <span class="pl-c">// Custom method added to all collections</span>
+<span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-en">extend</span>(object); <span class="pl-c">// Add multiple methods to the prototype.</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnadd" id="fnadd"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.add()</h4>
+		<p>Returns a new collection with the element(s) added to the end.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-c1">add</span>(element) <span class="pl-c">// =&gt; collection</span>
+<span class="pl-en">$</span>(element).<span class="pl-c1">add</span>(selector) <span class="pl-c">// =&gt; collection</span>
+<span class="pl-en">$</span>(element).<span class="pl-c1">add</span>(collection) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnaddclass" id="fnaddclass"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.addClass()</h4>
+		<p>Adds the className argument to collection elements.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">addClass</span>(className) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnafter" id="fnafter"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.after()</h4>
+		<p>Inserts content or elements after the collection.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">after</span>(element) <span class="pl-c">// =&gt; collection</span>
+<span class="pl-en">$</span>(element).<span class="pl-en">after</span>(htmlString) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnappend" id="fnappend"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.append()</h4>
+		<p>Appends the target element to the each element in the collection.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">append</span>(element) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnappendto" id="fnappendto"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.appendTo()</h4>
+		<p>Adds the elements in a collection to the target element(s).</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">appendTo</span>(element) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnattr" id="fnattr"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.attr()</h4>
+		<p>Without attrValue, returns the attribute value of the first element in the collection. With attrValue, sets the attribute value of each element of the collection.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">attr</span>(attrName) <span class="pl-c">// =&gt; AttributeValue</span>
+<span class="pl-en">$</span>(element).<span class="pl-en">attr</span>(attrName, attrValue) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnbefore" id="fnbefore"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.before()</h4>
+		<p>Inserts content or elements before the collection.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">before</span>(element) <span class="pl-c">// =&gt; collection</span>
+<span class="pl-en">$</span>(element).<span class="pl-en">before</span>(htmlString) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnchildren" id="fnchildren"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.children()</h4>
+		<p>Without a selector specified, returns a collection of child elements. With a selector, returns child elements that match the selector.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">children</span>() <span class="pl-c">// =&gt; collection</span>
+<span class="pl-en">$</span>(element).<span class="pl-en">children</span>(selector) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnclosest" id="fnclosest"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.closest()</h4>
+		<p>Returns the closest matching selector up the DOM tree.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">closest</span>() <span class="pl-c">// =&gt; collection</span>
+<span class="pl-en">$</span>(element).<span class="pl-en">closest</span>(selector) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnclone" id="fnclone"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.clone()</h4>
+		<p>Returns a clone of the collection.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">clone</span>() <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fncss" id="fncss"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.css()</h4>
+		<p>Returns a CSS property value when just property is supplied. Sets a CSS property when property and value are supplied, and set multiple properties when an object is supplied. Properties will be autoprefixed if needed for the user's browser.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">css</span>(property) <span class="pl-c">// =&gt; value</span>
+<span class="pl-en">$</span>(element).<span class="pl-en">css</span>(property, value) <span class="pl-c">// =&gt; collection</span>
+<span class="pl-en">$</span>(element).<span class="pl-en">css</span>(object) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fndata" id="fndata"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.data()</h4>
+		<p>Link some data (string, object, array, etc.) to an element when both key and value are supplied. If only a key is supplied, returns the linked data and falls back to data attribute value if no data is already linked. Multiple data can be set when an object is supplied.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-c1">data</span>(key) <span class="pl-c">// =&gt; value</span>
+<span class="pl-en">$</span>(element).<span class="pl-c1">data</span>(key, value) <span class="pl-c">// =&gt; collection</span>
+<span class="pl-en">$</span>(element).<span class="pl-c1">data</span>(object) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fneach" id="fneach"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.each()</h4>
+		<p>Iterates over a collection with callback(value, index, array).</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">each</span>(callback) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnempty" id="fnempty"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.empty()</h4>
+		<p>Empties an elements interior markup.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">empty</span>() <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fneq" id="fneq"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.eq()</h4>
+		<p>Returns a collection with the element at index.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">eq</span>(index) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnextend" id="fnextend"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.extend()</h4>
+		<p>Adds properties to the cash collection prototype.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-en">extend</span>(source) <span class="pl-c">// =&gt; object</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnfilter" id="fnfilter"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.filter()</h4>
+		<p>Returns the collection that results from applying the filter method.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">filter</span>(<span class="pl-k">function</span>) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnfind" id="fnfind"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.find()</h4>
+		<p>Returns selector match descendants from the first element in the collection.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-c1">find</span>(selector) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnfirst" id="fnfirst"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.first()</h4>
+		<p>Returns the first element in the collection.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">first</span>() <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnget" id="fnget"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.get()</h4>
+		<p>Returns the element at the index.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">get</span>(index) <span class="pl-c">// =&gt; domNode</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnhas" id="fnhas"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.has()</h4>
+		<p>Returns boolean result of the selector argument against the collection.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">has</span>(selector) <span class="pl-c">// =&gt; boolean</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnhasclass" id="fnhasclass"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.hasClass()</h4>
+		<p>Returns the boolean result of checking if the first element in the collection has the className attribute.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">hasClass</span>(className) <span class="pl-c">// =&gt; boolean</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnheight" id="fnheight"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.height()</h4>
+		<p>Returns the height of the element.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-c1">height</span>() <span class="pl-c">// =&gt; Integer</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnhtml" id="fnhtml"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.html()</h4>
+		<p>Returns the HTML text of the first element in the collection, sets the HTML if provided.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">html</span>() <span class="pl-c">// =&gt; HTML Text</span>
+<span class="pl-en">$</span>(element).<span class="pl-en">html</span>(<span class="pl-c1">HTML</span>) <span class="pl-c">// =&gt; HTML Text</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnindex" id="fnindex"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.index()</h4>
+		<p>Returns the index of the element in its parent if an element or selector isn't provided. Returns index within element or selector if it is.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-c1">index</span>() <span class="pl-c">// =&gt; Integer</span>
+<span class="pl-en">$</span>(element).<span class="pl-c1">index</span>(element) <span class="pl-c">// =&gt; Integer</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fninnerheight" id="fninnerheight"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.innerHeight()</h4>
+		<p>Returns the height of the element + padding.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-c1">innerHeight</span>() <span class="pl-c">// =&gt; Integer</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fninnerwidth" id="fninnerwidth"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.innerWidth()</h4>
+		<p>Returns the width of the element + padding.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-c1">innerWidth</span>() <span class="pl-c">// =&gt; Integer</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fninsertafter" id="fninsertafter"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.insertAfter()</h4>
+		<p>Inserts collection after specified element.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">insertAfter</span>(element) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fninsertbefore" id="fninsertbefore"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.insertBefore()</h4>
+		<p>Inserts collection before specified element.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-c1">insertBefore</span>(element) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnis" id="fnis"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.is()</h4>
+		<p>Returns whether the provided selector, element or collection matches any element in the collection.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">is</span>(selector) <span class="pl-c">// =&gt; boolean</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnlast" id="fnlast"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.last()</h4>
+		<p>Returns last element in the collection.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">last</span>() <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnnext" id="fnnext"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.next()</h4>
+		<p>Returns next sibling.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-c1">next</span>() <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnnot" id="fnnot"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.not()</h4>
+		<p>Filters collection by false match on selector.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">not</span>(selector) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnoff" id="fnoff"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.off()</h4>
+		<p>Removes event listener from collection elements.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">off</span>(eventName,eventHandler) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnoffset" id="fnoffset"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.offset()</h4>
+		<p>Get the coordinates of the first element in a collection relative to the document.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">offset</span>() <span class="pl-c">// =&gt; Object</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnoffsetparent" id="fnoffsetparent"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.offsetParent()</h4>
+		<p>Get the first element's ancestor that's positioned.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">offsetParent</span>() <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnon" id="fnon"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.on()</h4>
+		<p>Adds event listener to collection elements. Event is delegated if delegate is supplied.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">on</span>(eventName, eventHandler) <span class="pl-c">// =&gt; collection</span>
+<span class="pl-en">$</span>(element).<span class="pl-en">on</span>(eventName, delegate, eventHandler) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnone" id="fnone"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.one()</h4>
+		<p>Adds event listener to collection elements that only triggers once for each element. Event is delegated if delegate is supplied.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">one</span>(eventName, eventHandler) <span class="pl-c">// =&gt; collection</span>
+<span class="pl-en">$</span>(element).<span class="pl-en">one</span>(eventName, delegate, eventHandler) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnouterheight" id="fnouterheight"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.outerHeight()</h4>
+		<p>Returns the outer height of the element. Includes margins if margin is set to true.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-c1">outerHeight</span>() <span class="pl-c">// =&gt; Integer</span>
+<span class="pl-en">$</span>(element).<span class="pl-c1">outerHeight</span>(includeMargin) <span class="pl-c">// =&gt; Integer</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnouterwidth" id="fnouterwidth"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.outerWidth()</h4>
+		<p>Returns the outer width of the element. Includes margins if margin is set to true.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-c1">outerWidth</span>() <span class="pl-c">// =&gt; Integer</span>
+<span class="pl-en">$</span>(element).<span class="pl-c1">outerWidth</span>(includeMargin) <span class="pl-c">// =&gt; Integer</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnparent" id="fnparent"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.parent()</h4>
+		<p>Returns parent element.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-c1">parent</span>() <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnparents" id="fnparents"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.parents()</h4>
+		<p>Returns collection of elements who are parents of element. Optionally filtering by selector.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">parents</span>() <span class="pl-c">// =&gt; collection</span>
+<span class="pl-en">$</span>(element).<span class="pl-en">parents</span>(selector) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnposition" id="fnposition"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.position()</h4>
+		<p>Get the coordinates of the first element in a collection relative to its <code>offsetParent</code>.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">position</span>() <span class="pl-c">// =&gt; object</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnprepend" id="fnprepend"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.prepend()</h4>
+		<p>Prepends element to the each element in collection.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">prepend</span>(element) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnprependto" id="fnprependto"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.prependTo()</h4>
+		<p>Prepends elements in a collection to the target element(s).</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">prependTo</span>(element) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnprev" id="fnprev"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.prev()</h4>
+		<p>Returns the previous adjacent element.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">prev</span>() <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnprop" id="fnprop"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.prop()</h4>
+		<p>Returns a property value when just property is supplied. Sets a property when property and value are supplied, and sets multiple properties when an object is supplied.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">prop</span>(property) <span class="pl-c">// =&gt; property value</span>
+<span class="pl-en">$</span>(element).<span class="pl-en">prop</span>(property, value) <span class="pl-c">// =&gt; collection</span>
+<span class="pl-en">$</span>(element).<span class="pl-en">prop</span>(object) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnready" id="fnready"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.ready()</h4>
+		<p>Calls callback method on DOMContentLoaded.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(<span class="pl-c1">document</span>).<span class="pl-en">ready</span>(callback) <span class="pl-c">// =&gt; collection/span</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnremove" id="fnremove"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.remove()</h4>
+		<p>Removes collection elements from the DOM.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">remove</span>() <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnremoveattr" id="fnremoveattr"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.removeAttr()</h4>
+		<p>Removes attribute from collection elements.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">removeAttr</span>(attrName) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnremoveclass" id="fnremoveclass"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.removeClass()</h4>
+		<p>Removes className from collection elements. Accepts space-separated classNames for removing multiple classes. Providing no arguments will remove all classes.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">removeClass</span>() <span class="pl-c">// =&gt; collection</span>
+<span class="pl-en">$</span>(element).<span class="pl-en">removeClass</span>(className) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnremovedata" id="fnremovedata"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.removeData()</h4>
+		<p>Removes linked data and data-attributes from collection elements.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">removeData</span>(name) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnremoveprop" id="fnremoveprop"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.removeProp()</h4>
+		<p>Removes property from collection elements.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">removeProp</span>(propName) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnserialize" id="fnserialize"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.serialize()</h4>
+		<p>When called on a form, serializes and returns form data.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(form).<span class="pl-en">serialize</span>() <span class="pl-c">// =&gt; String</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnsiblings" id="fnsiblings"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.siblings</h4>
+		<p>Returns a collection of sibling elements.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">siblings</span>() <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fntext" id="fntext"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.text</h4>
+		<p>Returns the inner text of the first element in the collection, sets the text if textContent is provided.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-c1">text</span>() <span class="pl-c">// =&gt; text</span>
+<span class="pl-en">$</span>(element).<span class="pl-c1">text</span>(textContent) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fntoggleclass" id="fntoggleclass"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.toggleClass</h4>
+		<p>Adds or removes className from collection elements based on if the element already has the class. Accepts space-separated classNames for toggling multiple classes, and an optional <code>force</code> boolean to ensure classes are added (<code>true</code>) or removed (<code>false</code>).</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">toggleClass</span>(className) <span class="pl-c">// =&gt; collection</span>
+<span class="pl-en">$</span>(element).<span class="pl-en">toggleClass</span>(className,force) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fntrigger" id="fntrigger"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.trigger()</h4>
+		<p>Triggers supplied event on elements in collection. Data can be passed along as the second parameter.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-en">trigger</span>(eventName) <span class="pl-c">// =&gt; collection</span>
+<span class="pl-en">$</span>(element).<span class="pl-en">trigger</span>(eventName,data) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnval" id="fnval"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.val()</h4>
+		<p>Returns an inputs value. If value is supplied, sets all inputs in collection's value to the value argument.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(input).<span class="pl-en">val</span>() <span class="pl-c">// =&gt; value</span>
+<span class="pl-en">$</span>(input).<span class="pl-en">val</span>(value) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#fnwidth" id="fnwidth"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.fn.width()</h4>
+		<p>Returns the width of the element.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-en">$</span>(element).<span class="pl-c1">width</span>() <span class="pl-c">// =&gt; number</span></pre>
+		</div>
+		<hr>
+		<h3><a aria-hidden="true" class="anchor" href="#type-checking" id="type-checking"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Type Checking</h3>
+		<h4><a aria-hidden="true" class="anchor" href="#isarray" id="isarray"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.isArray()</h4>
+		<p>Check if the argument is an array.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-smi">$</span>.<span class="pl-en">isArray</span>([<span class="pl-c1">1</span>,<span class="pl-c1">2</span>,<span class="pl-c1">3</span>]) <span class="pl-c">// =&gt; true</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#isfunction" id="isfunction"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.isFunction()</h4>
+		<p>Check if the argument is a function.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-k">var</span> <span class="pl-en">func</span> <span class="pl-k">=</span> <span class="pl-k">function</span>(){};
+<span class="pl-smi">$</span>.<span class="pl-en">isFunction</span>(func) <span class="pl-c">// =&gt; true</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#isnumeric" id="isnumeric"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.isNumeric()</h4>
+		<p>Check if the argument is numeric.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-smi">$</span>.<span class="pl-en">isNumeric</span>(<span class="pl-c1">57</span>) <span class="pl-c">// =&gt; true</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#isstring" id="isstring"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.isString()</h4>
+		<p>Check if the argument is a string.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-smi">$</span>.<span class="pl-en">isString</span>(<span class="pl-s"><span class="pl-pds">'</span>hello<span class="pl-pds">'</span></span>) <span class="pl-c">// =&gt; true</span></pre>
+		</div>
+		<hr>
+		<h3><a aria-hidden="true" class="anchor" href="#utilities-1" id="utilities-1"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Utilities</h3>
+		<h4><a aria-hidden="true" class="anchor" href="#each" id="each"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.each()</h4>
+		<p>Iterates through a collection and calls the callback method on each.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-smi">$</span>.<span class="pl-en">each</span>(collection, callback) <span class="pl-c">// =&gt; collection</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#extend" id="extend"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.extend()</h4>
+		<p>Extends target object with properties from the source object. If no target is provided, cash itself will be extended.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-smi">$</span>.<span class="pl-en">extend</span>(target,source) <span class="pl-c">// =&gt; object</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#matches" id="matches"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.matches()</h4>
+		<p>Checks a selector against an element, returning a boolean value for match.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-smi">$</span>.<span class="pl-en">matches</span>(element, selector) <span class="pl-c">// =&gt; boolean</span></pre>
+		</div>
+		<h4><a aria-hidden="true" class="anchor" href="#parsehtml" id="parsehtml"><svg class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16">
+		<path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>$.parseHTML()</h4>
+		<p>Returns a collection from an HTML string.</p>
+		<div class="highlight highlight-source-js">
+			<pre><span class="pl-smi">$</span>.<span class="pl-en">parseHTML</span>(htmlString) <span class="pl-c">// =&gt; Collection</span></pre>
+		</div>
+	</article>
+</body>
+</html>

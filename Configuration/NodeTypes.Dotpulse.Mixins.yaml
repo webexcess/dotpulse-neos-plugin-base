@@ -63,8 +63,6 @@
 # Ganze Seitenbreite nutzen (Bei Bildern, Buttons, etc.)
 'Dotpulse.Base:BleedMixin':
   abstract: TRUE
-  superTypes:
-    'Dotpulse.Base:SettingsMixin': TRUE
   properties:
     bleed:
       type: boolean
@@ -73,7 +71,7 @@
         label: i18n
         reloadIfChanged: TRUE
         inspector:
-          group: settings
+          group: image
           position: 340
 
 'Dotpulse.Base:MaximumWidthMixin':

@@ -1,12 +1,10 @@
-prototype(Neos:Page) {
-	@context.rawContent = ${node.context.currentRenderingMode.name == 'rawContent' ? true : false}
-
+prototype(TYPO3.Neos:Page) {
 	htmlTag.attributes {
 		@context.config = ${Configuration.setting('Dotpulse.Base.Source')}
 		data-version = ${config.VersionOfAssets}
 		data-jq = ${config.jQuery.printInHead ? config.jQuery.new : false}
 		data-jq-old = ${config.SupportIE8 && config.jQuery.printInHead ? config.jQuery.old : false}
-		class = TypoScript:RawArray {
+		class = TYPO3.TypoScript:RawArray {
 			live = ${node.context.inBackend ? 'inBackend' : 'live'}
 			javascript = 'no-js'
 		}
@@ -15,7 +13,7 @@ prototype(Neos:Page) {
 	bodyTag.attributes {
 		data-neos-node = ${node.contextPath}
 		id = ${q(site).get(0) == q(node).get(0) ? 'level-index' : 'level-' + q(node).parents().count() + '-' + q(node).property('uriPathSegment')}
-		class = TypoScript:RawArray {
+		class = TYPO3.TypoScript:RawArray {
 			subpages = ${q(node).parents().is() && q(node).children('[instanceof TYPO3.Neos:Document]').filter('[_hiddenInIndex=false]').is() ? 'has-subpages' : false}
 			level = ${'level-' + q(node).parents().count()}
 		}
@@ -26,14 +24,14 @@ prototype(Neos:Page) {
 		@context.baseConfiguration = ${this.baseConfiguration}
 		partialRootPath = 'resource://Dotpulse.Base/Private/Partials'
 
-		mainAttributes = TypoScript:Attributes {
-			id = ${rawContent ? 'neos-raw-content-container' : 'top'}
-			class = TypoScript:RawArray {
+		mainAttributes = TYPO3.TypoScript:Attributes {
+			id = 'top'
+			class = TYPO3.TypoScript:RawArray {
 				level = ${'level-' + q(node).parents().count()}
 			}
 		}
 
-		GoogleTagManager = TypoScript:Template {
+		GoogleTagManager = TYPO3.TypoScript:Template {
 			templatePath = 'resource://Dotpulse.Base/Private/Partials/GoogleTagManager.html'
 			GoogleTagManager = ${baseConfiguration.Source.GoogleTagManager}
 			@if.isLive = ${node.context.live}
@@ -41,7 +39,7 @@ prototype(Neos:Page) {
 		}
 		@process.PrependGoogleTagManager = ${this.GoogleTagManager + value}
 
-		GoogleAnalytics  = TypoScript:Template {
+		GoogleAnalytics  = TYPO3.TypoScript:Template {
 			templatePath = 'resource://Dotpulse.Base/Private/Partials/GoogleAnalytics.html'
 			GoogleAnalytics = ${baseConfiguration.Source.GoogleAnalytics}
 			SendPageview = ${baseConfiguration.Source.GoogleAnalyticsSendPageview}
@@ -49,32 +47,25 @@ prototype(Neos:Page) {
 			@if.isNotBlank = ${!String.isBlank(this.GoogleAnalytics)}
 		}
 		@process.PrependGoogleAnalytics = ${this.GoogleAnalytics + value}
-		@context.VersionOfAssets = ${baseConfiguration.Source.VersionOfAssets ? '?v=' + baseConfiguration.Source.VersionOfAssets : ''}
+		@context.VersionOfAssets = ${this.baseConfiguration.Source.VersionOfAssets ? '?v=' + this.baseConfiguration.Source.VersionOfAssets : ''}
 		javascripts {
-			jQuery = Base:jQuery
-			General = Base:JSCollection {
+			jQuery = Dotpulse.Base:jQuery
+			General = Dotpulse.Base:JSCollection {
 				collection = ${String.split(baseConfiguration.Source.General.BodyJavascript, ',')}
-				@if.isNotRaw = ${rawContent ? false : true}
 			}
-			Backend = Base:JSCollection {
+			Backend = Dotpulse.Base:JSCollection {
 				collection = ${String.split(baseConfiguration.Source.Backend.BodyJavascript, ',')}
 				@if.isBackend = ${node.context.inBackend}
-				@if.isNotRaw = ${rawContent ? false : true}
 			}
-			Live = Base:JSCollection {
+			Live = Dotpulse.Base:JSCollection {
 				collection = ${String.split(baseConfiguration.Source.Live.BodyJavascript, ',')}
 				@if.isLive = ${!node.context.inBackend}
-				@if.isNotRaw = ${rawContent ? false : true}
-			}
-			RawContent = Base:JSCollection {
-				collection = ${String.split(baseConfiguration.Source.RawContent.BodyJavascript, ',')}
-				@if.isRaw = ${rawContent}
 			}
 		}
 	}
 
 	lastVisitedNodeScript >
-	lastVisitedNodeScript = TypoScript:Tag {
+	lastVisitedNodeScript = TYPO3.TypoScript:Tag {
 		@position = 'before closingBodyTag'
 		tagName = 'script'
 		content = 'try{lastVisitedNode();}catch(e){}'
