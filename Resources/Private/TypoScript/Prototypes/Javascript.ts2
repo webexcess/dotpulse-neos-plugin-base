@@ -1,0 +1,31 @@
+prototype(Base:JSCollection) < prototype(TypoScript:Collection) {
+	itemName = 'item'
+	itemRenderer = TypoScript:Collection {
+		collection = ${item ? String.split(String.replace(String.trim(item), ']', ''), '[') : []}
+		iterationName = 'iterator'
+		itemName = 'entry'
+		itemRenderer = TypoScript:Case {
+			isFilename {
+				condition = ${iterator.isFirst}
+				renderer = TypoScript:Case {
+					isExternal {
+						condition = ${String.indexOf(entry, '//') != -1}
+						renderer = ${entry}
+					}
+					isInternal {
+						condition = ${entry}
+						renderer = TypoScript:ResourceUri {
+							path = ${'resource://' + sitePackage + '/Public/Scripts/' + entry +'.js'}
+						}
+					}
+					@process.wrap = ${' src="' + value + VersionOfAssets + '"'}
+				}
+			}
+			areAttributes {
+				condition = ${entry}
+				renderer = ${' ' + String.trim(entry)}
+			}
+		}
+		@process.wrap = ${value ? '<script' + value + '></script>' : ''}
+	}
+}

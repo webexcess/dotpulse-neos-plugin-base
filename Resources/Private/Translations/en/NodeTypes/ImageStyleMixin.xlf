@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file original="" product-name="Dotpulse.Base" source-language="en" datatype="plaintext">
+		<body>
+			<trans-unit id="properties.shape" xml:space="preserve">
+				<source>Shape of image</source>
+			</trans-unit>
+			<trans-unit id="properties.shape.selectBoxEditor.placeholder" xml:space="preserve">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="properties.shape.selectBoxEditor.values.figure-corner" xml:space="preserve">
+				<source>No round corners</source>
+			</trans-unit>
+			<trans-unit id="properties.shape.selectBoxEditor.values.figure-rounded" xml:space="preserve">
+				<source>Round Corners</source>
+			</trans-unit>
+			<trans-unit id="properties.shape.selectBoxEditor.values.figure-circle" xml:space="preserve">
+				<source>Image in a circle</source>
+			</trans-unit>
+			<trans-unit id="properties.shape.selectBoxEditor.values.figure-thumbnail" xml:space="preserve">
+				<source>Image with border</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

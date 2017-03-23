@@ -11,6 +11,23 @@
 	@if $grid-enable-fallback {
 		#{$grid-enable-fallback} {
 			@import 'Import/Float';
+
+			@each $breakpoint in $grid-autowidth {
+				@include media-breakpoint-up($breakpoint) {
+					#{$grid-selector}col-#{$breakpoint} {
+						float: left;
+						display: inline-block;
+					}
+				}
+			}
+			@each $breakpoint in $grid-autowidth-min {
+				@include media-breakpoint-up($breakpoint) {
+					#{$grid-selector}col-#{$breakpoint}-min {
+						float: left;
+						display: inline-block;
+					}
+				}
+			}
 		}
 	}
 } @else {

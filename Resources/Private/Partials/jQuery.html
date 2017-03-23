@@ -1,6 +1,6 @@
-<!--[if lte IE 9]>
-	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-<![endif]-->
-<!--[if gt IE 9]><!-->
-	<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-<!--<![endif]-->
+<f:if condition="{supportIE8}">
+<!--[if lt IE 9]><script src="//code.jquery.com/jquery-{old}.min.js"></script><![endif]-->
+<!--[if gt IE 8]><!-->
+</f:if>
+<script src="//code.jquery.com/jquery-{new}.min.js"></script>
+<f:if condition="{supportIE8}"><!--<![endif]--></f:if>

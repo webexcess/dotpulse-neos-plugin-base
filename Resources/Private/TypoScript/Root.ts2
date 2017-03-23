@@ -1,6 +1,8 @@
 namespace: NodeTypes=TYPO3.Neos.NodeTypes
 namespace: TypoScript=TYPO3.TypoScript
 namespace: Neos=TYPO3.Neos
+namespace: Base=Dotpulse.Base
 
+include: Prototypes/*
 include: NodeTypes/*
 include: TypoScriptObjects/*

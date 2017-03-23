@@ -1,4 +1,3 @@
-# TODO: Labels translation
 # Settings im Inspektor
 'Dotpulse.Base:SettingsMixin':
   abstract: TRUE
@@ -6,7 +5,7 @@
     inspector:
       groups:
         settings:
-          label: 'Settings'
+          label: i18n
           position: 50
 
 # bigmargin: Grosser Abstand
@@ -19,8 +18,8 @@
       type: boolean
       defaultValue: FALSE
       ui:
-        label: 'Extra spacing'
-        reloadPageIfChanged: TRUE
+        label: i18n
+        reloadIfChanged: TRUE
         inspector:
           group: settings
           position: 350
@@ -34,7 +33,7 @@
       ui:
         inlineEditable: TRUE
         aloha:
-          placeholder: 'Enter text here'
+          placeholder: i18n
           format: []
           table: []
           link: []
@@ -53,7 +52,7 @@
       ui:
         inlineEditable: TRUE
         aloha:
-          placeholder: 'Enter text here'
+          placeholder: i18n
           alignment: []
           autoparagraph: TRUE
           format:
@@ -86,8 +85,8 @@
       type: boolean
       defaultValue: FALSE
       ui:
-        label: 'Large Size'
-        reloadPageIfChanged: TRUE
+        label: i18n
+        reloadIfChanged: TRUE
         inspector:
           group: settings
           position: 310
@@ -102,8 +101,8 @@
       type: boolean
       defaultValue: FALSE
       ui:
-        label: 'Use full width'
-        reloadPageIfChanged: TRUE
+        label: i18n
+        reloadIfChanged: TRUE
         inspector:
           group: settings
           position: 340
@@ -118,25 +117,25 @@
       type: string
       defaultValue: ''
       ui:
-        label: 'Shape of image'
-        reloadPageIfChanged: TRUE
+        label: i18n
+        reloadIfChanged: TRUE
         inspector:
           group: image
-          position: 500
-          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          position: 190
+          editor: TYPO3.Neos/Inspector/Editors/SelectBoxEditor
           editorOptions:
-            placeholder: Default
+            placeholder: i18n
             values:
               '':
                 label: ''
-              'figure-corner':
-                label: 'No round corners'
-              'figure-rounded':
-                label: 'Round Corners'
-              'figure-circle':
-                label: 'Image in a circle'
-              'figure-thumbnail':
-                label: 'Image with border'
+              figure-corner:
+                label: i18n
+              figure-rounded:
+                label: i18n
+              figure-circle:
+                label: i18n
+              figure-thumbnail:
+                label: i18n
 
 # lightbox: Lightbox Mixin
 'Dotpulse.Base:LightboxMixin':
@@ -148,7 +147,7 @@
       type: boolean
       defaultValue: FALSE
       ui:
-        label: 'Enlarge image with click'
+        label: i18n
         inspector:
           group: image
           position: 1000
@@ -163,10 +162,10 @@
       type: boolean
       defaultValue: FALSE
       ui:
-        label: 'Lead copy'
-        reloadPageIfChanged: TRUE
+        label: i18n
+        reloadIfChanged: TRUE
         inspector:
-          group: 'settings'
+          group: settings
           position: 360
 
 # link: Link zu mehr Inhalt

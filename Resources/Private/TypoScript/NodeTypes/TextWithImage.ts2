@@ -6,15 +6,14 @@ prototype(NodeTypes:TextWithImage) {
 	@override.alignment = ${this.alignment}
 
 	needRow = ${alignment == 'left' || alignment == 'right' ? true : false}
-	@override.needRow = ${this.needRow}
 	colClasses = ${q(node).parent().parent().is('[instanceof TYPO3.Neos:Document]') ? configuration.TextWithImage.firstlevel[alignment] : configuration.TextWithImage.nested[alignment]}
 
 	alternativeText = ${q(node).property('alternativeText') ? q(node).property('alternativeText') : q(node).property('image').caption}
 
 	attributes.class = TypoScript:RawArray {
-		container = ${q(node).parent().parent().is('[instanceof TYPO3.Neos:Document]') ? configuration.TextWithImage.containerClass : needRow ? configuration.TextWithImage.rowClass : ''}
-		lead = ${q(node).property('lead') ? configuration.TextWithImage.leadClass : ''}
-		margin = ${q(node).property('bigmargin') ? configuration.TextWithImage.marginClass : ''}
+		container = ${q(node).parent().parent().is('[instanceof TYPO3.Neos:Document]') ? configuration.TextWithImage.containerClass : alignment == 'left' || alignment == 'right' ? configuration.TextWithImage.rowClass : false}
+		lead = ${q(node).property('lead') ? configuration.TextWithImage.leadClass : false}
+		margin = ${q(node).property('bigmargin') ? configuration.TextWithImage.marginClass : false}
 		alignment = ${'pos-' + alignment}
 	}
 

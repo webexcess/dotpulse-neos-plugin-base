@@ -35,71 +35,14 @@
 	</f:if>
 	<meta name="msapplication-config" content="/browserconfig.xml">
 </f:if>
-<script type="text/javascript">document.documentElement.className=document.documentElement.className.replace(/\bno-js\b/g,'js');window.isOldIE=false;</script>
 <f:if condition="{configuration.GoogleFonts}">
 	<link href='//fonts.googleapis.com/css?family={configuration.GoogleFonts}'>
 </f:if>
-<f:if condition="{configuration.General.CSS}">
-	<f:for each="{General.CSS}" as="File">
-		<link rel="stylesheet" href="{f:uri.resource(path: 'Styles/{File}.css', package: sitePackage)}{VersionOfAssets}">
-	</f:for>
+{HeadCSS -> f:format.raw()}
+<f:if condition="{supportIE8}">
+	<!--[if lt IE 9]>
+		<script src="//oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
 </f:if>
-<f:if condition="{neos:rendering.inBackend()}">
-	<f:then>
-		<f:if condition="{configuration.Backend.CSS}">
-			<f:for each="{Backend.CSS}" as="File">
-				<link rel="stylesheet" href="{f:uri.resource(path: 'Styles/{File}.css', package: sitePackage)}{VersionOfAssets}">
-			</f:for>
-		</f:if>
-	</f:then>
-	<f:else>
-		<f:if condition="{configuration.Live.CSS}">
-			<f:for each="{Live.CSS}" as="File">
-				<link rel="stylesheet" href="{f:uri.resource(path: 'Styles/{File}.css', package: sitePackage)}{VersionOfAssets}">
-			</f:for>
-		</f:if>
-	</f:else>
-</f:if>
-<!--[if lt IE 9]>
-	<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
-<!--[if lte IE 9]>
-	<script>window.isOldIE=true;</script>
-<![endif]-->
-<f:if condition="{configuration.General.jQuery} == 'head'">
-	<f:render partial="jQuery" />
-</f:if>
-<f:if condition="{neos:rendering.inBackend()}">
-	<f:then>
-		<f:if condition="{configuration.Backend.jQuery} == 'head'">
-			<f:render partial="jQuery" />
-		</f:if>
-	</f:then>
-	<f:else>
-		<f:if condition="{configuration.Live.jQuery} == 'head'">
-			<f:render partial="jQuery" />
-		</f:if>
-	</f:else>
-</f:if>
-<f:if condition="{configuration.General.HeadJavascript}">
-	<f:for each="{General.HeadJavascript}" as="File">
-		<script src="{f:uri.resource(path: 'Scripts/{File}.js', package: sitePackage)}{VersionOfAssets}"></script>
-	</f:for>
-</f:if>
-<f:if condition="{neos:rendering.inBackend()}">
-	<f:then>
-		<f:if condition="{configuration.Backend.HeadJavascript}">
-			<f:for each="{Backend.HeadJavascript}" as="File">
-				<script src="{f:uri.resource(path: 'Scripts/{File}.js', package: sitePackage)}{VersionOfAssets}"></script>
-			</f:for>
-		</f:if>
-	</f:then>
-	<f:else>
-		<f:if condition="{configuration.Live.HeadJavascript}">
-			<f:for each="{Live.HeadJavascript}" as="File">
-				<script src="{f:uri.resource(path: 'Scripts/{File}.js', package: sitePackage)}{VersionOfAssets}"></script>
-			</f:for>
-		</f:if>
-	</f:else>
-</f:if>
+{HeadJavascript -> f:format.raw()}

@@ -1,4 +1,3 @@
-# TODO: Labels translation
 # Blindtext beim Text
 'TYPO3.Neos.NodeTypes:TextMixin':
   properties:
@@ -22,22 +21,22 @@
   properties:
     alignment:
       ui:
-        label: 'Position'
+        label: 'Dotpulse.Base:NodeTypes.ImageAlignmentMixin:properties.alignment'
         inspector:
           position: 90
           editorOptions:
-            placeholder: 'Default'
+            placeholder: 'Dotpulse.Base:NodeTypes.ImageAlignmentMixin:properties.alignment.selectBoxEditor.placeholder'
             values:
               '':
                 label: ''
               top:
-                label: 'Top'
+                label: 'Dotpulse.Base:NodeTypes.ImageAlignmentMixin:properties.alignment.selectBoxEditor.values.top'
               left:
-                label: 'Left'
+                label: 'Dotpulse.Base:NodeTypes.ImageAlignmentMixin:properties.alignment.selectBoxEditor.values.left'
               right:
-                label: 'Right'
+                label: 'Dotpulse.Base:NodeTypes.ImageAlignmentMixin:properties.alignment.selectBoxEditor.values.right'
               bottom:
-                label: 'Bottom'
+                label: 'Dotpulse.Base:NodeTypes.ImageAlignmentMixin:properties.alignment.selectBoxEditor.values.bottom'
               center: ~
 
 'TYPO3.Neos.NodeTypes:ImageCaptionMixin':
@@ -46,13 +45,13 @@
       defaultValue: ''
       ui:
         aloha:
-          placeholder: '<p>Please enter caption</p>'
+          placeholder: 'Dotpulse.Base:NodeTypes.ImageCaptionMixin:properties.caption.aloha.placeholder'
 
 # Title mixin
 'TYPO3.Neos.NodeTypes:TitleMixin':
   properties:
     title:
-      defaultValue: '<h1>Enter headline here</h1>'
+      defaultValue: ''
       ui:
         aloha:
-          placeholder: '<h1>Enter headline here</h1>'
+          placeholder: 'Dotpulse.Base:NodeTypes.TitleMixin:properties.title.aloha.placeholder'

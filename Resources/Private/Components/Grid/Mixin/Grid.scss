@@ -29,9 +29,15 @@
 			object-fit: contain;
 		}
 	}
+
+	&#{$grid-selector}no-scale-up {
+		width: auto;
+		max-width: 100%;
+		@if $grid-enable-flex {
+			object-fit: scale-down;
+		}
+	}
 }
-
-
 
 @mixin grid-padding($breakpoints, $padding: $grid-gutter-padding) {
 	@if $breakpoints {

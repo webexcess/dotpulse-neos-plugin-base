@@ -3,18 +3,39 @@ prototype(Neos:Page) {
 		headTags = TypoScript:Template {
 			templatePath = 'resource://Dotpulse.Base/Private/Templates/TypoScriptObjects/HeadTags.html'
 			configuration = ${Configuration.setting('Dotpulse.Base.Source')}
+			supportIE8 = ${this.configuration.SupportIE8}
 			VersionOfAssets = ${this.configuration.VersionOfAssets ? '?v=' + this.configuration.VersionOfAssets : ''}
-			General {
-				CSS = ${String.split(String.replace(this.configuration.General.CSS, ' ', ''), ',')}
-				HeadJavascript = ${String.split(String.replace(this.configuration.General.HeadJavascript, ' ', ''), ',')}
+			@override.configuration = ${this.configuration}
+			@override.VersionOfAssets = ${this.VersionOfAssets}
+
+			HeadCSS =  TypoScript:Array {
+				General = Base:CSSCollection {
+					collection = ${String.split(configuration.General.CSS, ',')}
+				}
+				Backend = Base:CSSCollection {
+					collection = ${String.split(configuration.Backend.CSS, ',')}
+					@if.isBackend = ${node.context.inBackend}
+				}
+				Live = Base:CSSCollection {
+					collection = ${String.split(configuration.Live.CSS, ',')}
+					@if.isLive = ${!node.context.inBackend}
+				}
 			}
-			Backend {
-				CSS = ${String.split(String.replace(this.configuration.Backend.CSS, ' ', ''), ',')}
-				HeadJavascript = ${String.split(String.replace(this.configuration.Backend.HeadJavascript, ' ', ''), ',')}
-			}
-			Live {
-				CSS = ${String.split(String.replace(this.configuration.Live.CSS, ' ', ''), ',')}
-				HeadJavascript = ${String.split(String.replace(this.configuration.Live.HeadJavascript, ' ', ''), ',')}
+			HeadJavascript =  TypoScript:Array {
+				jQuery = Base:jQuery {
+					place = 'head'
+				}
+				General = Base:JSCollection {
+					collection = ${String.split(configuration.General.HeadJavascript, ',')}
+				}
+				Backend = Base:JSCollection {
+					collection = ${String.split(configuration.Backend.HeadJavascript, ',')}
+					@if.isBackend = ${node.context.inBackend}
+				}
+				Live = Base:JSCollection {
+					collection = ${String.split(configuration.Live.HeadJavascript, ',')}
+					@if.isLive = ${!node.context.inBackend}
+				}
 			}
 		}
 	}

@@ -1,13 +1,17 @@
 prototype(Neos:Page) {
 	htmlTag.attributes {
-		data-version = ${Configuration.setting('Dotpulse.Base.Source.VersionOfAssets')}
+		@override.config = ${Configuration.setting('Dotpulse.Base.Source')}
+		data-version = ${config.VersionOfAssets}
+		data-jq = ${config.jQuery.printInHead ? config.jQuery.new : false}
+		data-jq-old = ${config.SupportIE8 && config.jQuery.printInHead ? config.jQuery.old : false}
 		class = TypoScript:RawArray {
-			live = ${node.context.live ? 'live' : false}
+			live = ${node.context.inBackend ? 'inBackend' : 'live'}
 			javascript = 'no-js'
 		}
 	}
 
 	bodyTag.attributes {
+		data-neos-node = ${node.contextPath}
 		id = ${q(site).get(0) == q(node).get(0) ? 'level-index' : 'level-' + q(node).parents().count() + '-' + q(node).property('uriPathSegment')}
 		class = TypoScript:RawArray {
 			subpages = ${q(node).parents().is() && q(node).children('[instanceof TYPO3.Neos:Document]').filter('[_hiddenInIndex=false]').is() ? 'has-subpages' : ''}
@@ -36,43 +40,30 @@ prototype(Neos:Page) {
 			@if.isNotBlank = ${!String.isBlank(this.GoogleAnalytics)}
 		}
 		@process.PrependGoogleAnalytics = ${this.GoogleAnalytics + value}
-
 		@override.VersionOfAssets = ${this.configuration.VersionOfAssets ? '?v=' + this.configuration.VersionOfAssets : ''}
 		javascripts {
-			jQueryGeneral = TypoScript:Template {
-				templatePath = 'resource://Dotpulse.Base/Private/Partials/jQuery.html'
-				@if.isActive = ${configuration.General.jQuery == 'body'}
+			jQuery = Base:jQuery
+			General = Base:JSCollection {
+				collection = ${String.split(configuration.General.BodyJavascript, ',')}
 			}
-			jQueryLive = TypoScript:Template {
-				templatePath = 'resource://Dotpulse.Base/Private/Partials/jQuery.html'
-				@if.isActive = ${configuration.Live.jQuery == 'body'}
-				@if.isLive = ${node.context.live}
-			}
-			jQueryBackend = TypoScript:Template {
-				templatePath = 'resource://Dotpulse.Base/Private/Partials/jQuery.html'
-				@if.isActive = ${configuration.Backend.jQuery == 'body'}
+			Backend = Base:JSCollection {
+				collection = ${String.split(configuration.Backend.BodyJavascript, ',')}
 				@if.isBackend = ${node.context.inBackend}
 			}
-			siteGeneral = TypoScript:Template {
-				templatePath = 'resource://Dotpulse.Base/Private/Templates/TypoScriptObjects/SiteScript.html'
-				VersionOfAssets = ${VersionOfAssets}
-				Resources = ${String.split(String.replace(configuration.General.BodyJavascript, ' ', ''), ',')}
-				@if.isNotBlank = ${!String.isBlank(configuration.General.BodyJavascript)}
+			Live = Base:JSCollection {
+				collection = ${String.split(configuration.Live.BodyJavascript, ',')}
+				@if.isLive = ${!node.context.inBackend}
 			}
-			siteLive = TypoScript:Template {
-				templatePath = 'resource://Dotpulse.Base/Private/Templates/TypoScriptObjects/SiteScript.html'
-				VersionOfAssets = ${VersionOfAssets}
-				Resources = ${String.split(String.replace(configuration.Live.BodyJavascript, ' ', ''), ',')}
-				@if.isNotBlank = ${!String.isBlank(configuration.Live.BodyJavascript)}
-				@if.isLive = ${node.context.live}
-			}
-			siteBackend = TypoScript:Template {
-				templatePath = 'resource://Dotpulse.Base/Private/Templates/TypoScriptObjects/SiteScript.html'
-				VersionOfAssets = ${VersionOfAssets}
-				Resources = ${String.split(String.replace(configuration.Backend.BodyJavascript, ' ', ''), ',')}
-				@if.isNotBlank = ${!String.isBlank(configuration.Backend.BodyJavascript)}
-				@if.isBackend = ${node.context.inBackend}
-			}
+		}
+	}
+
+	lastVisitedNodeScript >
+	lastVisitedNodeScript = TypoScript:Tag {
+		@position = 'before closingBodyTag'
+		tagName = 'script'
+		content = 'try{lastVisitedNode();}catch(e){}'
+		attributes {
+			type = 'text/javascript'
 		}
 	}
 }

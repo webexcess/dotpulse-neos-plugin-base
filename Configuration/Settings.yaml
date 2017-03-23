@@ -7,6 +7,9 @@ TYPO3:
       navigateComponent:
         nodeTree:
           loadingDepth: 1
+      translation:
+        autoInclude:
+          'Dotpulse.Base': ['NodeTypes/*']
     typoScript:
       autoInclude:
         'Dotpulse.Base': TRUE
@@ -14,10 +17,16 @@ TYPO3:
       groups:
         product:
           position: 50
-          label: 'Products'
+          label: Products
         special:
           position: 100
           label: 'Special Content'
+
+# Filenames are comma separated
+#  * intern: Just the name e.g. "Main"
+#  * extern: e.g. //ajax.googleapis.com/...
+#  * If you want to add attributes, add it with square brackets e.g. Filename[data-prop data-attr="true"]
+
 
 Dotpulse:
   Base:
@@ -32,20 +41,26 @@ Dotpulse:
       Name:
       GoogleFonts:
       VersionOfAssets: #add a value to prevent caching issues
+      SupportIE8: FALSE
+      cleanHTML: TRUE
+      jQuery:
+        old: '1.12.1'
+        new: '2.2.1'
+        printInHead: TRUE
       General:
-        CSS:
-        HeadJavascript:
-        BodyJavascript:
+        CSS: #Filenames
+        HeadJavascript: #Filenames
+        BodyJavascript: #Filenames
         jQuery: #head OR body
       Backend:
-        CSS:
-        HeadJavascript:
-        BodyJavascript:
+        CSS: #Filenames
+        HeadJavascript: #Filenames
+        BodyJavascript: #Filenames
         jQuery: #head OR body
       Live:
-        CSS:
-        HeadJavascript:
-        BodyJavascript:
+        CSS: #Filenames
+        HeadJavascript: #Filenames
+        BodyJavascript: #Filenames
         jQuery: #head OR body
     Image:
       marginClass: img-margin
@@ -53,12 +68,12 @@ Dotpulse:
       leadClass: text-lead
       marginClass: text-margin
     Headline:
-      defaultClass: text-center
+      defaultClass: text-xs-center
       marginClass: headline-margin
     TextWithImage:
       defaultAlignment: right
       marginClass: textimg-margin
-      leadClass: leadtextForChildren
+      leadClass: text-lead
       containerClass: container
       rowClass: row
       firstlevel:

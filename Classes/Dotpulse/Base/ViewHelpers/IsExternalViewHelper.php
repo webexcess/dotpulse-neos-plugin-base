@@ -5,6 +5,13 @@ use TYPO3\Flow\Annotations as Flow;
 
 class IsExternalViewHelper extends \TYPO3\Fluid\Core\ViewHelper\AbstractViewHelper {
 
+
+	/**
+	 * @see AbstractViewHelper::isOutputEscapingEnabled()
+	 * @var boolean
+	 */
+	protected $escapeOutput = TRUE;
+
 	/**
 	 * @param integer $url
 	 * @return integer
