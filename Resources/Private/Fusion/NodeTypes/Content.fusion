@@ -1,4 +1,4 @@
-prototype(TYPO3.Neos:Content) {
+prototype(Neos.Neos:Content) {
 	// Container Variable
 	container= ${q(node).parent().parent().is(this.baseConfiguration.Container.Filter) ? this.baseConfiguration.Container.General : false}
 	@context.container = ${this.container}

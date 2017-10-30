@@ -1,7 +1,7 @@
-prototype(TYPO3.Neos:Page) {
+prototype(Neos.Neos:Page) {
 	head {
-		headTags = TYPO3.TypoScript:Array {
-			base = TYPO3.TypoScript:Template {
+		headTags = Neos.Fusion:Array {
+			base = Neos.Fusion:Template {
 				templatePath = 'resource://Dotpulse.Base/Private/Templates/TypoScriptObjects/HeadTags.html'
 				configuration = ${Configuration.setting('Dotpulse.Base.Source')}
 				supportIE8 = ${this.configuration.SupportIE8}
@@ -9,7 +9,7 @@ prototype(TYPO3.Neos:Page) {
 				@context.configuration = ${this.configuration}
 				@context.VersionOfAssets = ${this.VersionOfAssets}
 
-				HeadCSS =  TYPO3.TypoScript:Array {
+				HeadCSS =  Neos.Fusion:Array {
 					General = Dotpulse.Base:CSSCollection {
 						collection = ${String.split(configuration.General.CSS, ',')}
 					}
@@ -22,7 +22,7 @@ prototype(TYPO3.Neos:Page) {
 						@if.isLive = ${!node.context.inBackend}
 					}
 				}
-				HeadJavascript =  TYPO3.TypoScript:Array {
+				HeadJavascript =  Neos.Fusion:Array {
 					jQuery = Dotpulse.Base:jQuery {
 						place = 'head'
 					}

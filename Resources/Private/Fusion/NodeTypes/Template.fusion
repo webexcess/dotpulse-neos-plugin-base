@@ -1,4 +1,4 @@
-prototype(TYPO3.TypoScript:Template) {
+prototype(Neos.Fusion:Template) {
 	baseConfiguration = ${Configuration.setting('Dotpulse.Base')}
 	@context.baseConfiguration = ${this.baseConfiguration}
 

@@ -1,9 +1,9 @@
 <?php
 namespace Dotpulse\Base\ViewHelpers\Math;
 
-use TYPO3\Flow\Annotations as Flow;
+use Neos\Flow\Annotations as Flow;
 
-class MultiplicationViewHelper extends \TYPO3\Fluid\Core\ViewHelper\AbstractViewHelper {
+class MultiplicationViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\AbstractViewHelper {
 
 
 	/**

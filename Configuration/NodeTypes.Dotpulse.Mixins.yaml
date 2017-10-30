@@ -88,7 +88,7 @@
           editorOptions:
             placeholder: Pixel
       validation:
-        'TYPO3.Neos/Validation/IntegerValidator': []
+        'Neos.Neos/Validation/IntegerValidator': []
 
 
 # shape: Bildkonturen
@@ -106,7 +106,7 @@
         inspector:
           group: image
           position: 190
-          editor: TYPO3.Neos/Inspector/Editors/SelectBoxEditor
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
           editorOptions:
             placeholder: i18n
             allowEmpty: TRUE

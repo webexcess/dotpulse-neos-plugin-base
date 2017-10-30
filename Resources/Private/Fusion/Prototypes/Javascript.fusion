@@ -1,20 +1,20 @@
-prototype(Dotpulse.Base:JSCollection) < prototype(TYPO3.TypoScript:Collection) {
+prototype(Dotpulse.Base:JSCollection) < prototype(Neos.Fusion:Collection) {
 	itemName = 'item'
-	itemRenderer = TYPO3.TypoScript:Collection {
+	itemRenderer = Neos.Fusion:Collection {
 		collection = ${item ? String.split(String.replace(String.trim(item), ']', ''), '[') : []}
 		iterationName = 'iterator'
 		itemName = 'entry'
-		itemRenderer = TYPO3.TypoScript:Case {
+		itemRenderer = Neos.Fusion:Case {
 			isFilename {
 				condition = ${iterator.isFirst}
-				renderer = TYPO3.TypoScript:Case {
+				renderer = Neos.Fusion:Case {
 					isExternal {
 						condition = ${String.indexOf(entry, '//') != -1}
 						renderer = ${entry}
 					}
 					isInternal {
 						condition = ${entry}
-						renderer = TYPO3.TypoScript:ResourceUri {
+						renderer = Neos.Fusion:ResourceUri {
 							path = ${'resource://' + sitePackage + '/Public/Scripts/' + entry +'.js'}
 						}
 					}

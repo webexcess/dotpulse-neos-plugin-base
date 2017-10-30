@@ -1,4 +1,4 @@
-prototype(TYPO3.Neos.NodeTypes:TextWithImage) {
+prototype(Neos.NodeTypes:TextWithImage) {
 	templatePath = 'resource://Dotpulse.Base/Private/Templates/NodeTypes/TextWithImage.html'
 
 	alignmentProperty = ${q(node).property('alignment') ? q(node).property('alignment') : this.baseConfiguration.TextWithImage.defaultAlignment}
@@ -11,14 +11,14 @@ prototype(TYPO3.Neos.NodeTypes:TextWithImage) {
 	needRow = ${(this.alignment == 'left' || this.alignment == 'right') && this.container ? true : false}
 	colClasses = ${q(node).parent().parent().is(this.baseConfiguration.Container.Filter) ? this.baseConfiguration.TextWithImage.firstlevel[this.alignment] : this.baseConfiguration.TextWithImage.nested[this.alignment]}
 
-	attributes.class = TYPO3.TypoScript:RawArray {
+	attributes.class = Neos.Fusion:RawArray {
 		container = ${container ? baseConfiguration.Container.TextWithImage : false}
 		row = ${container ? false : alignment == 'left' || alignment == 'right' ? baseConfiguration.TextWithImage.rowClass : false}
 		alignment = ${'pos-' + alignment}
 	}
 
-	attributesRow = TYPO3.TypoScript:Attributes {
-		class = TYPO3.TypoScript:RawArray {
+	attributesRow = Neos.Fusion:Attributes {
+		class = Neos.Fusion:RawArray {
 			row = ${baseConfiguration.TextWithImage.rowClass}
 		}
 	}

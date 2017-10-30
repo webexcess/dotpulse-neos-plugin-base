@@ -1,9 +1,9 @@
 <?php
 namespace Dotpulse\Base\ViewHelpers;
 
-use TYPO3\Flow\Annotations as Flow;
+use Neos\Flow\Annotations as Flow;
 
-class IsExternalViewHelper extends \TYPO3\Fluid\Core\ViewHelper\AbstractViewHelper {
+class IsExternalViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\AbstractViewHelper {
 
 
 	/**

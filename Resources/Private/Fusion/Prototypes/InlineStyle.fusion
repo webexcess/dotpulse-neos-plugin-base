@@ -1,8 +1,8 @@
-prototype(Dotpulse.Base:InlineStyle) < prototype(TYPO3.TypoScript:Tag) {
+prototype(Dotpulse.Base:InlineStyle) < prototype(Neos.Fusion:Tag) {
 	filename = false
 	@context.filename = ${this.filename}
 	tagName = 'style'
-	content = TYPO3.TypoScript:Template {
+	content = Neos.Fusion:Template {
 		templatePath = ${'resource://' + sitePackage + '/Private/Templates/InlineAssets/' + filename + '.css'}
 	}
 	@if.hasFilename = ${this.filename}

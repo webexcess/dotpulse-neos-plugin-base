@@ -1,0 +1,5 @@
+prototype(Neos.NodeTypes:Headline) {
+	attributes.class = Neos.Fusion:RawArray {
+		container = ${container ? baseConfiguration.Container.Headline : false}
+	}
+}

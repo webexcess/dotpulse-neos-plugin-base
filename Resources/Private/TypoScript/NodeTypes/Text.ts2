@@ -1,5 +1,0 @@
-prototype(TYPO3.Neos.NodeTypes:Text) {
-	attributes.class = TYPO3.TypoScript:RawArray {
-		container = ${container ? baseConfiguration.Container.Text : false}
-	}
-}

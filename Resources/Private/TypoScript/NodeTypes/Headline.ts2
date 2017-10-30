@@ -1,5 +1,0 @@
-prototype(TYPO3.Neos.NodeTypes:Headline) {
-	attributes.class = TYPO3.TypoScript:RawArray {
-		container = ${container ? baseConfiguration.Container.Headline : false}
-	}
-}

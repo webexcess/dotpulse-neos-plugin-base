@@ -1,6 +1,6 @@
-prototype(TYPO3.Neos.NodeTypes:Image) {
+prototype(Neos.NodeTypes:Image) {
 	attributes {
-		class = TYPO3.TypoScript:RawArray {
+		class = Neos.Fusion:RawArray {
 			bleed = ${q(node).property('bleed') ? 'typo3-neos-nodetypes-image-bleed' : false}
 			container = ${container && q(node).property('bleed') != true ? baseConfiguration.Container.Image : false}
 		}
@@ -10,12 +10,12 @@ prototype(TYPO3.Neos.NodeTypes:Image) {
 	maximumWidth = ${q(node).property('maximumWidth') ? q(node).property('maximumWidth') : this.baseConfiguration.Image.maximumWidth}
 
 	alternativeText = ${q(node).property('alternativeText') ? q(node).property('alternativeText') : q(node).property('image').caption}
-	imageClassName = TYPO3.TypoScript:Array {
+	imageClassName = Neos.Fusion:Array {
 		shape = ${q(node).property('shape') ? q(node).property('shape') : false}
 		lazyLoad = ${baseConfiguration.Source.LazyLoading ? 'load' : false}
 	}
 
-	link.@process.convertUris = TYPO3.Neos:ConvertUris {
+	link.@process.convertUris = Neos.Neos:ConvertUris {
 		forceConversion = true
 	}
 

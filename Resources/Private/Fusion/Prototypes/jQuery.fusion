@@ -1,4 +1,4 @@
-prototype(Dotpulse.Base:jQuery) < prototype(TYPO3.TypoScript:Template) {
+prototype(Dotpulse.Base:jQuery) < prototype(Neos.Fusion:Template) {
 	place = 'body'
 	configuration = ${Configuration.setting('Dotpulse.Base.Source')}
 	templatePath = 'resource://Dotpulse.Base/Private/Partials/jQuery.html'

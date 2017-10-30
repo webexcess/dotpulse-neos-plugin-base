@@ -1,7 +1,7 @@
 <?php
 namespace Dotpulse\Base\ViewHelpers;
 
-use TYPO3\Fluid\Core\ViewHelper\AbstractConditionViewHelper;
+use Neos\FluidAdaptor\Core\ViewHelper\AbstractConditionViewHelper;
 
 class IfViewHelper extends AbstractConditionViewHelper
 {

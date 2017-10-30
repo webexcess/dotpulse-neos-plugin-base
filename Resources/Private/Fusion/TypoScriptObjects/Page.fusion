@@ -1,10 +1,10 @@
-prototype(TYPO3.Neos:Page) {
+prototype(Neos.Neos:Page) {
 	htmlTag.attributes {
 		@context.config = ${Configuration.setting('Dotpulse.Base.Source')}
 		data-version = ${config.VersionOfAssets}
 		data-jq = ${config.jQuery.printInHead ? config.jQuery.new : false}
 		data-jq-old = ${config.SupportIE8 && config.jQuery.printInHead ? config.jQuery.old : false}
-		class = TYPO3.TypoScript:RawArray {
+		class = Neos.Fusion:RawArray {
 			live = ${node.context.inBackend ? 'inBackend' : 'live'}
 			javascript = 'no-js'
 		}
@@ -13,7 +13,7 @@ prototype(TYPO3.Neos:Page) {
 	bodyTag.attributes {
 		data-neos-node = ${node.contextPath}
 		id = ${q(site).get(0) == q(node).get(0) ? 'level-index' : 'level-' + q(node).parents().count() + '-' + q(node).property('uriPathSegment')}
-		class = TYPO3.TypoScript:RawArray {
+		class = Neos.Fusion:RawArray {
 			subpages = ${q(node).parents().is() && q(node).children('[instanceof TYPO3.Neos:Document]').filter('[_hiddenInIndex=false]').is() ? 'has-subpages' : false}
 			level = ${'level-' + q(node).parents().count()}
 		}
@@ -24,14 +24,14 @@ prototype(TYPO3.Neos:Page) {
 		@context.baseConfiguration = ${this.baseConfiguration}
 		partialRootPath = 'resource://Dotpulse.Base/Private/Partials'
 
-		mainAttributes = TYPO3.TypoScript:Attributes {
+		mainAttributes = Neos.Fusion:Attributes {
 			id = 'top'
-			class = TYPO3.TypoScript:RawArray {
+			class = Neos.Fusion:RawArray {
 				level = ${'level-' + q(node).parents().count()}
 			}
 		}
 
-		GoogleTagManager = TYPO3.TypoScript:Template {
+		GoogleTagManager = Neos.Fusion:Template {
 			templatePath = 'resource://Dotpulse.Base/Private/Partials/GoogleTagManager.html'
 			GoogleTagManager = ${baseConfiguration.Source.GoogleTagManager}
 			@if.isLive = ${node.context.live}
@@ -39,7 +39,7 @@ prototype(TYPO3.Neos:Page) {
 		}
 		@process.PrependGoogleTagManager = ${this.GoogleTagManager + value}
 
-		GoogleAnalytics  = TYPO3.TypoScript:Template {
+		GoogleAnalytics  = Neos.Fusion:Template {
 			templatePath = 'resource://Dotpulse.Base/Private/Partials/GoogleAnalytics.html'
 			GoogleAnalytics = ${baseConfiguration.Source.GoogleAnalytics}
 			SendPageview = ${baseConfiguration.Source.GoogleAnalyticsSendPageview}
@@ -65,7 +65,7 @@ prototype(TYPO3.Neos:Page) {
 	}
 
 	lastVisitedNodeScript >
-	lastVisitedNodeScript = TYPO3.TypoScript:Tag {
+	lastVisitedNodeScript = Neos.Fusion:Tag {
 		@position = 'before closingBodyTag'
 		tagName = 'script'
 		content = 'try{lastVisitedNode();}catch(e){}'
