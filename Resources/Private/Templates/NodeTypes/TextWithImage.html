@@ -1,4 +1,4 @@
-{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace neos=Neos\Neos\ViewHelpers}
 <div{attributes -> f:format.raw()}>
 	<f:if condition="{needRow}"><div{attributesRow -> f:format.raw()}></f:if>
 		<f:render section="Item" arguments="{_all}" />
