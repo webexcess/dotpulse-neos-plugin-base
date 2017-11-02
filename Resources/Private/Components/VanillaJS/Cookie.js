@@ -1,6 +1,7 @@
-window.getCookie = window.setCookie = function() {
+window.getCookie = function() {
 	return false;
 };
+window.setCookie = getCookie;
 
 window.deleteCookie = function(name) {
 	return setCookie(name, '', -1);

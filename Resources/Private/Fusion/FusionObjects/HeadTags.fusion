@@ -1,0 +1,46 @@
+prototype(Page) {
+	head {
+		headTags = Neos.Fusion:Array {
+			base = Neos.Fusion:Template {
+				templatePath = 'resource://Dotpulse.Base/Private/Templates/FusionObjects/HeadTags.html'
+				configuration = ${Configuration.setting('Dotpulse.Base.Source')}
+				supportIE8 = ${this.configuration.SupportIE8}
+				VersionOfAssets = ${this.configuration.VersionOfAssets ? '?v=' + this.configuration.VersionOfAssets : ''}
+				@context.configuration = ${this.configuration}
+				@context.VersionOfAssets = ${this.VersionOfAssets}
+
+				HeadCSS =  Neos.Fusion:Array {
+					General = Dotpulse.Base:CSSCollection {
+						collection = ${String.split(configuration.General.CSS, ',')}
+					}
+					Backend = Dotpulse.Base:CSSCollection {
+						collection = ${String.split(configuration.Backend.CSS, ',')}
+						@if.isBackend = ${node.context.inBackend}
+					}
+					Live = Dotpulse.Base:CSSCollection {
+						collection = ${String.split(configuration.Live.CSS, ',')}
+						@if.isLive = ${!node.context.inBackend}
+					}
+				}
+				HeadJavascript =  Neos.Fusion:Array {
+					jQuery = Dotpulse.Base:jQuery {
+						place = 'head'
+					}
+					General = Dotpulse.Base:JSCollection {
+						collection = ${String.split(configuration.General.HeadJavascript, ',')}
+					}
+					Backend = Dotpulse.Base:JSCollection {
+						collection = ${String.split(configuration.Backend.HeadJavascript, ',')}
+						@if.isBackend = ${node.context.inBackend}
+					}
+					Live = Dotpulse.Base:JSCollection {
+						collection = ${String.split(configuration.Live.HeadJavascript, ',')}
+						@if.isLive = ${!node.context.inBackend}
+					}
+				}
+				@position = 'start'
+			}
+		}
+
+	}
+}

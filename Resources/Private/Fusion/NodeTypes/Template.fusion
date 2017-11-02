@@ -12,6 +12,10 @@ prototype(Neos.Fusion:Template) {
 	sitePackage = ${node.context.currentSite.siteResourcesPackageKey}
 	@context.sitePackage = ${this.sitePackage}
 
+	// Node Type Name
+	nodeTypeName = ${String.toLowerCase(Array.last(String.split(q(node).property('_nodeType.name'), ':')))}
+	@context.nodeTypeName = ${this.nodeTypeName}
+
 	// Variable mit Settings für Lazy Loading setzen
 	lazyLoading = ${baseConfiguration.Source.LazyLoading}
 	@context.lazyLoading = ${this.lazyLoading}

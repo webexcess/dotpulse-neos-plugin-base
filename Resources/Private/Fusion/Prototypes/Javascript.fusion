@@ -17,8 +17,9 @@ prototype(Dotpulse.Base:JSCollection) < prototype(Neos.Fusion:Collection) {
 						renderer = Neos.Fusion:ResourceUri {
 							path = ${'resource://' + sitePackage + '/Public/Scripts/' + entry +'.js'}
 						}
+						@process.wrap = ${value + VersionOfAssets}
 					}
-					@process.wrap = ${' src="' + value + VersionOfAssets + '"'}
+					@process.wrap = ${' src="' + value + '"'}
 				}
 			}
 			areAttributes {

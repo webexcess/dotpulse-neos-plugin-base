@@ -1,4 +1,4 @@
-function extend(object) {
+window.extend = function(object) {
 	var objects = Array.prototype.slice.call(arguments, 1);
 	var length = arguments.length;
 	var index = 0;
@@ -13,4 +13,4 @@ function extend(object) {
 		merge(index);
 	}
 	return object;
-}
+};

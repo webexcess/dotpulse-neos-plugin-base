@@ -1,7 +1,7 @@
-//= require Selectors.js
-//= require ClassManipulation.js
-//= require EachElement.js
-//= require Attr.js
+//= require Dotpulse.Base/Resources/Private/Components/PrototypesJS/Selectors.js
+//= require Dotpulse.Base/Resources/Private/Components/PrototypesJS/ClassManipulation.js
+//= require Dotpulse.Base/Resources/Private/Components/PrototypesJS/EachElement.js
+//= require Dotpulse.Base/Resources/Private/Components/PrototypesJS/Attr.js
 (function() {
 	if (feature.retina) {
 		onReady.Retina = function() {

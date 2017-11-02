@@ -1,4 +1,4 @@
-setPushState = getPushState = function() {
+window.setPushState = window.getPushState = function() {
 	// jscs:disable maximumLineLength
 	console.info('Your browser can\'t handle push state. Time to download a new one: https://www.browser-update.org/update.html');
 	return false;
@@ -15,7 +15,7 @@ if (typeof history.pushState === 'function') {
 			options.url = url;
 		}
 		if (typeof options.hash === 'string') {
-			url += '#' + options.hash;
+			options.url += '#' + options.hash;
 		} else {
 			options.hash = null;
 		}
@@ -27,7 +27,7 @@ if (typeof history.pushState === 'function') {
 		} else {
 			options.title = null;
 		}
-		history.pushState(options.data, options.title, url);
+		history.pushState(options.data, options.title, options.url);
 		return options;
 	};
 

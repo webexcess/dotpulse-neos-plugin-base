@@ -1,4 +1,4 @@
-//= require ../Polyfill/Matches.js
+//= require Dotpulse.Base/Resources/Private/Components/Polyfill/Matches.js
 if ('classList' in document.documentElement) {
 	Element.prototype.classHas = function(className) {
 		return this.classList.contains(className);

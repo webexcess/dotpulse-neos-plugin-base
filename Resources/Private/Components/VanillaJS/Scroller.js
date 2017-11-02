@@ -1,6 +1,6 @@
 // Require Extend
-//= require ../Polyfill/RequestAnimationFrame.js
-//= require Extend.js
+//= require Dotpulse.Base/Resources/Private/Components/Polyfill/RequestAnimationFrame.js
+//= require Dotpulse.Base/Resources/Private/Components/VanillaJS/Extend.js
 (function() {
 	var doScroll = function(position, options) {
 		var start = Date.now();

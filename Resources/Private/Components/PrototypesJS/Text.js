@@ -1,4 +1,4 @@
-//= require ../Polyfill/Trim.js
+//= require Dotpulse.Base/Resources/Private/Components/Polyfill/Trim.js
 
 String.prototype.innerTrim = function() {
 	return this.replace(/\s\s+/g, ' ');

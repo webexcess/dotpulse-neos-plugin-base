@@ -1,9 +1,20 @@
 <?php
 namespace Dotpulse\Base\ViewHelpers;
 
-use Neos\Flow\Annotations as Flow;
+/*
+ * This file is part of the Dotpulse.Base package.
+ *
+ * (c) Contributors of the Neos Project - www.neos.io
+ *
+ * This package is Open Source Software. For the full copyright and license
+ * information, please view the LICENSE file which was distributed with this
+ * source code.
+ */
 
-class IsExternalViewHelper extends \Neos\FluidAdaptor\Core\ViewHelper\AbstractViewHelper {
+use Neos\Flow\Annotations as Flow;
+use Neos\FluidAdaptor\Core\ViewHelper\AbstractViewHelper;
+
+class IsExternalViewHelper extends AbstractViewHelper {
 
 
 	/**

@@ -13,7 +13,7 @@ Neos:
           'Dotpulse.Base': ['NodeTypes/*']
     fusion:
       autoInclude:
-        'Dotpulse.Base': TRUE
+        'Dotpulse.Base': true
     nodeTypes:
       groups:
         product:
@@ -22,6 +22,11 @@ Neos:
         special:
           position: 400
           label: 'Dotpulse.Base:NodeTypes.Groups:special'
+  Fusion:
+    defaultContext:
+      # usage: Dotpulse.Base.AssetTranslation.translate('de text | fr text | it text')
+      # @see www/Neos/Packages/Plugins/Dotpulse.Base/Classes/Dotpulse/Base/Eel/Helper/AssetTranslationHelper.php
+      'Dotpulse.Base.AssetTranslation': 'Dotpulse\Base\Eel\Helper\AssetTranslationHelper'
 
 # Filenames are comma separated
 #  * intern: Just the name e.g. "Main"
@@ -34,7 +39,7 @@ Dotpulse:
     Source:
       GoogleTagManager:
       GoogleAnalytics:
-      GoogleAnalyticsSendPageview: TRUE
+      GoogleAnalyticsSendPageview: true
       GoogleSiteVerification:
       LazyLoading:
       Favicon:
@@ -44,13 +49,13 @@ Dotpulse:
       Name:
       GoogleFonts:
       VersionOfAssets: #add a value to prevent caching issues
-      SupportIE8: FALSE
-      cleanHTML: TRUE
-      loadCSSAsynchron: FALSE
+      SupportIE8: false
+      cleanHTML: true
+      loadCSSAsynchron: false
       jQuery:
         old: '1.12.4'
-        new: '2.2.4'
-        printInHead: TRUE
+        new: '3.0.0'
+        printInHead: true
       General:
         CSS: #Filenames
         HeadJavascript: #Filenames
@@ -67,7 +72,7 @@ Dotpulse:
         BodyJavascript: #Filenames
         jQuery: #head OR body
     Container:
-      Filter: '[instanceof TYPO3.Neos:Document]'
+      Filter: '[instanceof Neos.Neos:Document]'
       General: container
       AssetList: container
       Text: container
@@ -76,9 +81,11 @@ Dotpulse:
       Headline: container
     AssetList:
       titleTag: h3
+    AssetTranslation:
+      BySeparator: ~ # could be: '|'
     Image:
       maximumWidth: 2560
-      openOriginalImageInLightbox: FALSE
+      openOriginalImageInLightbox: false
     TextWithImage:
       maximumWidth: 2560
       defaultAlignment: right

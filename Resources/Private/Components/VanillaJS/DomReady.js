@@ -1,13 +1,12 @@
-function domReady(callback) {
+window.domReady = function(callback) {
 	var done = false;
 	var top = true;
 	var win = window;
 	var doc = win.document;
 	var root = doc.documentElement;
 	var hasListener = doc.addEventListener ? true : false;
-	//jshint -W120
-	var add = rem = hasListener ? 'addEventListener' : 'attachEvent';
-	//jshint +W120
+	var add = hasListener ? 'addEventListener' : 'attachEvent';
+	var rem = add;
 	var pre = hasListener ? '' : 'on';
 
 	var init = function(event) {
@@ -45,6 +44,6 @@ function domReady(callback) {
 		doc[add](pre + 'readystatechange', init, false);
 		win[add](pre + 'load', init, false);
 	}
-}
+};
 
 domReady(onReadyRun);

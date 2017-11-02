@@ -1,0 +1,14 @@
+'Neos.NodeTypes:Image':
+  superTypes:
+    'Neos.NodeTypes:ImageAlignmentMixin': false
+
+'Neos.NodeTypes:AssetList':
+  superTypes:
+    'Neos.NodeTypes:TitleMixin': true
+  properties:
+    title:
+      defaultValue: '<h2>Enter headline here</h2>'
+      ui:
+        aloha:
+          format:
+            h1: false

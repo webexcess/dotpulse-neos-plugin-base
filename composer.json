@@ -3,8 +3,7 @@
     "type": "neos-plugin",
     "description": "The Base package from dotpulse for Neos 2",
     "require": {
-        "neos/neos": "3.*",
-        "neos/nodetypes": "3.*"
+        "neos/nodetypes": "^3.2"
     },
     "autoload": {
         "psr-4": {
@@ -13,15 +12,21 @@
     },
     "authors": [
         {
-            "name": "dotpulse AG ppa. webexcess GmbH",
-            "email": "neos+dotpulse-opensource@webexcess.ch",
+            "name": "Jon Uhlmann",
+            "email": "jon.uhlmann@dotpulse.ch",
             "homepage": "https://github.com/jonnitto",
             "role": "Developer"
         },
         {
             "name": "Samuel Hauser",
-            "email": "samuel.hauser@webexcess.ch",
-            "homepage": "https://webexcess.github.io/open-source-initiative/",
+            "email": "samuel.hauser@dotpulse.ch",
+            "homepage": "https://github.com/loop86",
+            "role": "Developer"
+        },
+        {
+            "name": "Stefan Bruggmann",
+            "email": "stefan.bruggmann@dotpulse.ch",
+            "homepage": "https://github.com/sbruggmann",
             "role": "Developer"
         }
     ]

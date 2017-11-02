@@ -1,34 +1,34 @@
 // jscs:disable maximumLineLength
-html = document.documentElement;
+window.html = document.documentElement;
 html.className = html.className.replace(new RegExp('\\bno-js\\b', 'g'), '').replace(/\s\s*/g, ' ').replace(/^\s\s*/, '').replace(/\s\s*$/, '');
-dataVersion = html.getAttribute('data-version') || 0; // Version of assets (string)
-getProtokoll = 'https:' == document.location.protocol ? 'https' : 'http';
-language = html.lang || 'de'; // Language of the document (string)
-isLive = new RegExp('\\blive\\b').test(html.className);
+window.dataVersion = html.getAttribute('data-version') || 0; // Version of assets (string)
+window.getProtokoll = 'https:' == document.location.protocol ? 'https' : 'http';
+window.language = html.lang || 'de'; // Language of the document (string)
+window.isLive = new RegExp('\\blive\\b').test(html.className);
 
-function lastVisitedNode(node) {
+window.lastVisitedNode = function(node) {
 	try {
 		if (typeof node == 'undefined') {
 			node = document.body.getAttribute('data-neos-node') || false;
 		}
 		if (typeof node == 'string') {
-			sessionStorage.setItem('TYPO3.Neos.lastVisitedNode', node);
+			sessionStorage.setItem('Neos.Neos.lastVisitedNode', node);
 		}
 	} catch (error) {}
-}
+};
 
-function NeosEvents() {
+window.NeosEvents = function() {
 	return 'No Neos Events added';
-}
+};
 
-isIE = (function() {
+window.isIE = (function() {
 	var agent = navigator.userAgent.toLowerCase();
 	return (agent.indexOf('msie') != -1) ? parseInt(agent.split('msie')[1]) : false;
 })();
 
-theme = typeof theme == 'string' ? theme : 'Dotpulse.Theme';
+window.theme = typeof theme == 'string' ? theme : 'Dotpulse.Theme';
 
-path = {
+window.path = {
 	base: '/_Resources/Static/Packages/' + theme + '/'
 };
 path.Scripts = path.base + 'Scripts/';
@@ -40,7 +40,7 @@ window.onReady = {
 	}
 };
 
-function onReadyRun() {
+window.onReadyRun = function() {
 	for (var key in onReady) {
 		if (!onReady.hasOwnProperty(key)) {
 			continue;
@@ -51,4 +51,4 @@ function onReadyRun() {
 			func(); // Run function
 		}
 	}
-}
+};

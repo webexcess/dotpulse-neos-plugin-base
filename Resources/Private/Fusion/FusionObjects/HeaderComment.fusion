@@ -1,0 +1,10 @@
+prototype(Page) {
+	headerComment.@process.removeEndComment = ${String.replace(value, '-->', '')}
+	headerComment.@process.cleanHTML >
+	headerDotpulseComment = Neos.Fusion:Template {
+		@position = 'after headerComment'
+		templatePath = 'resource://Dotpulse.Base/Private/Templates/FusionObjects/HeaderComment.html'
+		@process.removeEndComment = ${String.replace(value, '<!--', '')}
+		@process.cleanHTML >
+	}
+}

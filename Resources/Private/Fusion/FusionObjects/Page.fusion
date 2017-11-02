@@ -1,0 +1,76 @@
+prototype(Page) {
+	htmlTag.attributes {
+		@context.config = ${Configuration.setting('Dotpulse.Base.Source')}
+		data-version = ${config.VersionOfAssets}
+		data-jq = ${config.jQuery.printInHead ? config.jQuery.new : false}
+		data-jq-old = ${config.SupportIE8 && config.jQuery.printInHead ? config.jQuery.old : false}
+		class = Neos.Fusion:RawArray {
+			live = ${node.context.inBackend ? 'inBackend' : 'live'}
+			javascript = 'no-js'
+		}
+	}
+
+	bodyTag.attributes {
+		data-neos-node = ${node.contextPath}
+		id = ${q(site).get(0) == q(node).get(0) ? 'level-index' : 'level-' + q(node).parents().count() + '-' + q(node).property('uriPathSegment')}
+		class = Neos.Fusion:RawArray {
+			subpages = ${q(node).parents().is() && q(node).children('[instanceof Neos.Neos:Document]').filter('[_hiddenInIndex=false]').is() ? 'has-subpages' : false}
+			level = ${'level-' + q(node).parents().count()}
+		}
+	}
+
+	body {
+		baseConfiguration = ${Configuration.setting('Dotpulse.Base')}
+		@context.baseConfiguration = ${this.baseConfiguration}
+		partialRootPath = 'resource://Dotpulse.Base/Private/Partials'
+
+		mainAttributes = Neos.Fusion:Attributes {
+			id = 'top'
+			class = Neos.Fusion:RawArray {
+				level = ${'level-' + q(node).parents().count()}
+			}
+		}
+
+		GoogleTagManager = Neos.Fusion:Template {
+			templatePath = 'resource://Dotpulse.Base/Private/Partials/GoogleTagManager.html'
+			GoogleTagManager = ${baseConfiguration.Source.GoogleTagManager}
+			@if.isLive = ${node.context.live}
+			@if.isNotBlank = ${!String.isBlank(this.GoogleTagManager)}
+		}
+		@process.PrependGoogleTagManager = ${this.GoogleTagManager + value}
+
+		GoogleAnalytics  = Neos.Fusion:Template {
+			templatePath = 'resource://Dotpulse.Base/Private/Partials/GoogleAnalytics.html'
+			GoogleAnalytics = ${baseConfiguration.Source.GoogleAnalytics}
+			SendPageview = ${baseConfiguration.Source.GoogleAnalyticsSendPageview}
+			@if.isLive = ${node.context.live}
+			@if.isNotBlank = ${!String.isBlank(this.GoogleAnalytics)}
+		}
+		@process.PrependGoogleAnalytics = ${this.GoogleAnalytics + value}
+		@context.VersionOfAssets = ${this.baseConfiguration.Source.VersionOfAssets ? '?v=' + this.baseConfiguration.Source.VersionOfAssets : ''}
+		javascripts {
+			jQuery = Dotpulse.Base:jQuery
+			General = Dotpulse.Base:JSCollection {
+				collection = ${String.split(baseConfiguration.Source.General.BodyJavascript, ',')}
+			}
+			Backend = Dotpulse.Base:JSCollection {
+				collection = ${String.split(baseConfiguration.Source.Backend.BodyJavascript, ',')}
+				@if.isBackend = ${node.context.inBackend}
+			}
+			Live = Dotpulse.Base:JSCollection {
+				collection = ${String.split(baseConfiguration.Source.Live.BodyJavascript, ',')}
+				@if.isLive = ${!node.context.inBackend}
+			}
+		}
+	}
+
+	lastVisitedNodeScript >
+	lastVisitedNodeScript = Neos.Fusion:Tag {
+		@position = 'before closingBodyTag'
+		tagName = 'script'
+		content = 'try{lastVisitedNode();}catch(e){}'
+		attributes {
+			type = 'text/javascript'
+		}
+	}
+}
