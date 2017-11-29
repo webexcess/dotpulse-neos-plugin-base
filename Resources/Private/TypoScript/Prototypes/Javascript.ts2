@@ -17,8 +17,9 @@ prototype(Dotpulse.Base:JSCollection) < prototype(TYPO3.TypoScript:Collection) {
 						renderer = TYPO3.TypoScript:ResourceUri {
 							path = ${'resource://' + sitePackage + '/Public/Scripts/' + entry +'.js'}
 						}
+						@process.wrap = ${value + VersionOfAssets}
 					}
-					@process.wrap = ${' src="' + value + VersionOfAssets + '"'}
+					@process.wrap = ${' src="' + value + '"'}
 				}
 			}
 			areAttributes {
