@@ -9,7 +9,8 @@ prototype(TYPO3.Neos.NodeTypes:Image) {
 
 	maximumWidth = ${q(node).property('maximumWidth') ? q(node).property('maximumWidth') : this.baseConfiguration.Image.maximumWidth}
 
-	alternativeText = ${q(node).property('alternativeText') ? q(node).property('alternativeText') : q(node).property('image').caption}
+	title = ${Dotpulse.Base.AssetTranslation.translate(q(node).property('image').title, node)}
+	alternativeText = ${q(node).property('alternativeText') ? q(node).property('alternativeText') : Dotpulse.Base.AssetTranslation.translate(q(node).property('image').caption, node)}
 	imageClassName = TYPO3.TypoScript:Array {
 		shape = ${q(node).property('shape') ? q(node).property('shape') : false}
 		lazyLoad = ${baseConfiguration.Source.LazyLoading ? 'load' : false}

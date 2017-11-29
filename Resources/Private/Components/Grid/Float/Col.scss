@@ -1,6 +1,6 @@
 // scss-lint:disable DeclarationOrder
 
-@if unquote('#{$classes-col} != ""') {
+@if str_length(#{$classes-col}) > 0 {
 	#{$classes-col} {
 		@include grid-col;
 	}

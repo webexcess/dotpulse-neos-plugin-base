@@ -1,12 +1,12 @@
 // scss-lint:disable DeclarationOrder
 
-@if unquote('#{$classes-col} != ""') {
+@if str_length(#{$classes-col}) > 0 {
 	#{$classes-col} {
 		@include grid-col;
 	}
 }
 
-@if unquote('{$classes-fallback} != ""') {
+@if str_length(#{$classes-fallback}) > 0  {
 	#{$classes-fallback} {
 		flex: 0 0 100%;
 		max-width: 100%;

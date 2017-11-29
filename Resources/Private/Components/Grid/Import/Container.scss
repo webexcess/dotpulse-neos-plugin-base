@@ -1,4 +1,4 @@
-@if unquote('#{$classes-container} != ""') {
+@if str_length(#{$classes-container}) > 0 {
 	#{$classes-container} {
 		@include clearfix;
 		margin-right: auto;

@@ -22,6 +22,11 @@ TYPO3:
         special:
           position: 400
           label: 'Dotpulse.Base:NodeTypes.Groups:special'
+  TypoScript:
+    defaultContext:
+      # usage: Dotpulse.Base.AssetTranslation.translate('de text | fr text | it text')
+      # @see www/Neos/Packages/Plugins/Dotpulse.Base/Classes/Dotpulse/Base/Eel/Helper/AssetTranslationHelper.php
+      'Dotpulse.Base.AssetTranslation': 'Dotpulse\Base\Eel\Helper\AssetTranslationHelper'
 
 # Filenames are comma separated
 #  * intern: Just the name e.g. "Main"
@@ -76,6 +81,8 @@ Dotpulse:
       Headline: container
     AssetList:
       titleTag: h3
+    AssetTranslation:
+      BySeparator: ~ # could be: '|'
     Image:
       maximumWidth: 2560
       openOriginalImageInLightbox: FALSE
