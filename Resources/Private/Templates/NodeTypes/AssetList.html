@@ -1,5 +1,6 @@
 {namespace neos=TYPO3\Neos\ViewHelpers}
 {namespace ts=TYPO3\TypoScript\ViewHelpers}
+{namespace dp=Dotpulse\Base\ViewHelpers}
 <f:if condition="{container}">
 	<f:then>
 		<div class="{container}">
@@ -24,11 +25,11 @@
 							<strong>
 						</f:if>
 						<f:if condition="{asset.title}">
-							<f:then>{asset.title}</f:then>
+							<f:then><dp:assetTranslation.translate text="{asset.title}"></dp:assetTranslation.translate></f:then>
 							<f:else><ts:render path="filename" context="{filename: asset.resource.filename, extension: asset.resource.fileextension}" /></f:else>
 						</f:if>
 						<f:if condition="{asset.caption}">
-							</strong> {asset.caption}
+							</strong> <dp:assetTranslation.translate text="{asset.caption}"></dp:assetTranslation.translate>
 						</f:if>
 						<small>({asset.resource.fileextension})</small>
 					</a></li>
