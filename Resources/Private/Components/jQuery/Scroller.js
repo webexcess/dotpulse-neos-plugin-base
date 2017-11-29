@@ -8,7 +8,7 @@
 	var $htmlAndBody   = $($html).add($body);
 	var scrollPosition = 0;
 	var htmlEvent      = false;
-	$.scroller     = function(id, options) {
+	$.scroller = function(id, options) {
 		// Scrollersettings
 		var opt      = $.extend({}, $.scroller.defaults, options);
 		var time     = 10;

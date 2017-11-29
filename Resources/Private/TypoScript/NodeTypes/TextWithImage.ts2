@@ -6,7 +6,6 @@ prototype(TYPO3.Neos.NodeTypes:TextWithImage) {
 	@context.alignment = ${this.alignment}
 
 	imageFirst = ${(this.alignment == 'top' || this.alignment == 'float-left' || this.alignment == 'float-right') ? true : false}
-	maximumWidth = ${this.baseConfiguration.TextWithImage.maximumWidth}
 
 	needRow = ${(this.alignment == 'left' || this.alignment == 'right') && this.container ? true : false}
 	colClasses = ${q(node).parent().parent().is(this.baseConfiguration.Container.Filter) ? this.baseConfiguration.TextWithImage.firstlevel[this.alignment] : this.baseConfiguration.TextWithImage.nested[this.alignment]}
@@ -15,6 +14,12 @@ prototype(TYPO3.Neos.NodeTypes:TextWithImage) {
 		container = ${container ? baseConfiguration.Container.TextWithImage : false}
 		row = ${container ? false : alignment == 'left' || alignment == 'right' ? baseConfiguration.TextWithImage.rowClass : false}
 		alignment = ${'pos-' + alignment}
+	}
+
+	@context.maximumWidth = ${q(node).property('maximumWidth')}
+	maximumWidth = ${maximumWidth ? maximumWidth : this.baseConfiguration.TextWithImage.maximumWidth}
+	style = TYPO3.TypoScript:Array {
+		maxWidth = ${maximumWidth ? 'max-width:' + maximumWidth + 'px;' : false}
 	}
 
 	attributesRow = TYPO3.TypoScript:Attributes {
