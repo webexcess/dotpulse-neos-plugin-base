@@ -20,7 +20,8 @@
 	}
 }
 
-.neos.neos.neos-empty-contentcollection-overlay {
+.neos.neos.neos-empty-contentcollection-overlay,
+.neos-backend [class*="addEmptyContentCollectionOverlay"] {
 	$height: 41px;
 	height: $height;
 	margin-left: 2px;
@@ -31,6 +32,7 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	padding: 0 10px;
+	line-height: 100%;
 
 	&::before,
 	&::after {
