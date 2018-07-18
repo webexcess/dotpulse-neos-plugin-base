@@ -1,5 +1,5 @@
 # Blindtext beim Text
-'Neos.NodeTypes:TextMixin':
+'Neos.NodeTypes.BaseMixins:TextMixin':
   properties:
     text:
       defaultValue: ''
@@ -17,7 +17,7 @@
             ul: TRUE
 
 # Image alignment mixin
-'Neos.NodeTypes:ImageAlignmentMixin':
+'Neos.NodeTypes.BaseMixins:ImageAlignmentMixin':
   properties:
     alignment:
       ui:
@@ -39,7 +39,7 @@
               center: ~
               '': ~
 
-'Neos.NodeTypes:ImageCaptionMixin':
+'Neos.NodeTypes.BaseMixins:ImageCaptionMixin':
   properties:
     caption:
       defaultValue: ''
@@ -48,7 +48,7 @@
           placeholder: 'Dotpulse.Base:NodeTypes.ImageCaptionMixin:properties.caption.aloha.placeholder'
 
 # Title mixin
-'Neos.NodeTypes:TitleMixin':
+'Neos.NodeTypes.BaseMixins:TitleMixin':
   properties:
     title:
       defaultValue: ''
